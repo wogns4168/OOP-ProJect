@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MoneyWeapon.Scenes;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,15 +9,21 @@ namespace MoneyWeapon.Managers
 {
     internal class GameManager
     {
-        public const string GameName = "무기 : 통장";
-        public const string SubGameTitle = "마왕 잡기 전에 손절부터";
+        public const string SubGameTitle = "마왕 잡기 전에 손절부터...";
         public static bool IsGameOver {  get; set; }
 
         public void Run()
         {
+            Init();
+
             while(!IsGameOver)
             {
                 Console.Clear();
+                SceneManager.Render();
+
+                InputManager.GetUserInput();
+
+                SceneManager.Update();
             }
 
         }
@@ -24,6 +31,10 @@ namespace MoneyWeapon.Managers
         public void Init()
         {
             IsGameOver = false;
+
+            SceneManager.AddScene("Title", new TitleScene());
+
+            SceneManager.Change("Title");
         }
     }
 }
