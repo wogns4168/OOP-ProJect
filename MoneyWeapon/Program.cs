@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MoneyWeapon.Managers;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,6 +11,8 @@ namespace MoneyWeapon
     {
         static void Main(string[] args)
         {
+            GameManager gameManager = new GameManager();
+            gameManager.Run();
         }
     }
 }
