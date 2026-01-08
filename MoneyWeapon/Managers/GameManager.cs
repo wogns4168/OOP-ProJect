@@ -23,7 +23,7 @@ namespace MoneyWeapon.Managers
 
         public void Init()
         {
-
+            IsGameOver = false;
         }
     }
 }
