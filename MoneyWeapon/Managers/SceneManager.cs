@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using MoneyWeapon.Scenes;
+using MoneyWeapon.Utils;
 
 namespace MoneyWeapon.Managers
 {
@@ -56,7 +57,13 @@ namespace MoneyWeapon.Managers
 
         public static void Render()
         {
-            Current?.Render(); 
+            Current?.Render();
+            Log.NomalLog("씬 출력");
+        }
+
+        public static void LogRender()
+        {
+
         }
     }
 }

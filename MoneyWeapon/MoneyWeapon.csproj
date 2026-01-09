@@ -49,12 +49,20 @@
     <Compile Include="Managers\SceneManager.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Scenes\CreditScene.cs" />
+    <Compile Include="Scenes\DungeonScene.cs" />
+    <Compile Include="Scenes\EndingScene.cs" />
+    <Compile Include="Scenes\ExchangeScene.cs" />
+    <Compile Include="Scenes\MineScene.cs" />
     <Compile Include="Scenes\Scene.cs" />
     <Compile Include="Scenes\TitleScene.cs" />
+    <Compile Include="Scenes\TownScene.cs" />
+    <Compile Include="Utils\Log.cs" />
     <Compile Include="Utils\GameName.cs" />
     <Compile Include="Utils\MenuList.cs" />
     <Compile Include="Utils\Ractangle.cs" />
     <Compile Include="Utils\TextExtensions.cs" />
+    <Compile Include="Utils\Tutorial.cs" />
     <Compile Include="Utils\Vector.cs" />
   </ItemGroup>
   <ItemGroup>

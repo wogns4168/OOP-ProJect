@@ -20,7 +20,7 @@ namespace MoneyWeapon.Managers
             ConsoleKey.I,
             ConsoleKey.Spacebar,
             ConsoleKey.Escape,
-            ConsoleKey.L,
+            ConsoleKey.L
         };
 
         public static bool GetKey(ConsoleKey input)

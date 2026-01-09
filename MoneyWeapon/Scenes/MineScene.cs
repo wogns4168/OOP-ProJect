@@ -6,7 +6,22 @@ using System.Threading.Tasks;
 
 namespace MoneyWeapon.Scenes
 {
-    internal class MineScene
+    internal class MineScene : Scene
     {
+        public override void Enter()
+        {
+        }
+
+        public override void Exit()
+        {
+        }
+
+        public override void Render()
+        {
+        }
+
+        public override void Update()
+        {
+        }
     }
 }

@@ -1,6 +1,8 @@
 ﻿using MoneyWeapon.Scenes;
+using MoneyWeapon.Utils;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -20,8 +22,14 @@ namespace MoneyWeapon.Managers
             {
                 Console.Clear();
                 SceneManager.Render();
+                Log.Render(40, 10);
 
                 InputManager.GetUserInput();
+
+                if (InputManager.GetKey(ConsoleKey.L))
+                {
+                    Log.HandleControl();
+                }
 
                 SceneManager.Update();
             }
@@ -38,7 +46,6 @@ namespace MoneyWeapon.Managers
             SceneManager.AddScene("Exchange", new TitleScene());
             SceneManager.AddScene("Mine", new TitleScene());
             SceneManager.AddScene("Dungeon", new TitleScene());
-            SceneManager.AddScene("Log", new TitleScene());
             SceneManager.AddScene("Ending", new TitleScene());
 
             SceneManager.Change("Title");
