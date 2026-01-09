@@ -44,6 +44,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="GameObjects\GameObject.cs" />
+    <Compile Include="GameObjects\Player.cs" />
+    <Compile Include="GameObjects\Wall.cs" />
     <Compile Include="Managers\GameManager.cs" />
     <Compile Include="Managers\InputManager.cs" />
     <Compile Include="Managers\SceneManager.cs" />
@@ -62,6 +64,7 @@
     <Compile Include="Utils\MenuList.cs" />
     <Compile Include="Utils\Ractangle.cs" />
     <Compile Include="Utils\TextExtensions.cs" />
+    <Compile Include="Utils\Tile.cs" />
     <Compile Include="Utils\Tutorial.cs" />
     <Compile Include="Utils\Vector.cs" />
   </ItemGroup>

@@ -37,13 +37,13 @@ namespace MoneyWeapon.Utils
             int contentHeight = MaxHeight - 3;
             int start = Math.Max(0, LogList.Count - contentHeight);
 
-            _outline.X = x;
+            _outline.X = x + 20;
             _outline.Y = y;
             _outline.Width = 40;
             _outline.Height = 3 + LogList.Count - start;
             _outline.Draw();
 
-            Console.SetCursorPosition(x + 1, y + 1);
+            Console.SetCursorPosition(x + 21, y + 1);
             "[Log 목록]".Print(ConsoleColor.Red);
 
            
@@ -52,7 +52,7 @@ namespace MoneyWeapon.Utils
             {
                 var (type, text) = LogList[i];
 
-                Console.SetCursorPosition(x + 2, y + 2 + (i - start));
+                Console.SetCursorPosition(x + 22, y + 2 + (i - start));
 
                 if (type == LogType.Nomal)
                     text.Print();

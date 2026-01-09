@@ -1,4 +1,5 @@
-﻿using MoneyWeapon.Scenes;
+﻿using MoneyWeapon.GameObjects;
+using MoneyWeapon.Scenes;
 using MoneyWeapon.Utils;
 using System;
 using System.Collections.Generic;
@@ -13,6 +14,8 @@ namespace MoneyWeapon.Managers
     {
         public const string SubGameTitle = "마왕 잡기 전에 손절부터...";
         public static bool IsGameOver {  get; set; }
+
+        private Player _player;
 
         public void Run()
         {
@@ -39,10 +42,11 @@ namespace MoneyWeapon.Managers
         public void Init()
         {
             IsGameOver = false;
+            _player = new Player();
 
             SceneManager.AddScene("Title", new TitleScene());
             SceneManager.AddScene("Credit", new CreditScene());
-            SceneManager.AddScene("Town", new TownScene());
+            SceneManager.AddScene("Town", new TownScene(_player));
             SceneManager.AddScene("Exchange", new ExchangeScene());
             SceneManager.AddScene("Mine", new MineScene());
             SceneManager.AddScene("Dungeon", new DungeonScene());

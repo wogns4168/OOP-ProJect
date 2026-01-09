@@ -58,5 +58,10 @@ namespace MoneyWeapon.GameObjects
             Field[nextPos.Y, nextPos.X].OnTileObject = this;
             Position = nextPos;
         }
+
+        public void Render()
+        {
+
+        }
     }
 }
