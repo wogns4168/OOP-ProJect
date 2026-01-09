@@ -35,15 +35,29 @@ namespace MoneyWeapon.Scenes
         public override void Render()
         {
             Console.SetCursorPosition(2, 1);
-            GameName.gameName.Print(ConsoleColor.DarkYellow);
+            GameName.gameName.Print(ConsoleColor.DarkBlue);
             Console.SetCursorPosition(1, 8);
-            GameManager.SubGameTitle.Print(ConsoleColor.Yellow);
+            GameManager.SubGameTitle.Print(ConsoleColor.Blue);
 
             _titleMenu.Render(2, 12);
         }
 
         public override void Update()
         {
+            if (InputManager.GetKey(ConsoleKey.UpArrow))
+            {
+                _titleMenu.SelectUp();
+            }
+
+            if (InputManager.GetKey(ConsoleKey.DownArrow))
+            {
+                _titleMenu.SelectDown();
+            }
+
+            if (InputManager.GetKey(ConsoleKey.Enter))
+            {
+                _titleMenu.Select();
+            }
         }
 
         public void GameStart()
