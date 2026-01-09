@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MoneyWeapon.Scenes
+namespace MoneyWeapon.Utils
 {
-    internal class LogScene
+    internal class Log
     {
     }
 }
