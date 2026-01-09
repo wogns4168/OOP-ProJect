@@ -58,12 +58,7 @@ namespace MoneyWeapon.Managers
         public static void Render()
         {
             Current?.Render();
-            Log.NomalLog("씬 출력");
         }
 
-        public static void LogRender()
-        {
-
-        }
     }
 }

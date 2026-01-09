@@ -41,12 +41,12 @@ namespace MoneyWeapon.Managers
             IsGameOver = false;
 
             SceneManager.AddScene("Title", new TitleScene());
-            SceneManager.AddScene("Credit", new TitleScene());
-            SceneManager.AddScene("Town", new TitleScene());
-            SceneManager.AddScene("Exchange", new TitleScene());
-            SceneManager.AddScene("Mine", new TitleScene());
-            SceneManager.AddScene("Dungeon", new TitleScene());
-            SceneManager.AddScene("Ending", new TitleScene());
+            SceneManager.AddScene("Credit", new CreditScene());
+            SceneManager.AddScene("Town", new TownScene());
+            SceneManager.AddScene("Exchange", new ExchangeScene());
+            SceneManager.AddScene("Mine", new MineScene());
+            SceneManager.AddScene("Dungeon", new DungeonScene());
+            SceneManager.AddScene("Ending", new EndingScene());
 
             SceneManager.Change("Title");
         }

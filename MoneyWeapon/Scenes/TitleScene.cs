@@ -26,6 +26,7 @@ namespace MoneyWeapon.Scenes
         }
         public override void Enter()
         {
+            _titleMenu.Reset();
         }
 
         public override void Exit()
@@ -62,12 +63,12 @@ namespace MoneyWeapon.Scenes
 
         public void GameStart()
         {
-
+            SceneManager.Change("Town");
         }
 
         public void Credit()
         {
-
+            SceneManager.Change("Credit");
         }
 
         public void GameQuit()
