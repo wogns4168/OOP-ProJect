@@ -1,10 +1,11 @@
-﻿using System;
+﻿using MoneyWeapon.GameObjects;
+using MoneyWeapon.Managers;
+using MoneyWeapon.Utils;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using MoneyWeapon.GameObjects;
-using MoneyWeapon.Utils;
 
 namespace MoneyWeapon.Scenes
 {
@@ -12,16 +13,18 @@ namespace MoneyWeapon.Scenes
     {
         private Tile[,] _townField = new Tile[10, 50];
         private Player _player;
-        private Wall _wall;
+        private MinePotal _minePotal;
+        private DengeonPotal _dengeonPotal;
         private ExchangePotal _exchangePotal;
 
-        public TownScene(Player player) => Init(player);
+        public TownScene(Player player, MinePotal minePotal, DengeonPotal dengeonPotal, ExchangePotal exchangePotal) => Init(player, minePotal, dengeonPotal, exchangePotal);
 
-        public void Init(Player player)
+        public void Init(Player player, MinePotal minePotal, DengeonPotal dengeonPotal, ExchangePotal exchangePotal)
         {
             _player = player;
-            _wall = new Wall();
-            _exchangePotal = new ExchangePotal();
+            _minePotal = minePotal;
+            _dengeonPotal = dengeonPotal;
+            _exchangePotal = exchangePotal;
 
             for (int y = 0; y < _townField.GetLength(0); y++)
             {
@@ -34,8 +37,6 @@ namespace MoneyWeapon.Scenes
                     {
                         _townField[y, x].OnTileObject = new Wall();
                     }
-
-                    if (y == 1 && x == 3) _townField[y, x].OnTileObject = new ExchangePotal();
                 }
             }
         }
@@ -43,8 +44,22 @@ namespace MoneyWeapon.Scenes
         public override void Enter()
         {
             _player.Field = _townField;
+            _exchangePotal.Field = _townField;
+            _dengeonPotal.Field = _townField;
+            _minePotal.Field = _townField;
             _player.Position = new Vector(1, 4);
-            _townField[_player.Position.Y, _player.Position.X].OnTileObject = _player;
+            _exchangePotal.Position = new Vector(25, 1);
+            _dengeonPotal.Position = new Vector(_townField.GetLength(1) - 2, 4);
+            _minePotal.Position = new Vector(25, _townField.GetLength(0) - 2);
+            ObjectPosition(_player);
+            ObjectPosition(_exchangePotal);
+            ObjectPosition(_dengeonPotal);
+            ObjectPosition(_minePotal);
+        }
+
+        public void ObjectPosition(GameObject obj)
+        {
+            _townField[obj.Position.Y, obj.Position.X].OnTileObject = obj;
         }
 
         public override void Exit()
@@ -62,6 +77,8 @@ namespace MoneyWeapon.Scenes
         public override void Update()
         {
             _player.Update();
+
+
         }
 
         private void PrintField()

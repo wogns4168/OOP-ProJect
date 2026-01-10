@@ -16,6 +16,9 @@ namespace MoneyWeapon.Managers
         public static bool IsGameOver {  get; set; }
 
         private Player _player;
+        private MinePotal _minePotal;
+        private DengeonPotal _dengeonPotal;
+        private ExchangePotal _exchangePotal;
 
         public void Run()
         {
@@ -43,10 +46,13 @@ namespace MoneyWeapon.Managers
         {
             IsGameOver = false;
             _player = new Player();
+            _dengeonPotal = new DengeonPotal();
+            _exchangePotal = new ExchangePotal();
+            _minePotal = new MinePotal();
 
             SceneManager.AddScene("Title", new TitleScene());
             SceneManager.AddScene("Credit", new CreditScene());
-            SceneManager.AddScene("Town", new TownScene(_player));
+            SceneManager.AddScene("Town", new TownScene(_player, _minePotal, _dengeonPotal, _exchangePotal));
             SceneManager.AddScene("Exchange", new ExchangeScene());
             SceneManager.AddScene("Mine", new MineScene());
             SceneManager.AddScene("Dungeon", new DungeonScene());

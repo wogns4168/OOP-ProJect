@@ -43,7 +43,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="GameObjects\DengeonPotal.cs" />
     <Compile Include="GameObjects\GameObject.cs" />
+    <Compile Include="GameObjects\MinePotal.cs" />
     <Compile Include="GameObjects\Player.cs" />
     <Compile Include="GameObjects\ExchangePotal.cs" />
     <Compile Include="GameObjects\IPotal.cs" />
