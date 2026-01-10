@@ -17,7 +17,7 @@ namespace MoneyWeapon.Managers
 
         private Player _player;
         private MinePotal _minePotal;
-        private DengeonPotal _dengeonPotal;
+        private DungeonPotal _dungeonPotal;
         private ExchangePotal _exchangePotal;
         private TownPotal _townPotal;
         private Player _prevPlayer;
@@ -48,7 +48,7 @@ namespace MoneyWeapon.Managers
         {
             IsGameOver = false;
             _player = new Player();
-            _dengeonPotal = new DengeonPotal();
+            _dungeonPotal = new DungeonPotal();
             _exchangePotal = new ExchangePotal();
             _minePotal = new MinePotal();
             _townPotal = new TownPotal();

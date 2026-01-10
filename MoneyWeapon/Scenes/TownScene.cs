@@ -15,7 +15,7 @@ namespace MoneyWeapon.Scenes
         private Player _player = new Player();
         private Player _prevPlayer = new Player();
         private MinePotal _minePotal = new MinePotal();
-        private DengeonPotal _dengeonPotal = new DengeonPotal();
+        private DungeonPotal _dungeonPotal = new DungeonPotal();
         private ExchangePotal _exchangePotal = new ExchangePotal();
 
         public TownScene() => Init();
@@ -50,11 +50,11 @@ namespace MoneyWeapon.Scenes
             }
             _prevPlayer.Position = Vector.None;
             _exchangePotal.Position = new Vector(25, 1);
-            _dengeonPotal.Position = new Vector(_townField.GetLength(1) - 2, 4);
+            _dungeonPotal.Position = new Vector(_townField.GetLength(1) - 2, 4);
             _minePotal.Position = new Vector(25, _townField.GetLength(0) - 2);
             ObjectPosition(_player);
             ObjectPosition(_exchangePotal);
-            ObjectPosition(_dengeonPotal);
+            ObjectPosition(_dungeonPotal);
             ObjectPosition(_minePotal);
             Log.NomalLog("마을씬 진입");
         }
@@ -87,9 +87,9 @@ namespace MoneyWeapon.Scenes
                     SceneManager.Change("Exchange");
                 }
 
-                if (Vector.Near(_player.Position, _dengeonPotal.Position))
+                if (Vector.Near(_player.Position, _dungeonPotal.Position))
                 {
-                    SceneManager.Change("Dengeon");
+                    SceneManager.Change("Dungeon");
                 }
 
                 if (Vector.Near(_player.Position, _minePotal.Position))

@@ -7,11 +7,11 @@ using System.Threading.Tasks;
 
 namespace MoneyWeapon.GameObjects
 {
-    internal class DengeonPotal : GameObject, IPotal
+    internal class DungeonPotal : GameObject, IPotal
     {
         public string Name { get; } = "던전 입구";
 
-        public DengeonPotal() => Symbol = '@';
+        public DungeonPotal() => Symbol = '@';
 
     }
 }
