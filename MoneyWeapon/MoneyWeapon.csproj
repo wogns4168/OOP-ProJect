@@ -45,6 +45,8 @@
   <ItemGroup>
     <Compile Include="GameObjects\GameObject.cs" />
     <Compile Include="GameObjects\Player.cs" />
+    <Compile Include="GameObjects\ExchangePotal.cs" />
+    <Compile Include="GameObjects\IPotal.cs" />
     <Compile Include="GameObjects\Wall.cs" />
     <Compile Include="Managers\GameManager.cs" />
     <Compile Include="Managers\InputManager.cs" />

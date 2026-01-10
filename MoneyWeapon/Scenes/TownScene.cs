@@ -13,6 +13,7 @@ namespace MoneyWeapon.Scenes
         private Tile[,] _townField = new Tile[10, 50];
         private Player _player;
         private Wall _wall;
+        private ExchangePotal _exchangePotal;
 
         public TownScene(Player player) => Init(player);
 
@@ -20,6 +21,7 @@ namespace MoneyWeapon.Scenes
         {
             _player = player;
             _wall = new Wall();
+            _exchangePotal = new ExchangePotal();
 
             for (int y = 0; y < _townField.GetLength(0); y++)
             {
@@ -33,6 +35,7 @@ namespace MoneyWeapon.Scenes
                         _townField[y, x].OnTileObject = new Wall();
                     }
 
+                    if (y == 1 && x == 3) _townField[y, x].OnTileObject = new ExchangePotal();
                 }
             }
         }
