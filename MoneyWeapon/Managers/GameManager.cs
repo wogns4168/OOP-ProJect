@@ -20,6 +20,7 @@ namespace MoneyWeapon.Managers
         private DengeonPotal _dengeonPotal;
         private ExchangePotal _exchangePotal;
         private TownPotal _townPotal;
+        private Player _prevPlayer;
 
         public void Run()
         {
@@ -51,10 +52,11 @@ namespace MoneyWeapon.Managers
             _exchangePotal = new ExchangePotal();
             _minePotal = new MinePotal();
             _townPotal = new TownPotal();
+            _prevPlayer = new Player();
 
             SceneManager.AddScene("Title", new TitleScene());
             SceneManager.AddScene("Credit", new CreditScene());
-            SceneManager.AddScene("Town", new TownScene(_player, _minePotal, _dengeonPotal, _exchangePotal));
+            SceneManager.AddScene("Town", new TownScene(_player, _minePotal, _dengeonPotal, _exchangePotal, _prevPlayer));
             SceneManager.AddScene("Exchange", new ExchangeScene(_player, _townPotal));
             SceneManager.AddScene("Mine", new MineScene());
             SceneManager.AddScene("Dungeon", new DungeonScene());

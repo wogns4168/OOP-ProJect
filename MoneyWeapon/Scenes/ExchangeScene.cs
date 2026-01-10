@@ -1,4 +1,5 @@
 ﻿using MoneyWeapon.GameObjects;
+using MoneyWeapon.Managers;
 using MoneyWeapon.Utils;
 using System;
 using System.Collections.Generic;
@@ -69,6 +70,7 @@ namespace MoneyWeapon.Scenes
 
         public override void Exit()
         {
+            _exchangeField[_player.Position.Y, _player.Position.X].OnTileObject = null;
         }
 
         public override void Render()
@@ -80,6 +82,14 @@ namespace MoneyWeapon.Scenes
         public override void Update()
         {
             _player.Update();
+
+            if(InputManager.GetKey(ConsoleKey.Enter))
+            {
+                if (Vector.Near(_player.Position, _townPotal.Position))
+                {
+                    SceneManager.ChangePrevScene();
+                }
+            }
         }
     }
 }

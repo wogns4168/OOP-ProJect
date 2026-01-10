@@ -13,18 +13,20 @@ namespace MoneyWeapon.Scenes
     {
         private Tile[,] _townField = new Tile[10, 50];
         private Player _player;
+        private Player _prevPlayer;
         private MinePotal _minePotal;
         private DengeonPotal _dengeonPotal;
         private ExchangePotal _exchangePotal;
 
-        public TownScene(Player player, MinePotal minePotal, DengeonPotal dengeonPotal, ExchangePotal exchangePotal) => Init(player, minePotal, dengeonPotal, exchangePotal);
+        public TownScene(Player player, MinePotal minePotal, DengeonPotal dengeonPotal, ExchangePotal exchangePotal, Player prevPlayer) => Init(player, minePotal, dengeonPotal, exchangePotal, prevPlayer);
 
-        public void Init(Player player, MinePotal minePotal, DengeonPotal dengeonPotal, ExchangePotal exchangePotal)
+        public void Init(Player player, MinePotal minePotal, DengeonPotal dengeonPotal, ExchangePotal exchangePotal, Player prevPlayer)
         {
             _player = player;
             _minePotal = minePotal;
             _dengeonPotal = dengeonPotal;
             _exchangePotal = exchangePotal;
+            _prevPlayer = prevPlayer;
 
             for (int y = 0; y < _townField.GetLength(0); y++)
             {
@@ -47,7 +49,16 @@ namespace MoneyWeapon.Scenes
             _exchangePotal.Field = _townField;
             _dengeonPotal.Field = _townField;
             _minePotal.Field = _townField;
-            _player.Position = new Vector(1, 4);
+            _prevPlayer.Field = _townField;
+            if (_prevPlayer.Position.X == Vector.None.X && _prevPlayer.Position.Y == Vector.None.Y)
+            {
+                _player.Position = new Vector(1, 4); 
+            }
+            else
+            {
+                _player.Position = _prevPlayer.Position;
+            }
+            _prevPlayer.Position = Vector.None;
             _exchangePotal.Position = new Vector(25, 1);
             _dengeonPotal.Position = new Vector(_townField.GetLength(1) - 2, 4);
             _minePotal.Position = new Vector(25, _townField.GetLength(0) - 2);
@@ -65,8 +76,7 @@ namespace MoneyWeapon.Scenes
 
         public override void Exit()
         {
-            _townField[_player.Position.Y, _player.Position.X].OnTileObject = null;
-            _player.Field = null;
+            _prevPlayer.Position = _player.Position;
         }
 
         public override void Render()
