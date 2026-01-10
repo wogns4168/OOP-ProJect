@@ -12,7 +12,7 @@ namespace MoneyWeapon.GameObjects
     {
         public Tile[,] Field { get; set; }
 
-        public Player() 
+        public Player()
         {
             Init();
         }
@@ -22,43 +22,58 @@ namespace MoneyWeapon.GameObjects
             Symbol = 'P';
         }
 
-        public void Update()
+        public Vector Update()
         {
             if (InputManager.GetKey(ConsoleKey.UpArrow))
             {
-                Move(Vector.Up);
+                return Move(Vector.Up);
             }
 
             if (InputManager.GetKey(ConsoleKey.DownArrow))
             {
-                Move(Vector.Down);
+                return Move(Vector.Down);
             }
 
             if (InputManager.GetKey(ConsoleKey.LeftArrow))
             {
-                Move(Vector.Left);
+                return Move(Vector.Left);
             }
 
             if (InputManager.GetKey(ConsoleKey.RightArrow))
             {
-                Move(Vector.Right);
+                return Move(Vector.Right);
+            }
+
+            else
+            {
+                return Move(Vector.None);
             }
         }
 
-        public void Move(Vector direction)
+        public Vector Move(Vector direction)
         {
-            Vector Current = Position;
-            Vector nextPos = Position + direction;
+            Vector current = Position;
+            Vector nextPos = NextPos(direction);
+
 
             GameObject nextTileObject = Field[nextPos.Y, nextPos.X].OnTileObject;
 
-            if (nextTileObject != null) return;
+            if (nextTileObject != null) return current;
 
             Field[Position.Y, Position.X].OnTileObject = null;
             Field[nextPos.Y, nextPos.X].OnTileObject = this;
             Position = nextPos;
+
+            return Position;
         }
 
+        public Vector NextPos(Vector direction)
+        {
+            Vector Current = Position;
+            Vector nextPos = Position + direction;
+            return nextPos;
+
+        }
         public void Render()
         {
 

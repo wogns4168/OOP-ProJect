@@ -55,6 +55,7 @@ namespace MoneyWeapon.Scenes
             ObjectPosition(_exchangePotal);
             ObjectPosition(_dengeonPotal);
             ObjectPosition(_minePotal);
+            Log.NomalLog("마을씬 진입");
         }
 
         public void ObjectPosition(GameObject obj)
@@ -77,6 +78,27 @@ namespace MoneyWeapon.Scenes
         public override void Update()
         {
             _player.Update();
+
+            Vector p = _player.Position;
+
+            if (InputManager.GetKey(ConsoleKey.Enter))
+            {
+                if (Vector.Near(p, _exchangePotal.Position))
+                {
+                    SceneManager.Change("Exchange");
+                }
+
+                if (Vector.Near(p, _dengeonPotal.Position))
+                {
+                    SceneManager.Change("Dengeon");
+                }
+
+                if (Vector.Near(p, _minePotal.Position))
+                {
+                    SceneManager.Change("Mine");
+                }
+            }
+
 
 
         }
