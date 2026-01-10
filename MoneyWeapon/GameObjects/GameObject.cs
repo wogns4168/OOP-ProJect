@@ -10,6 +10,7 @@ namespace MoneyWeapon.GameObjects
 {
     internal abstract class GameObject
     {
+        public Tile[,] Field {  get; set; }
         public char Symbol { get; set; }
         
         public Vector Position { get; set; }

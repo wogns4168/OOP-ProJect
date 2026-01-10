@@ -9,8 +9,6 @@ namespace MoneyWeapon.GameObjects
 {
     internal class Wall : GameObject
     {
-        public Tile[,] Field { get; set; }
-
         public Wall()
         {
             Init();

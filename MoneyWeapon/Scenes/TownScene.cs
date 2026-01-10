@@ -12,21 +12,16 @@ namespace MoneyWeapon.Scenes
     internal class TownScene : Scene
     {
         private Tile[,] _townField = new Tile[10, 50];
-        private Player _player;
-        private Player _prevPlayer;
-        private MinePotal _minePotal;
-        private DengeonPotal _dengeonPotal;
-        private ExchangePotal _exchangePotal;
+        private Player _player = new Player();
+        private Player _prevPlayer = new Player();
+        private MinePotal _minePotal = new MinePotal();
+        private DengeonPotal _dengeonPotal = new DengeonPotal();
+        private ExchangePotal _exchangePotal = new ExchangePotal();
 
-        public TownScene(Player player, MinePotal minePotal, DengeonPotal dengeonPotal, ExchangePotal exchangePotal, Player prevPlayer) => Init(player, minePotal, dengeonPotal, exchangePotal, prevPlayer);
+        public TownScene() => Init();
 
-        public void Init(Player player, MinePotal minePotal, DengeonPotal dengeonPotal, ExchangePotal exchangePotal, Player prevPlayer)
+        public void Init()
         {
-            _player = player;
-            _minePotal = minePotal;
-            _dengeonPotal = dengeonPotal;
-            _exchangePotal = exchangePotal;
-            _prevPlayer = prevPlayer;
 
             for (int y = 0; y < _townField.GetLength(0); y++)
             {
@@ -45,11 +40,6 @@ namespace MoneyWeapon.Scenes
 
         public override void Enter()
         {
-            _player.Field = _townField;
-            _exchangePotal.Field = _townField;
-            _dengeonPotal.Field = _townField;
-            _minePotal.Field = _townField;
-            _prevPlayer.Field = _townField;
             if (_prevPlayer.Position.X == Vector.None.X && _prevPlayer.Position.Y == Vector.None.Y)
             {
                 _player.Position = new Vector(1, 4); 
@@ -71,6 +61,7 @@ namespace MoneyWeapon.Scenes
 
         public void ObjectPosition(GameObject obj)
         {
+            obj.Field = _townField;
             _townField[obj.Position.Y, obj.Position.X].OnTileObject = obj;
         }
 

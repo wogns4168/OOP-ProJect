@@ -10,8 +10,6 @@ namespace MoneyWeapon.GameObjects
 {
     internal class Player : GameObject
     {
-        public Tile[,] Field { get; set; }
-
         public Player()
         {
             Init();

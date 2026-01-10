@@ -11,8 +11,6 @@ namespace MoneyWeapon.GameObjects
     {
         public string Name { get; } = "광산";
 
-        public Tile[,] Field { get; set; }
-
         public MinePotal() => Init();
 
 

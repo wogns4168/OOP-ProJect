@@ -56,8 +56,8 @@ namespace MoneyWeapon.Managers
 
             SceneManager.AddScene("Title", new TitleScene());
             SceneManager.AddScene("Credit", new CreditScene());
-            SceneManager.AddScene("Town", new TownScene(_player, _minePotal, _dengeonPotal, _exchangePotal, _prevPlayer));
-            SceneManager.AddScene("Exchange", new ExchangeScene(_player, _townPotal));
+            SceneManager.AddScene("Town", new TownScene());
+            SceneManager.AddScene("Exchange", new ExchangeScene());
             SceneManager.AddScene("Mine", new MineScene());
             SceneManager.AddScene("Dungeon", new DungeonScene());
             SceneManager.AddScene("Ending", new EndingScene());

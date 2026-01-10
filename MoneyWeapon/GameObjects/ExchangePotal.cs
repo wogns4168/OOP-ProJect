@@ -11,7 +11,6 @@ namespace MoneyWeapon.GameObjects
     {
         public string Name { get; } = "주식 거래소";
 
-        public Tile[,] Field { get; set; }
 
         public ExchangePotal() => Init();
 

@@ -11,8 +11,6 @@ namespace MoneyWeapon.GameObjects
     {
         public string Name { get; } = "던전";
 
-        public Tile[,] Field { get; set; }
-
         public DengeonPotal() => Init();
 
 

@@ -12,15 +12,13 @@ namespace MoneyWeapon.Scenes
     internal class ExchangeScene : Scene
     {
         private Tile[,] _exchangeField = new Tile[10, 20];
-        private Player _player;
-        private TownPotal _townPotal;
+        private Player _player = new Player();
+        private TownPotal _townPotal = new TownPotal();
 
-        public ExchangeScene(Player player, TownPotal townPotal) => Init(player, townPotal);
+        public ExchangeScene() => Init();
 
-        public void Init(Player player, TownPotal townPotal)
+        public void Init()
         {
-            _player = player;
-            _townPotal = townPotal;
 
             for (int y = 0; y < _exchangeField.GetLength(0); y++)
             {
