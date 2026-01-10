@@ -9,19 +9,9 @@ namespace MoneyWeapon.GameObjects
 {
     internal class DengeonPotal : GameObject, IPotal
     {
-        public string Name { get; } = "던전";
+        public string Name { get; } = "던전 입구";
 
-        public DengeonPotal() => Init();
+        public DengeonPotal() => Symbol = '@';
 
-
-        public void Init()
-        {
-            Symbol = '@';
-        }
-
-        public void Render(Vector position)
-        {
-
-        }
     }
 }

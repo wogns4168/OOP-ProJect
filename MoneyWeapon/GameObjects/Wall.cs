@@ -9,14 +9,6 @@ namespace MoneyWeapon.GameObjects
 {
     internal class Wall : GameObject
     {
-        public Wall()
-        {
-            Init();
-        }
-
-        public void Init()
-        {
-            Symbol = '#';
-        }
+        public Wall() => Symbol = '#';
     }
 }

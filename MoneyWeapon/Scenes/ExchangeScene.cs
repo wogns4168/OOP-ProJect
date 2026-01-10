@@ -35,9 +35,9 @@ namespace MoneyWeapon.Scenes
             }
 
         }
-
         public void ObjectPosition(GameObject obj)
         {
+            obj.Field = _exchangeField;
             _exchangeField[obj.Position.Y, obj.Position.X].OnTileObject = obj;
         }
 
@@ -57,8 +57,6 @@ namespace MoneyWeapon.Scenes
 
         public override void Enter()
         {
-            _player.Field = _exchangeField;
-            _townPotal.Field = _exchangeField;
             _player.Position = new Vector(9, 7);
             _townPotal.Position = new Vector(9, 8);
             ObjectPosition(_player);

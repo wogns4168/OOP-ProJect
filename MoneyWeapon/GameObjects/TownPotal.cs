@@ -9,19 +9,9 @@ namespace MoneyWeapon.GameObjects
 {
     internal class TownPotal : GameObject, IPotal
     {
-        public string Name { get; } = "주식 거래소";
+        public string Name { get; } = "마을 입구";
 
-        public TownPotal() => Init();
+        public TownPotal() => Symbol = '@';
 
-
-        public void Init()
-        {
-            Symbol = '@';
-        }
-
-        public void Render(Vector position)
-        {
-
-        }
     }
 }

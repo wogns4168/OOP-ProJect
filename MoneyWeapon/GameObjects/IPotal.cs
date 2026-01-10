@@ -11,7 +11,5 @@ namespace MoneyWeapon.GameObjects
     internal interface IPotal
     {
         string Name { get; }
-
-        void Render(Vector position);
     }
 }
