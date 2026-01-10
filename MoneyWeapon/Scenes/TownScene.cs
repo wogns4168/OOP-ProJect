@@ -79,21 +79,19 @@ namespace MoneyWeapon.Scenes
         {
             _player.Update();
 
-            Vector p = _player.Position;
-
             if (InputManager.GetKey(ConsoleKey.Enter))
             {
-                if (Vector.Near(p, _exchangePotal.Position))
+                if (Vector.Near(_player.Position, _exchangePotal.Position))
                 {
                     SceneManager.Change("Exchange");
                 }
 
-                if (Vector.Near(p, _dengeonPotal.Position))
+                if (Vector.Near(_player.Position, _dengeonPotal.Position))
                 {
                     SceneManager.Change("Dengeon");
                 }
 
-                if (Vector.Near(p, _minePotal.Position))
+                if (Vector.Near(_player.Position, _minePotal.Position))
                 {
                     SceneManager.Change("Mine");
                 }
