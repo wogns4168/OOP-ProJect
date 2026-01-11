@@ -14,6 +14,8 @@ namespace MoneyWeapon.Scenes
         private Tile[,] _exchangeField = new Tile[10, 20];
         private Player _player = new Player();
         private TownPotal _townPotal = new TownPotal();
+        private Exchange _exchange = new Exchange();
+        public static bool exchangeIsActive = false;
 
         public ExchangeScene() => Init();
 
@@ -59,8 +61,10 @@ namespace MoneyWeapon.Scenes
         {
             _player.Position = new Vector(9, 7);
             _townPotal.Position = new Vector(9, 8);
+            _exchange.Position = new Vector(9, 1);
             ObjectPosition(_player);
             ObjectPosition(_townPotal);
+            ObjectPosition(_exchange);
             Log.NomalLog("거래소씬 진입");
         }
 
@@ -77,13 +81,29 @@ namespace MoneyWeapon.Scenes
 
         public override void Update()
         {
-            _player.Update();
+            if (!exchangeIsActive)
+            {
+                _player.Update();
+            }
 
             if(InputManager.GetKey(ConsoleKey.Enter))
             {
                 if (Vector.Near(_player.Position, _townPotal.Position))
                 {
                     SceneManager.ChangePrevScene();
+                }
+
+                if (Vector.Near(_player.Position, _exchange.Position))
+                {
+                    exchangeIsActive = true;
+                }
+            }
+
+            if(exchangeIsActive)
+            {
+                if(InputManager.GetKey(ConsoleKey.Escape))
+                {
+                    exchangeIsActive = false;
                 }
             }
         }

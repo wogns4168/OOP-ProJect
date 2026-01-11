@@ -35,22 +35,25 @@ namespace MoneyWeapon.Managers
 
                 InputManager.GetUserInput();
 
-                if (InputManager.GetKey(ConsoleKey.L))
+                if (ExchangeScene.exchangeIsActive == false)
                 {
-                    Log.HandleControl();
+                    if (InputManager.GetKey(ConsoleKey.L))
+                    {
+                        Log.HandleControl();
+                    }
+
+                    if (!(SceneManager.curScene() is TitleScene) && Log.IsActive == false )
+                    {
+                        if (InputManager.GetKey(ConsoleKey.I))
+                        {
+                            Inventory.HandleControl();
+                        }
+                    }
                 }
 
-                if (!(SceneManager.curScene() is TitleScene))
+                if (Inventory.IsActive)
                 {
-                    if (InputManager.GetKey(ConsoleKey.I))
-                    {
-                        Inventory.HandleControl();
-                    }
-
-                    if (Inventory.IsActive)
-                    {
-                        Inventory.Update();
-                    }
+                    Inventory.Update();
                 }
 
                 SceneManager.Update();

@@ -1,8 +1,11 @@
 ﻿using MoneyWeapon.GameObjects;
 using MoneyWeapon.Managers;
+using MoneyWeapon.Scenes;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.InteropServices;
+using System.Security.Authentication;
 using System.Text;
 using System.Threading.Tasks;
 using static MoneyWeapon.Utils.Log;
@@ -15,9 +18,10 @@ namespace MoneyWeapon.Utils
         public static bool IsActive { get; set; }
         private static Ractangle _outline;
         const int MaxHeight = 15;
+
         private static int CurrentIndex { get; set; }
 
-        private static List<string> InventoryList = new List<string>();
+        private static List<(string text, Action action)> InventoryList = new List<(string, Action)>();
         public static void Render(int x, int y)
         {
             if (!IsActive) return;
@@ -38,20 +42,20 @@ namespace MoneyWeapon.Utils
 
             for (int i = start; i < InventoryList.Count; i++)
             {
-                string text = InventoryList[i];
+                var (text, action) = InventoryList[i];
 
                 Console.SetCursorPosition(x + 22, y + 2 + (i - start));
 
                 if (i == CurrentIndex)
                 {
                     "->".Print(ConsoleColor.Green);
-                    InventoryList[i].Print(ConsoleColor.Green);
+                    text.Print(ConsoleColor.Green);
                     continue;
                 }
                 else
                 {
                     Console.Write("  ");
-                    InventoryList[i].Print();
+                    text.Print();
                 }
             }
 
@@ -93,9 +97,19 @@ namespace MoneyWeapon.Utils
                 CurrentIndex = InventoryList.Count - 1;
         }
 
-        public static void Add(string item)
+        public static void Select()
         {
-            InventoryList.Add(item);
+            if (InventoryList.Count == 0) return;
+
+            InventoryList[CurrentIndex].action?.Invoke();
+
+            if (InventoryList.Count == 0) CurrentIndex = 0;
+            else if (CurrentIndex >= InventoryList.Count) CurrentIndex = InventoryList.Count - 1;
+        }
+
+        public static void Add(string item, Action action)
+        {
+            InventoryList.Add((item, action));
         }
     }
 }
