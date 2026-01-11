@@ -31,12 +31,26 @@ namespace MoneyWeapon.Managers
                 Console.Clear();
                 SceneManager.Render();
                 Log.Render(40, 10);
+                Inventory.Render(40, 10);
 
                 InputManager.GetUserInput();
 
                 if (InputManager.GetKey(ConsoleKey.L))
                 {
                     Log.HandleControl();
+                }
+
+                if (!(SceneManager.curScene() is TitleScene))
+                {
+                    if (InputManager.GetKey(ConsoleKey.I))
+                    {
+                        Inventory.HandleControl();
+                    }
+
+                    if (Inventory.IsActive)
+                    {
+                        Inventory.Update();
+                    }
                 }
 
                 SceneManager.Update();

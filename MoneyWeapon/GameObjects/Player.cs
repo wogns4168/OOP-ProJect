@@ -10,6 +10,9 @@ namespace MoneyWeapon.GameObjects
 {
     internal class Player : GameObject
     {
+        public static bool IsActive { get; set; }
+
+
         public Player()
         {
             Init();
@@ -22,30 +25,31 @@ namespace MoneyWeapon.GameObjects
 
         public Vector Update()
         {
-            if (InputManager.GetKey(ConsoleKey.UpArrow))
+            if (IsActive)
             {
-                return Move(Vector.Up);
+                if (InputManager.GetKey(ConsoleKey.UpArrow))
+                {
+                    return Move(Vector.Up);
+                }
+
+                if (InputManager.GetKey(ConsoleKey.DownArrow))
+                {
+                    return Move(Vector.Down);
+                }
+
+                if (InputManager.GetKey(ConsoleKey.LeftArrow))
+                {
+                    return Move(Vector.Left);
+                }
+
+                if (InputManager.GetKey(ConsoleKey.RightArrow))
+                {
+                    return Move(Vector.Right);
+                }
             }
 
-            if (InputManager.GetKey(ConsoleKey.DownArrow))
-            {
-                return Move(Vector.Down);
-            }
-
-            if (InputManager.GetKey(ConsoleKey.LeftArrow))
-            {
-                return Move(Vector.Left);
-            }
-
-            if (InputManager.GetKey(ConsoleKey.RightArrow))
-            {
-                return Move(Vector.Right);
-            }
-
-            else
-            {
-                return Move(Vector.None);
-            }
+            return Position;
+            
         }
 
         public Vector Move(Vector direction)

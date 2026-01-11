@@ -48,6 +48,11 @@ namespace MoneyWeapon.Managers
 
         }
 
+        public static Scene curScene()
+        {
+            return Current;
+        }
+
         public static void Update()
         {
             Current?.Update();
