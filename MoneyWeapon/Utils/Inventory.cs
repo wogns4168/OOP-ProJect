@@ -38,10 +38,13 @@ namespace MoneyWeapon.Utils
 
             Console.SetCursorPosition(x + 21, y + 1);
             "[인벤토리]".Print(ConsoleColor.Red);
+            Console.SetCursorPosition(x + 35, y + 1);
+            $"보유 금액 : {Player.Money}".Print(ConsoleColor.Green);
             Console.SetCursorPosition(x + 24, y + 2);
             "[이름]".Print(ConsoleColor.Yellow);
             Console.SetCursorPosition(x + 42, y + 2);
             "[가격]".Print(ConsoleColor.Yellow);
+            
 
 
 

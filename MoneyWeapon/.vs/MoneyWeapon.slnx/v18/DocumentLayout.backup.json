@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\KGA1\\Documents\\GitHub\\04-oop-console-project-wogns4168\\MoneyWeapon\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C221BE72-7895-4E15-A9D3-19A6564773CB}|MoneyWeapon.csproj|C:\\Users\\KGA1\\Documents\\GitHub\\04-oop-console-project-wogns4168\\MoneyWeapon\\scenes\\exchangescene.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C221BE72-7895-4E15-A9D3-19A6564773CB}|MoneyWeapon.csproj|solutionrelative:scenes\\exchangescene.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{C221BE72-7895-4E15-A9D3-19A6564773CB}|MoneyWeapon.csproj|c:\\users\\kga1\\documents\\github\\04-oop-console-project-wogns4168\\moneyweapon\\utils\\inventory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C221BE72-7895-4E15-A9D3-19A6564773CB}|MoneyWeapon.csproj|solutionrelative:utils\\inventory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C221BE72-7895-4E15-A9D3-19A6564773CB}|MoneyWeapon.csproj|C:\\Users\\KGA1\\Documents\\GitHub\\04-oop-console-project-wogns4168\\MoneyWeapon\\scenes\\exchangescene.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C221BE72-7895-4E15-A9D3-19A6564773CB}|MoneyWeapon.csproj|solutionrelative:scenes\\exchangescene.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C221BE72-7895-4E15-A9D3-19A6564773CB}|MoneyWeapon.csproj|c:\\users\\kga1\\documents\\github\\04-oop-console-project-wogns4168\\moneyweapon\\gameobjects\\stock.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -134,7 +134,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Document",
@@ -177,13 +177,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "ExchangeScene.cs",
               "DocumentMoniker": "C:\\Users\\KGA1\\Documents\\GitHub\\04-oop-console-project-wogns4168\\MoneyWeapon\\Scenes\\ExchangeScene.cs",
               "RelativeDocumentMoniker": "Scenes\\ExchangeScene.cs",
-              "ToolTip": "C:\\Users\\KGA1\\Documents\\GitHub\\04-oop-console-project-wogns4168\\MoneyWeapon\\Scenes\\ExchangeScene.cs*",
-              "RelativeToolTip": "Scenes\\ExchangeScene.cs*",
-              "ViewState": "AgIAADoAAAAAAAAAAAAAAEYAAAANAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\KGA1\\Documents\\GitHub\\04-oop-console-project-wogns4168\\MoneyWeapon\\Scenes\\ExchangeScene.cs",
+              "RelativeToolTip": "Scenes\\ExchangeScene.cs",
+              "ViewState": "AgIAADoAAAAAAAAAAAAAAEcAAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-01-10T15:12:55.672Z",
               "EditorCaption": ""
@@ -202,13 +202,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "Inventory.cs",
               "DocumentMoniker": "C:\\Users\\KGA1\\Documents\\GitHub\\04-oop-console-project-wogns4168\\MoneyWeapon\\Utils\\Inventory.cs",
               "RelativeDocumentMoniker": "Utils\\Inventory.cs",
-              "ToolTip": "C:\\Users\\KGA1\\Documents\\GitHub\\04-oop-console-project-wogns4168\\MoneyWeapon\\Utils\\Inventory.cs",
-              "RelativeToolTip": "Utils\\Inventory.cs",
-              "ViewState": "AgIAAB0AAAAAAAAAAAAgwCoAAAAAAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\KGA1\\Documents\\GitHub\\04-oop-console-project-wogns4168\\MoneyWeapon\\Utils\\Inventory.cs*",
+              "RelativeToolTip": "Utils\\Inventory.cs*",
+              "ViewState": "AgIAAB0AAAAAAAAAAAAgwCgAAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-01-11T05:09:09.245Z",
               "EditorCaption": ""
