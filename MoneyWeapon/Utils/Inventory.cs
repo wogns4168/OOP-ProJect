@@ -2,6 +2,8 @@
 using MoneyWeapon.Managers;
 using MoneyWeapon.Scenes;
 using System;
+using System.CodeDom;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.InteropServices;
@@ -22,7 +24,62 @@ namespace MoneyWeapon.Utils
 
         private static int CurrentIndex { get; set; }
 
-        public static List<(string text, Action action)> InventoryList = new List<(string, Action)>();
+        public static List<InventorySlot> InventoryList = new List<InventorySlot>();
+
+        public static void Add(Stock stock, int number)
+        {
+            InventorySlot slot = null;
+            for (int i = 0; i < InventoryList.Count; i++)
+            {
+                if (slot == InventoryList[i])
+                {
+                    slot = InventoryList[i];
+                    break;
+                }
+            }
+
+            if(slot == null)
+            {
+                InventoryList.Add(new InventorySlot(stock, number));
+            }
+            else
+            {
+                slot.Quantity += number;
+            }
+        }
+
+        public static void Remove(Stock stock, int number)
+        {
+            InventorySlot slot = null;
+            for (int i = 0; i < InventoryList.Count; i++)
+            {
+                if (slot == InventoryList[i])
+                {
+                    slot = InventoryList[i];
+                    break;
+                }
+            }
+
+            if (slot == null) return;
+
+            else
+            {
+                if (slot.Quantity < number) return;
+                else if (slot.Quantity == number) InventoryList.Remove(slot);
+                else slot.Quantity -= number;
+            }
+        }
+
+        public static int AllPrice()
+        {
+            int allPrice = 0;
+            for (int i = 0; i < InventoryList.Count; i++)
+            {
+                InventorySlot slot = InventoryList[i];
+                allPrice += slot.Quantity * slot.stock.Price;
+            }
+            return allPrice;
+        }
         public static void Render(int x, int y)
         {
             if (!IsActive) return;
@@ -39,10 +96,12 @@ namespace MoneyWeapon.Utils
             Console.SetCursorPosition(x + 21, y + 1);
             "[인벤토리]".Print(ConsoleColor.Red);
             Console.SetCursorPosition(x + 35, y + 1);
-            $"보유 금액 : {Player.Money}".Print(ConsoleColor.Green);
-            Console.SetCursorPosition(x + 24, y + 2);
+            $"총 금액 : {AllPrice()}".Print(ConsoleColor.Green);
+            Console.SetCursorPosition(x + 23, y + 2);
             "[이름]".Print(ConsoleColor.Yellow);
-            Console.SetCursorPosition(x + 42, y + 2);
+            Console.SetCursorPosition(x + 34, y + 2);
+            "[보유]".Print(ConsoleColor.Yellow);
+            Console.SetCursorPosition(x + 44, y + 2);
             "[가격]".Print(ConsoleColor.Yellow);
             
 
@@ -50,20 +109,27 @@ namespace MoneyWeapon.Utils
 
             for (int i = start; i < InventoryList.Count; i++)
             {
-                var (text, action) = InventoryList[i];
+                var item = InventoryList[i];
 
-                Console.SetCursorPosition(x + 22, y + 3 + (i - start));
+                int X = _outline.X + 2;
+                int Y = _outline.Y + 3 + (i - start);
+
+                Console.SetCursorPosition(X, Y);
 
                 if (i == CurrentIndex)
                 {
                     "->".Print(ConsoleColor.Green);
-                    text.Print(ConsoleColor.Green);
+                    item.stock.Name.Print(ConsoleColor.Green);
+                    Console.SetCursorPosition(X + 23, Y);
+                    Console.WriteLine(item.stock.Price);
                     continue;
                 }
                 else
                 {
                     Console.Write("  ");
-                    text.Print();
+                    item.stock.Name.Print();
+                    Console.SetCursorPosition(X + 23, Y);
+                    Console.WriteLine(item.stock.Price);
                 }
             }
 
@@ -108,11 +174,6 @@ namespace MoneyWeapon.Utils
         public static void Select()
         {
             Onselect?.Invoke(CurrentIndex);
-        }
-
-        public static void Add(string item, Action action)
-        {
-            InventoryList.Add((item, action));
         }
     }
 }

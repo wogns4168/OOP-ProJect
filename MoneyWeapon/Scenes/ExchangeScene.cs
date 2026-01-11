@@ -60,9 +60,11 @@ namespace MoneyWeapon.Scenes
 
             Console.SetCursorPosition(x + 11, y + 1);
             "[거래소]".Print(ConsoleColor.Red);
-            Console.SetCursorPosition(x + 14, y + 2);
+            Console.SetCursorPosition(x + 25, y + 1);
+            $"보유 금액 : {Player.Money}".Print(ConsoleColor.Green);
+            Console.SetCursorPosition(x + 13, y + 2);
             "[이름]".Print(ConsoleColor.Yellow);
-            Console.SetCursorPosition(x + 32, y + 2);
+            Console.SetCursorPosition(x + 34, y + 2);
             "[가격]".Print(ConsoleColor.Yellow);
 
 
@@ -71,8 +73,8 @@ namespace MoneyWeapon.Scenes
             {
                 var item = exchangeStockList[i];
 
-                int X = x + 12;
-                int Y = y + 3 + (i - start);
+                int X = _outline.X + 2;
+                int Y = _outline.Y + 3 + (i - start);
 
                 Console.SetCursorPosition(X, Y);
 
@@ -80,7 +82,7 @@ namespace MoneyWeapon.Scenes
                 {
                     "->".Print(ConsoleColor.Green);
                     item.Name.Print(ConsoleColor.Green);
-                    Console.SetCursorPosition(X + 20, Y);
+                    Console.SetCursorPosition(X + 23, Y);
                     Console.WriteLine(item.Price);
                     continue;
                 }
@@ -88,7 +90,7 @@ namespace MoneyWeapon.Scenes
                 {
                     Console.Write("  ");
                     item.Name.Print();
-                    Console.SetCursorPosition(X + 20, Y);
+                    Console.SetCursorPosition(X + 23, Y);
                     Console.WriteLine(item.Price);
                 }
             }
@@ -104,6 +106,11 @@ namespace MoneyWeapon.Scenes
         }
 
         public void SellItem(int index)
+        {
+
+        }
+
+        public void BuyItem(int index)
         {
 
         }
