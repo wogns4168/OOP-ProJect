@@ -66,6 +66,7 @@ namespace MoneyWeapon.Utils
 
         public static void HandleControl()
         {
+            if(!Inventory.IsActive)
             IsActive = !IsActive;
         }
     }
