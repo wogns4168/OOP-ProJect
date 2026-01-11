@@ -17,18 +17,20 @@ namespace MoneyWeapon.Scenes
 
         private static int CurrentIndex { get; set; }
 
-        private static List<(string text, Action action)> exchangeList = new List<(string, Action)>();
+        private static List<Stock> exchangeStockList = new List<Stock>();
 
         public ExchangeScene() => Init();
 
         public void Init()
         {
+            exchangeStockList.Add(new Stock("주식 1", 10000, 1000, 100000, 100));
         }
 
         public override void Enter()
         {
             exchangeIsActive = true;
             Inventory.IsActive = true;
+            Inventory.Onselect += SellItem;
         }
 
         public override void Exit()
@@ -48,35 +50,46 @@ namespace MoneyWeapon.Scenes
             if (!exchangeIsActive) return;
 
             int contentHeight = MaxHeight - 3;
-            int start = Math.Max(0, exchangeList.Count - contentHeight);
+            int start = Math.Max(0, exchangeStockList.Count - contentHeight);
 
             _outline.X = x + 10;
             _outline.Y = y;
             _outline.Width = 40;
-            _outline.Height = 3 + exchangeList.Count - start;
+            _outline.Height = 4 + exchangeStockList.Count - start;
             _outline.Draw();
 
             Console.SetCursorPosition(x + 11, y + 1);
             "[거래소]".Print(ConsoleColor.Red);
+            Console.SetCursorPosition(x + 14, y + 2);
+            "[이름]".Print(ConsoleColor.Yellow);
+            Console.SetCursorPosition(x + 32, y + 2);
+            "[가격]".Print(ConsoleColor.Yellow);
 
 
 
-            for (int i = start; i < exchangeList.Count; i++)
+            for (int i = start; i < exchangeStockList.Count; i++)
             {
-                var (text, action) = exchangeList[i];
+                var item = exchangeStockList[i];
 
-                Console.SetCursorPosition(x + 12, y + 2 + (i - start));
+                int X = x + 12;
+                int Y = y + 3 + (i - start);
+
+                Console.SetCursorPosition(X, Y);
 
                 if (i == CurrentIndex)
                 {
                     "->".Print(ConsoleColor.Green);
-                    text.Print(ConsoleColor.Green);
+                    item.Name.Print(ConsoleColor.Green);
+                    Console.SetCursorPosition(X + 20, Y);
+                    Console.WriteLine(item.Price);
                     continue;
                 }
                 else
                 {
                     Console.Write("  ");
-                    text.Print();
+                    item.Name.Print();
+                    Console.SetCursorPosition(X + 20, Y);
+                    Console.WriteLine(item.Price);
                 }
             }
 
@@ -88,6 +101,11 @@ namespace MoneyWeapon.Scenes
             {
                 SceneManager.ChangePrevScene();
             }
+        }
+
+        public void SellItem(int index)
+        {
+
         }
     }
 }

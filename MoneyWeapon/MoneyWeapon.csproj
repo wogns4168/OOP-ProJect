@@ -45,10 +45,12 @@
   <ItemGroup>
     <Compile Include="GameObjects\DungeonPotal.cs" />
     <Compile Include="GameObjects\GameObject.cs" />
+    <Compile Include="GameObjects\Item.cs" />
     <Compile Include="GameObjects\MinePotal.cs" />
     <Compile Include="GameObjects\Player.cs" />
     <Compile Include="GameObjects\ExchangePotal.cs" />
     <Compile Include="GameObjects\IPotal.cs" />
+    <Compile Include="GameObjects\Stock.cs" />
     <Compile Include="GameObjects\TownPotal.cs" />
     <Compile Include="GameObjects\Wall.cs" />
     <Compile Include="Managers\GameManager.cs" />

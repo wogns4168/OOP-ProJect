@@ -18,6 +18,7 @@ namespace MoneyWeapon.Utils
         public static bool IsActive { get; set; }
         private static Ractangle _outline;
         const int MaxHeight = 15;
+        public static event Action<int> Onselect;
 
         private static int CurrentIndex { get; set; }
 
@@ -32,11 +33,15 @@ namespace MoneyWeapon.Utils
             _outline.X = x + 20;
             _outline.Y = y;
             _outline.Width = 40;
-            _outline.Height = 3 + InventoryList.Count - start;
+            _outline.Height = 4 + InventoryList.Count - start;
             _outline.Draw();
 
             Console.SetCursorPosition(x + 21, y + 1);
             "[인벤토리]".Print(ConsoleColor.Red);
+            Console.SetCursorPosition(x + 24, y + 2);
+            "[이름]".Print(ConsoleColor.Yellow);
+            Console.SetCursorPosition(x + 42, y + 2);
+            "[가격]".Print(ConsoleColor.Yellow);
 
 
 
@@ -44,7 +49,7 @@ namespace MoneyWeapon.Utils
             {
                 var (text, action) = InventoryList[i];
 
-                Console.SetCursorPosition(x + 22, y + 2 + (i - start));
+                Console.SetCursorPosition(x + 22, y + 3 + (i - start));
 
                 if (i == CurrentIndex)
                 {
@@ -99,12 +104,7 @@ namespace MoneyWeapon.Utils
 
         public static void Select()
         {
-            if (InventoryList.Count == 0) return;
-
-            InventoryList[CurrentIndex].action?.Invoke();
-
-            if (InventoryList.Count == 0) CurrentIndex = 0;
-            else if (CurrentIndex >= InventoryList.Count) CurrentIndex = InventoryList.Count - 1;
+            Onselect?.Invoke(CurrentIndex);
         }
 
         public static void Add(string item, Action action)
