@@ -21,7 +21,7 @@ namespace MoneyWeapon.Utils
 
         private static int CurrentIndex { get; set; }
 
-        private static List<(string text, Action action)> InventoryList = new List<(string, Action)>();
+        public static List<(string text, Action action)> InventoryList = new List<(string, Action)>();
         public static void Render(int x, int y)
         {
             if (!IsActive) return;

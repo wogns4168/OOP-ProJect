@@ -11,7 +11,7 @@ namespace MoneyWeapon.GameObjects
     internal class Player : GameObject
     {
         public static bool IsActive { get; set; }
-
+        public static int Money = 50000;
 
         public Player()
         {

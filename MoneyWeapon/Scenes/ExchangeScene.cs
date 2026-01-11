@@ -11,100 +11,82 @@ namespace MoneyWeapon.Scenes
 {
     internal class ExchangeScene : Scene
     {
-        private Tile[,] _exchangeField = new Tile[10, 20];
-        private Player _player = new Player();
-        private TownPotal _townPotal = new TownPotal();
-        private Exchange _exchange = new Exchange();
-        public static bool exchangeIsActive = false;
+        public static bool exchangeIsActive { get; set; }
+        private static Ractangle _outline;
+        const int MaxHeight = 15;
+
+        private static int CurrentIndex { get; set; }
+
+        private static List<(string text, Action action)> exchangeList = new List<(string, Action)>();
 
         public ExchangeScene() => Init();
 
         public void Init()
         {
-
-            for (int y = 0; y < _exchangeField.GetLength(0); y++)
-            {
-                for (int x = 0; x < _exchangeField.GetLength(1); x++)
-                {
-                    Vector pos = new Vector(x, y);
-                    _exchangeField[y, x] = new Tile(pos);
-
-                    if (y == 0 || x == 0 || y == _exchangeField.GetLength(0) - 1 || x == _exchangeField.GetLength(1) - 1)
-                    {
-                        _exchangeField[y, x].OnTileObject = new Wall();
-                    }
-                }
-            }
-
-        }
-        public void ObjectPosition(GameObject obj)
-        {
-            obj.Field = _exchangeField;
-            _exchangeField[obj.Position.Y, obj.Position.X].OnTileObject = obj;
-        }
-
-        private void PrintField()
-        {
-            Console.SetCursorPosition(5, 1);
-            Tutorial.Render(5, 1);
-            for (int y = 0; y < _exchangeField.GetLength(0); y++)
-            {
-                for (int x = 0; x < _exchangeField.GetLength(1); x++)
-                {
-                    Console.SetCursorPosition(x + 5, y + 10);
-                    _exchangeField[y, x].Print();
-                }
-            }
         }
 
         public override void Enter()
         {
-            _player.Position = new Vector(9, 7);
-            _townPotal.Position = new Vector(9, 8);
-            _exchange.Position = new Vector(9, 1);
-            ObjectPosition(_player);
-            ObjectPosition(_townPotal);
-            ObjectPosition(_exchange);
-            Log.NomalLog("거래소씬 진입");
+            exchangeIsActive = true;
+            Inventory.IsActive = true;
         }
 
         public override void Exit()
         {
-            _exchangeField[_player.Position.Y, _player.Position.X].OnTileObject = null;
+            exchangeIsActive = false;
+            Inventory.IsActive = false;
         }
 
         public override void Render()
         {
-            PrintField();
-            _player.Render();
+            Tutorial.Render(5, 1);
+            RenderShop(0, 10);
+        }
+
+        public static void RenderShop(int x, int y)
+        {
+            if (!exchangeIsActive) return;
+
+            int contentHeight = MaxHeight - 3;
+            int start = Math.Max(0, exchangeList.Count - contentHeight);
+
+            _outline.X = x + 10;
+            _outline.Y = y;
+            _outline.Width = 40;
+            _outline.Height = 3 + exchangeList.Count - start;
+            _outline.Draw();
+
+            Console.SetCursorPosition(x + 11, y + 1);
+            "[거래소]".Print(ConsoleColor.Red);
+
+
+
+            for (int i = start; i < exchangeList.Count; i++)
+            {
+                var (text, action) = exchangeList[i];
+
+                Console.SetCursorPosition(x + 12, y + 2 + (i - start));
+
+                if (i == CurrentIndex)
+                {
+                    "->".Print(ConsoleColor.Green);
+                    text.Print(ConsoleColor.Green);
+                    continue;
+                }
+                else
+                {
+                    Console.Write("  ");
+                    text.Print();
+                }
+            }
+
         }
 
         public override void Update()
         {
-            if (!exchangeIsActive)
+            if(InputManager.GetKey(ConsoleKey.Escape))
             {
-                _player.Update();
-            }
-
-            if(InputManager.GetKey(ConsoleKey.Enter))
-            {
-                if (Vector.Near(_player.Position, _townPotal.Position))
-                {
-                    SceneManager.ChangePrevScene();
-                }
-
-                if (Vector.Near(_player.Position, _exchange.Position))
-                {
-                    exchangeIsActive = true;
-                }
-            }
-
-            if(exchangeIsActive)
-            {
-                if(InputManager.GetKey(ConsoleKey.Escape))
-                {
-                    exchangeIsActive = false;
-                }
+                SceneManager.ChangePrevScene();
             }
         }
     }

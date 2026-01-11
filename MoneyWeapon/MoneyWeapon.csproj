@@ -44,7 +44,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="GameObjects\DungeonPotal.cs" />
-    <Compile Include="GameObjects\Exchange.cs" />
     <Compile Include="GameObjects\GameObject.cs" />
     <Compile Include="GameObjects\MinePotal.cs" />
     <Compile Include="GameObjects\Player.cs" />

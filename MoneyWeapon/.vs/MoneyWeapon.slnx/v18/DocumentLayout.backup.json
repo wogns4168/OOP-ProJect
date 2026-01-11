@@ -3,23 +3,63 @@
   "WorkspaceRootPath": "C:\\Users\\KGA1\\Documents\\GitHub\\04-oop-console-project-wogns4168\\MoneyWeapon\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C221BE72-7895-4E15-A9D3-19A6564773CB}|MoneyWeapon.csproj|C:\\Users\\KGA1\\Documents\\GitHub\\04-oop-console-project-wogns4168\\MoneyWeapon\\managers\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{C221BE72-7895-4E15-A9D3-19A6564773CB}|MoneyWeapon.csproj|C:\\Users\\KGA1\\Documents\\GitHub\\04-oop-console-project-wogns4168\\MoneyWeapon\\scenes\\exchangescene.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C221BE72-7895-4E15-A9D3-19A6564773CB}|MoneyWeapon.csproj|solutionrelative:scenes\\exchangescene.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C221BE72-7895-4E15-A9D3-19A6564773CB}|MoneyWeapon.csproj|C:\\Users\\KGA1\\Documents\\GitHub\\04-oop-console-project-wogns4168\\MoneyWeapon\\scenes\\dungeonscene.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C221BE72-7895-4E15-A9D3-19A6564773CB}|MoneyWeapon.csproj|solutionrelative:scenes\\dungeonscene.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C221BE72-7895-4E15-A9D3-19A6564773CB}|MoneyWeapon.csproj|C:\\Users\\KGA1\\Documents\\GitHub\\04-oop-console-project-wogns4168\\MoneyWeapon\\scenes\\townscene.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C221BE72-7895-4E15-A9D3-19A6564773CB}|MoneyWeapon.csproj|solutionrelative:scenes\\townscene.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C221BE72-7895-4E15-A9D3-19A6564773CB}|MoneyWeapon.csproj|C:\\Users\\KGA1\\Documents\\GitHub\\04-oop-console-project-wogns4168\\MoneyWeapon\\utils\\tutorial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C221BE72-7895-4E15-A9D3-19A6564773CB}|MoneyWeapon.csproj|solutionrelative:utils\\tutorial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C221BE72-7895-4E15-A9D3-19A6564773CB}|MoneyWeapon.csproj|c:\\users\\kga1\\documents\\github\\04-oop-console-project-wogns4168\\moneyweapon\\managers\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C221BE72-7895-4E15-A9D3-19A6564773CB}|MoneyWeapon.csproj|solutionrelative:managers\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C221BE72-7895-4E15-A9D3-19A6564773CB}|MoneyWeapon.csproj|C:\\Users\\KGA1\\Documents\\GitHub\\04-oop-console-project-wogns4168\\MoneyWeapon\\managers\\scenemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C221BE72-7895-4E15-A9D3-19A6564773CB}|MoneyWeapon.csproj|solutionrelative:managers\\scenemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C221BE72-7895-4E15-A9D3-19A6564773CB}|MoneyWeapon.csproj|C:\\Users\\KGA1\\Documents\\GitHub\\04-oop-console-project-wogns4168\\MoneyWeapon\\scenes\\scene.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C221BE72-7895-4E15-A9D3-19A6564773CB}|MoneyWeapon.csproj|solutionrelative:scenes\\scene.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C221BE72-7895-4E15-A9D3-19A6564773CB}|MoneyWeapon.csproj|C:\\Users\\KGA1\\Documents\\GitHub\\04-oop-console-project-wogns4168\\MoneyWeapon\\gameobjects\\dungeonpotal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C221BE72-7895-4E15-A9D3-19A6564773CB}|MoneyWeapon.csproj|solutionrelative:gameobjects\\dungeonpotal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C221BE72-7895-4E15-A9D3-19A6564773CB}|MoneyWeapon.csproj|c:\\users\\kga1\\documents\\github\\04-oop-console-project-wogns4168\\moneyweapon\\gameobjects\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C221BE72-7895-4E15-A9D3-19A6564773CB}|MoneyWeapon.csproj|solutionrelative:gameobjects\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C221BE72-7895-4E15-A9D3-19A6564773CB}|MoneyWeapon.csproj|C:\\Users\\KGA1\\Documents\\GitHub\\04-oop-console-project-wogns4168\\MoneyWeapon\\scenes\\titlescene.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C221BE72-7895-4E15-A9D3-19A6564773CB}|MoneyWeapon.csproj|solutionrelative:scenes\\titlescene.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C221BE72-7895-4E15-A9D3-19A6564773CB}|MoneyWeapon.csproj|c:\\users\\kga1\\documents\\github\\04-oop-console-project-wogns4168\\moneyweapon\\utils\\inventory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C221BE72-7895-4E15-A9D3-19A6564773CB}|MoneyWeapon.csproj|solutionrelative:utils\\inventory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{C221BE72-7895-4E15-A9D3-19A6564773CB}|MoneyWeapon.csproj|C:\\Users\\KGA1\\Documents\\GitHub\\04-oop-console-project-wogns4168\\MoneyWeapon\\gameobjects\\exchangepotal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C221BE72-7895-4E15-A9D3-19A6564773CB}|MoneyWeapon.csproj|solutionrelative:gameobjects\\exchangepotal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C221BE72-7895-4E15-A9D3-19A6564773CB}|MoneyWeapon.csproj|C:\\Users\\KGA1\\Documents\\GitHub\\04-oop-console-project-wogns4168\\MoneyWeapon\\gameobjects\\minepotal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C221BE72-7895-4E15-A9D3-19A6564773CB}|MoneyWeapon.csproj|solutionrelative:gameobjects\\minepotal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{C221BE72-7895-4E15-A9D3-19A6564773CB}|MoneyWeapon.csproj|C:\\Users\\KGA1\\Documents\\GitHub\\04-oop-console-project-wogns4168\\MoneyWeapon\\utils\\log.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C221BE72-7895-4E15-A9D3-19A6564773CB}|MoneyWeapon.csproj|solutionrelative:utils\\log.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C221BE72-7895-4E15-A9D3-19A6564773CB}|MoneyWeapon.csproj|C:\\Users\\KGA1\\Documents\\GitHub\\04-oop-console-project-wogns4168\\MoneyWeapon\\gameobjects\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C221BE72-7895-4E15-A9D3-19A6564773CB}|MoneyWeapon.csproj|solutionrelative:gameobjects\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C221BE72-7895-4E15-A9D3-19A6564773CB}|MoneyWeapon.csproj|c:\\users\\kga1\\documents\\github\\04-oop-console-project-wogns4168\\moneyweapon\\utils\\menulist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{C221BE72-7895-4E15-A9D3-19A6564773CB}|MoneyWeapon.csproj|C:\\Users\\KGA1\\Documents\\GitHub\\04-oop-console-project-wogns4168\\MoneyWeapon\\utils\\menulist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C221BE72-7895-4E15-A9D3-19A6564773CB}|MoneyWeapon.csproj|solutionrelative:utils\\menulist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -27,44 +67,12 @@
       "RelativeMoniker": "D:0:0:{C221BE72-7895-4E15-A9D3-19A6564773CB}|MoneyWeapon.csproj|solutionrelative:utils\\gamename.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C221BE72-7895-4E15-A9D3-19A6564773CB}|MoneyWeapon.csproj|C:\\Users\\KGA1\\Documents\\GitHub\\04-oop-console-project-wogns4168\\MoneyWeapon\\scenes\\townscene.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C221BE72-7895-4E15-A9D3-19A6564773CB}|MoneyWeapon.csproj|solutionrelative:scenes\\townscene.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C221BE72-7895-4E15-A9D3-19A6564773CB}|MoneyWeapon.csproj|C:\\Users\\KGA1\\Documents\\GitHub\\04-oop-console-project-wogns4168\\MoneyWeapon\\scenes\\titlescene.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C221BE72-7895-4E15-A9D3-19A6564773CB}|MoneyWeapon.csproj|solutionrelative:scenes\\titlescene.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C221BE72-7895-4E15-A9D3-19A6564773CB}|MoneyWeapon.csproj|C:\\Users\\KGA1\\Documents\\GitHub\\04-oop-console-project-wogns4168\\MoneyWeapon\\scenes\\exchangescene.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C221BE72-7895-4E15-A9D3-19A6564773CB}|MoneyWeapon.csproj|solutionrelative:scenes\\exchangescene.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{C221BE72-7895-4E15-A9D3-19A6564773CB}|MoneyWeapon.csproj|C:\\Users\\KGA1\\Documents\\GitHub\\04-oop-console-project-wogns4168\\MoneyWeapon\\scenes\\endingscene.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C221BE72-7895-4E15-A9D3-19A6564773CB}|MoneyWeapon.csproj|solutionrelative:scenes\\endingscene.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C221BE72-7895-4E15-A9D3-19A6564773CB}|MoneyWeapon.csproj|c:\\users\\kga1\\documents\\github\\04-oop-console-project-wogns4168\\moneyweapon\\gameobjects\\exchange.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C221BE72-7895-4E15-A9D3-19A6564773CB}|MoneyWeapon.csproj|solutionrelative:gameobjects\\exchange.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C221BE72-7895-4E15-A9D3-19A6564773CB}|MoneyWeapon.csproj|C:\\Users\\KGA1\\Documents\\GitHub\\04-oop-console-project-wogns4168\\MoneyWeapon\\gameobjects\\exchangepotal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C221BE72-7895-4E15-A9D3-19A6564773CB}|MoneyWeapon.csproj|solutionrelative:gameobjects\\exchangepotal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C221BE72-7895-4E15-A9D3-19A6564773CB}|MoneyWeapon.csproj|C:\\Users\\KGA1\\Documents\\GitHub\\04-oop-console-project-wogns4168\\MoneyWeapon\\managers\\scenemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C221BE72-7895-4E15-A9D3-19A6564773CB}|MoneyWeapon.csproj|solutionrelative:managers\\scenemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C221BE72-7895-4E15-A9D3-19A6564773CB}|MoneyWeapon.csproj|C:\\Users\\KGA1\\Documents\\GitHub\\04-oop-console-project-wogns4168\\MoneyWeapon\\gameobjects\\minepotal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C221BE72-7895-4E15-A9D3-19A6564773CB}|MoneyWeapon.csproj|solutionrelative:gameobjects\\minepotal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{C221BE72-7895-4E15-A9D3-19A6564773CB}|MoneyWeapon.csproj|C:\\Users\\KGA1\\Documents\\GitHub\\04-oop-console-project-wogns4168\\MoneyWeapon\\gameobjects\\gameobject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C221BE72-7895-4E15-A9D3-19A6564773CB}|MoneyWeapon.csproj|solutionrelative:gameobjects\\gameobject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C221BE72-7895-4E15-A9D3-19A6564773CB}|MoneyWeapon.csproj|C:\\Users\\KGA1\\Documents\\GitHub\\04-oop-console-project-wogns4168\\MoneyWeapon\\scenes\\scene.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C221BE72-7895-4E15-A9D3-19A6564773CB}|MoneyWeapon.csproj|solutionrelative:scenes\\scene.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C221BE72-7895-4E15-A9D3-19A6564773CB}|MoneyWeapon.csproj|C:\\Users\\KGA1\\Documents\\GitHub\\04-oop-console-project-wogns4168\\MoneyWeapon\\gameobjects\\townpotal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -75,16 +83,8 @@
       "RelativeMoniker": "D:0:0:{C221BE72-7895-4E15-A9D3-19A6564773CB}|MoneyWeapon.csproj|solutionrelative:utils\\ractangle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C221BE72-7895-4E15-A9D3-19A6564773CB}|MoneyWeapon.csproj|c:\\users\\kga1\\documents\\github\\04-oop-console-project-wogns4168\\moneyweapon\\scenes\\dungeonscene.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C221BE72-7895-4E15-A9D3-19A6564773CB}|MoneyWeapon.csproj|solutionrelative:scenes\\dungeonscene.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{C221BE72-7895-4E15-A9D3-19A6564773CB}|MoneyWeapon.csproj|C:\\Users\\KGA1\\Documents\\GitHub\\04-oop-console-project-wogns4168\\MoneyWeapon\\scenes\\minescene.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C221BE72-7895-4E15-A9D3-19A6564773CB}|MoneyWeapon.csproj|solutionrelative:scenes\\minescene.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C221BE72-7895-4E15-A9D3-19A6564773CB}|MoneyWeapon.csproj|C:\\Users\\KGA1\\Documents\\GitHub\\04-oop-console-project-wogns4168\\MoneyWeapon\\gameobjects\\dungeonpotal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C221BE72-7895-4E15-A9D3-19A6564773CB}|MoneyWeapon.csproj|solutionrelative:gameobjects\\dungeonpotal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C221BE72-7895-4E15-A9D3-19A6564773CB}|MoneyWeapon.csproj|C:\\Users\\KGA1\\Documents\\GitHub\\04-oop-console-project-wogns4168\\MoneyWeapon\\utils\\tile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -101,10 +101,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{C221BE72-7895-4E15-A9D3-19A6564773CB}|MoneyWeapon.csproj|C:\\Users\\KGA1\\Documents\\GitHub\\04-oop-console-project-wogns4168\\MoneyWeapon\\utils\\vector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C221BE72-7895-4E15-A9D3-19A6564773CB}|MoneyWeapon.csproj|solutionrelative:utils\\vector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C221BE72-7895-4E15-A9D3-19A6564773CB}|MoneyWeapon.csproj|C:\\Users\\KGA1\\Documents\\GitHub\\04-oop-console-project-wogns4168\\MoneyWeapon\\utils\\tutorial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C221BE72-7895-4E15-A9D3-19A6564773CB}|MoneyWeapon.csproj|solutionrelative:utils\\tutorial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C221BE72-7895-4E15-A9D3-19A6564773CB}|MoneyWeapon.csproj|C:\\Users\\KGA1\\Documents\\GitHub\\04-oop-console-project-wogns4168\\MoneyWeapon\\utils\\textextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -130,11 +126,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 26,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\KGA1\\Documents\\GitHub\\04-oop-console-project-wogns4168\\MoneyWeapon\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
@@ -148,201 +144,19 @@
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "MenuList.cs",
-              "DocumentMoniker": "C:\\Users\\KGA1\\Documents\\GitHub\\04-oop-console-project-wogns4168\\MoneyWeapon\\Utils\\MenuList.cs",
-              "RelativeDocumentMoniker": "Utils\\MenuList.cs",
-              "ToolTip": "C:\\Users\\KGA1\\Documents\\GitHub\\04-oop-console-project-wogns4168\\MoneyWeapon\\Utils\\MenuList.cs",
-              "RelativeToolTip": "Utils\\MenuList.cs",
-              "ViewState": "AgIAAHYAAAAAAAAAAAAAwAoAAAAwAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-11T02:49:49.924Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Inventory.cs",
-              "DocumentMoniker": "C:\\Users\\KGA1\\Documents\\GitHub\\04-oop-console-project-wogns4168\\MoneyWeapon\\Utils\\Inventory.cs",
-              "RelativeDocumentMoniker": "Utils\\Inventory.cs",
-              "ToolTip": "C:\\Users\\KGA1\\Documents\\GitHub\\04-oop-console-project-wogns4168\\MoneyWeapon\\Utils\\Inventory.cs",
-              "RelativeToolTip": "Utils\\Inventory.cs",
-              "ViewState": "AgIAADUAAAAAAAAAAAAgwEEAAAAtAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-11T00:23:38.217Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "TownScene.cs",
-              "DocumentMoniker": "C:\\Users\\KGA1\\Documents\\GitHub\\04-oop-console-project-wogns4168\\MoneyWeapon\\Scenes\\TownScene.cs",
-              "RelativeDocumentMoniker": "Scenes\\TownScene.cs",
-              "ToolTip": "C:\\Users\\KGA1\\Documents\\GitHub\\04-oop-console-project-wogns4168\\MoneyWeapon\\Scenes\\TownScene.cs",
-              "RelativeToolTip": "Scenes\\TownScene.cs",
-              "ViewState": "AgIAAE0AAAAAAAAAAAAswFQAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-10T15:16:28.575Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Log.cs",
-              "DocumentMoniker": "C:\\Users\\KGA1\\Documents\\GitHub\\04-oop-console-project-wogns4168\\MoneyWeapon\\Utils\\Log.cs",
-              "RelativeDocumentMoniker": "Utils\\Log.cs",
-              "ToolTip": "C:\\Users\\KGA1\\Documents\\GitHub\\04-oop-console-project-wogns4168\\MoneyWeapon\\Utils\\Log.cs",
-              "RelativeToolTip": "Utils\\Log.cs",
-              "ViewState": "AgIAAC0AAAAAAAAAAAAowA0AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-09T03:52:30.339Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "GameName.cs",
-              "DocumentMoniker": "C:\\Users\\KGA1\\Documents\\GitHub\\04-oop-console-project-wogns4168\\MoneyWeapon\\Utils\\GameName.cs",
-              "RelativeDocumentMoniker": "Utils\\GameName.cs",
-              "ToolTip": "C:\\Users\\KGA1\\Documents\\GitHub\\04-oop-console-project-wogns4168\\MoneyWeapon\\Utils\\GameName.cs",
-              "RelativeToolTip": "Utils\\GameName.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-08T08:58:20.53Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Player.cs",
-              "DocumentMoniker": "C:\\Users\\KGA1\\Documents\\GitHub\\04-oop-console-project-wogns4168\\MoneyWeapon\\GameObjects\\Player.cs",
-              "RelativeDocumentMoniker": "GameObjects\\Player.cs",
-              "ToolTip": "C:\\Users\\KGA1\\Documents\\GitHub\\04-oop-console-project-wogns4168\\MoneyWeapon\\GameObjects\\Player.cs",
-              "RelativeToolTip": "GameObjects\\Player.cs",
-              "ViewState": "AgIAAEUAAAAAAAAAAAAowCcAAAA+AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-09T07:57:19.552Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
               "Title": "GameManager.cs",
               "DocumentMoniker": "C:\\Users\\KGA1\\Documents\\GitHub\\04-oop-console-project-wogns4168\\MoneyWeapon\\Managers\\GameManager.cs",
               "RelativeDocumentMoniker": "Managers\\GameManager.cs",
-              "ToolTip": "C:\\Users\\KGA1\\Documents\\GitHub\\04-oop-console-project-wogns4168\\MoneyWeapon\\Managers\\GameManager.cs*",
-              "RelativeToolTip": "Managers\\GameManager.cs*",
-              "ViewState": "AgIAAB4AAAAAAAAAAAAswCwAAABZAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\KGA1\\Documents\\GitHub\\04-oop-console-project-wogns4168\\MoneyWeapon\\Managers\\GameManager.cs",
+              "RelativeToolTip": "Managers\\GameManager.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAAawEwAAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-01-08T08:26:17.013Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "TitleScene.cs",
-              "DocumentMoniker": "C:\\Users\\KGA1\\Documents\\GitHub\\04-oop-console-project-wogns4168\\MoneyWeapon\\Scenes\\TitleScene.cs",
-              "RelativeDocumentMoniker": "Scenes\\TitleScene.cs",
-              "ToolTip": "C:\\Users\\KGA1\\Documents\\GitHub\\04-oop-console-project-wogns4168\\MoneyWeapon\\Scenes\\TitleScene.cs",
-              "RelativeToolTip": "Scenes\\TitleScene.cs",
-              "ViewState": "AgIAABoAAAAAAAAAAAA2wDoAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-08T08:12:12.505Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "EndingScene.cs",
-              "DocumentMoniker": "C:\\Users\\KGA1\\Documents\\GitHub\\04-oop-console-project-wogns4168\\MoneyWeapon\\Scenes\\EndingScene.cs",
-              "RelativeDocumentMoniker": "Scenes\\EndingScene.cs",
-              "ToolTip": "C:\\Users\\KGA1\\Documents\\GitHub\\04-oop-console-project-wogns4168\\MoneyWeapon\\Scenes\\EndingScene.cs",
-              "RelativeToolTip": "Scenes\\EndingScene.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAlAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-09T03:51:16.185Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "Exchange.cs",
-              "DocumentMoniker": "C:\\Users\\KGA1\\Documents\\GitHub\\04-oop-console-project-wogns4168\\MoneyWeapon\\GameObjects\\Exchange.cs",
-              "RelativeDocumentMoniker": "GameObjects\\Exchange.cs",
-              "ToolTip": "C:\\Users\\KGA1\\Documents\\GitHub\\04-oop-console-project-wogns4168\\MoneyWeapon\\GameObjects\\Exchange.cs",
-              "RelativeToolTip": "GameObjects\\Exchange.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-11T02:17:16.097Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "ExchangeScene.cs",
-              "DocumentMoniker": "C:\\Users\\KGA1\\Documents\\GitHub\\04-oop-console-project-wogns4168\\MoneyWeapon\\Scenes\\ExchangeScene.cs",
-              "RelativeDocumentMoniker": "Scenes\\ExchangeScene.cs",
-              "ToolTip": "C:\\Users\\KGA1\\Documents\\GitHub\\04-oop-console-project-wogns4168\\MoneyWeapon\\Scenes\\ExchangeScene.cs",
-              "RelativeToolTip": "Scenes\\ExchangeScene.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-10T15:12:55.672Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "ExchangePotal.cs",
-              "DocumentMoniker": "C:\\Users\\KGA1\\Documents\\GitHub\\04-oop-console-project-wogns4168\\MoneyWeapon\\GameObjects\\ExchangePotal.cs",
-              "RelativeDocumentMoniker": "GameObjects\\ExchangePotal.cs",
-              "ToolTip": "C:\\Users\\KGA1\\Documents\\GitHub\\04-oop-console-project-wogns4168\\MoneyWeapon\\GameObjects\\ExchangePotal.cs",
-              "RelativeToolTip": "GameObjects\\ExchangePotal.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAA4AAAAvAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-09T23:45:30.518Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "SceneManager.cs",
-              "DocumentMoniker": "C:\\Users\\KGA1\\Documents\\GitHub\\04-oop-console-project-wogns4168\\MoneyWeapon\\Managers\\SceneManager.cs",
-              "RelativeDocumentMoniker": "Managers\\SceneManager.cs",
-              "ToolTip": "C:\\Users\\KGA1\\Documents\\GitHub\\04-oop-console-project-wogns4168\\MoneyWeapon\\Managers\\SceneManager.cs",
-              "RelativeToolTip": "Managers\\SceneManager.cs",
-              "ViewState": "AgIAADUAAAAAAAAAAAAswA4AAAAjAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-08T08:26:39.203Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "MinePotal.cs",
-              "DocumentMoniker": "C:\\Users\\KGA1\\Documents\\GitHub\\04-oop-console-project-wogns4168\\MoneyWeapon\\GameObjects\\MinePotal.cs",
-              "RelativeDocumentMoniker": "GameObjects\\MinePotal.cs",
-              "ToolTip": "C:\\Users\\KGA1\\Documents\\GitHub\\04-oop-console-project-wogns4168\\MoneyWeapon\\GameObjects\\MinePotal.cs",
-              "RelativeToolTip": "GameObjects\\MinePotal.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAArAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-10T07:23:08.841Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "GameObject.cs",
-              "DocumentMoniker": "C:\\Users\\KGA1\\Documents\\GitHub\\04-oop-console-project-wogns4168\\MoneyWeapon\\GameObjects\\GameObject.cs",
-              "RelativeDocumentMoniker": "GameObjects\\GameObject.cs",
-              "ToolTip": "C:\\Users\\KGA1\\Documents\\GitHub\\04-oop-console-project-wogns4168\\MoneyWeapon\\GameObjects\\GameObject.cs",
-              "RelativeToolTip": "GameObjects\\GameObject.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAswAwAAAArAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-09T03:43:25.373Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 6,
               "Title": "Scene.cs",
               "DocumentMoniker": "C:\\Users\\KGA1\\Documents\\GitHub\\04-oop-console-project-wogns4168\\MoneyWeapon\\Scenes\\Scene.cs",
               "RelativeDocumentMoniker": "Scenes\\Scene.cs",
@@ -355,7 +169,210 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "SceneManager.cs",
+              "DocumentMoniker": "C:\\Users\\KGA1\\Documents\\GitHub\\04-oop-console-project-wogns4168\\MoneyWeapon\\Managers\\SceneManager.cs",
+              "RelativeDocumentMoniker": "Managers\\SceneManager.cs",
+              "ToolTip": "C:\\Users\\KGA1\\Documents\\GitHub\\04-oop-console-project-wogns4168\\MoneyWeapon\\Managers\\SceneManager.cs",
+              "RelativeToolTip": "Managers\\SceneManager.cs",
+              "ViewState": "AgIAADUAAAAAAAAAAAAswDQAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-08T08:26:39.203Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Tutorial.cs",
+              "DocumentMoniker": "C:\\Users\\KGA1\\Documents\\GitHub\\04-oop-console-project-wogns4168\\MoneyWeapon\\Utils\\Tutorial.cs",
+              "RelativeDocumentMoniker": "Utils\\Tutorial.cs",
+              "ToolTip": "C:\\Users\\KGA1\\Documents\\GitHub\\04-oop-console-project-wogns4168\\MoneyWeapon\\Utils\\Tutorial.cs",
+              "RelativeToolTip": "Utils\\Tutorial.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABkAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-09T03:54:28.547Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ExchangeScene.cs",
+              "DocumentMoniker": "C:\\Users\\KGA1\\Documents\\GitHub\\04-oop-console-project-wogns4168\\MoneyWeapon\\Scenes\\ExchangeScene.cs",
+              "RelativeDocumentMoniker": "Scenes\\ExchangeScene.cs",
+              "ToolTip": "C:\\Users\\KGA1\\Documents\\GitHub\\04-oop-console-project-wogns4168\\MoneyWeapon\\Scenes\\ExchangeScene.cs",
+              "RelativeToolTip": "Scenes\\ExchangeScene.cs",
+              "ViewState": "AgIAAEkAAAAAAAAAAAAAwFwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-10T15:12:55.672Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "DungeonScene.cs",
+              "DocumentMoniker": "C:\\Users\\KGA1\\Documents\\GitHub\\04-oop-console-project-wogns4168\\MoneyWeapon\\Scenes\\DungeonScene.cs",
+              "RelativeDocumentMoniker": "Scenes\\DungeonScene.cs",
+              "ToolTip": "C:\\Users\\KGA1\\Documents\\GitHub\\04-oop-console-project-wogns4168\\MoneyWeapon\\Scenes\\DungeonScene.cs",
+              "RelativeToolTip": "Scenes\\DungeonScene.cs",
+              "ViewState": "AgIAAEIAAAAAAAAAAAAowFUAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-10T08:51:33.893Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "TownScene.cs",
+              "DocumentMoniker": "C:\\Users\\KGA1\\Documents\\GitHub\\04-oop-console-project-wogns4168\\MoneyWeapon\\Scenes\\TownScene.cs",
+              "RelativeDocumentMoniker": "Scenes\\TownScene.cs",
+              "ToolTip": "C:\\Users\\KGA1\\Documents\\GitHub\\04-oop-console-project-wogns4168\\MoneyWeapon\\Scenes\\TownScene.cs",
+              "RelativeToolTip": "Scenes\\TownScene.cs",
+              "ViewState": "AgIAAFwAAAAAAAAAAAAAAG0AAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-10T15:16:28.575Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "DungeonPotal.cs",
+              "DocumentMoniker": "C:\\Users\\KGA1\\Documents\\GitHub\\04-oop-console-project-wogns4168\\MoneyWeapon\\GameObjects\\DungeonPotal.cs",
+              "RelativeDocumentMoniker": "GameObjects\\DungeonPotal.cs",
+              "ToolTip": "C:\\Users\\KGA1\\Documents\\GitHub\\04-oop-console-project-wogns4168\\MoneyWeapon\\GameObjects\\DungeonPotal.cs",
+              "RelativeToolTip": "GameObjects\\DungeonPotal.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-10T07:19:55.733Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Player.cs",
+              "DocumentMoniker": "C:\\Users\\KGA1\\Documents\\GitHub\\04-oop-console-project-wogns4168\\MoneyWeapon\\GameObjects\\Player.cs",
+              "RelativeDocumentMoniker": "GameObjects\\Player.cs",
+              "ToolTip": "C:\\Users\\KGA1\\Documents\\GitHub\\04-oop-console-project-wogns4168\\MoneyWeapon\\GameObjects\\Player.cs",
+              "RelativeToolTip": "GameObjects\\Player.cs",
+              "ViewState": "AgIAADQAAAAAAAAAAAAkwBMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-11T04:53:08.906Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "TitleScene.cs",
+              "DocumentMoniker": "C:\\Users\\KGA1\\Documents\\GitHub\\04-oop-console-project-wogns4168\\MoneyWeapon\\Scenes\\TitleScene.cs",
+              "RelativeDocumentMoniker": "Scenes\\TitleScene.cs",
+              "ToolTip": "C:\\Users\\KGA1\\Documents\\GitHub\\04-oop-console-project-wogns4168\\MoneyWeapon\\Scenes\\TitleScene.cs",
+              "RelativeToolTip": "Scenes\\TitleScene.cs",
+              "ViewState": "AgIAACgAAAAAAAAAAAAkwDoAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-08T08:12:12.505Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "ExchangePotal.cs",
+              "DocumentMoniker": "C:\\Users\\KGA1\\Documents\\GitHub\\04-oop-console-project-wogns4168\\MoneyWeapon\\GameObjects\\ExchangePotal.cs",
+              "RelativeDocumentMoniker": "GameObjects\\ExchangePotal.cs",
+              "ToolTip": "C:\\Users\\KGA1\\Documents\\GitHub\\04-oop-console-project-wogns4168\\MoneyWeapon\\GameObjects\\ExchangePotal.cs",
+              "RelativeToolTip": "GameObjects\\ExchangePotal.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-09T23:45:30.518Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Inventory.cs",
+              "DocumentMoniker": "C:\\Users\\KGA1\\Documents\\GitHub\\04-oop-console-project-wogns4168\\MoneyWeapon\\Utils\\Inventory.cs",
+              "RelativeDocumentMoniker": "Utils\\Inventory.cs",
+              "ToolTip": "C:\\Users\\KGA1\\Documents\\GitHub\\04-oop-console-project-wogns4168\\MoneyWeapon\\Utils\\Inventory.cs",
+              "RelativeToolTip": "Utils\\Inventory.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABUAAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-11T05:09:09.245Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Log.cs",
+              "DocumentMoniker": "C:\\Users\\KGA1\\Documents\\GitHub\\04-oop-console-project-wogns4168\\MoneyWeapon\\Utils\\Log.cs",
+              "RelativeDocumentMoniker": "Utils\\Log.cs",
+              "ToolTip": "C:\\Users\\KGA1\\Documents\\GitHub\\04-oop-console-project-wogns4168\\MoneyWeapon\\Utils\\Log.cs",
+              "RelativeToolTip": "Utils\\Log.cs",
+              "ViewState": "AgIAAC0AAAAAAAAAAAAowA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-09T03:52:30.339Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "MinePotal.cs",
+              "DocumentMoniker": "C:\\Users\\KGA1\\Documents\\GitHub\\04-oop-console-project-wogns4168\\MoneyWeapon\\GameObjects\\MinePotal.cs",
+              "RelativeDocumentMoniker": "GameObjects\\MinePotal.cs",
+              "ToolTip": "C:\\Users\\KGA1\\Documents\\GitHub\\04-oop-console-project-wogns4168\\MoneyWeapon\\GameObjects\\MinePotal.cs",
+              "RelativeToolTip": "GameObjects\\MinePotal.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-10T07:23:08.841Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "GameName.cs",
+              "DocumentMoniker": "C:\\Users\\KGA1\\Documents\\GitHub\\04-oop-console-project-wogns4168\\MoneyWeapon\\Utils\\GameName.cs",
+              "RelativeDocumentMoniker": "Utils\\GameName.cs",
+              "ToolTip": "C:\\Users\\KGA1\\Documents\\GitHub\\04-oop-console-project-wogns4168\\MoneyWeapon\\Utils\\GameName.cs",
+              "RelativeToolTip": "Utils\\GameName.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-08T08:58:20.53Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "MenuList.cs",
+              "DocumentMoniker": "C:\\Users\\KGA1\\Documents\\GitHub\\04-oop-console-project-wogns4168\\MoneyWeapon\\Utils\\MenuList.cs",
+              "RelativeDocumentMoniker": "Utils\\MenuList.cs",
+              "ToolTip": "C:\\Users\\KGA1\\Documents\\GitHub\\04-oop-console-project-wogns4168\\MoneyWeapon\\Utils\\MenuList.cs",
+              "RelativeToolTip": "Utils\\MenuList.cs",
+              "ViewState": "AgIAAHYAAAAAAAAAAAAAwAoAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-11T02:49:49.924Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 16,
+              "Title": "EndingScene.cs",
+              "DocumentMoniker": "C:\\Users\\KGA1\\Documents\\GitHub\\04-oop-console-project-wogns4168\\MoneyWeapon\\Scenes\\EndingScene.cs",
+              "RelativeDocumentMoniker": "Scenes\\EndingScene.cs",
+              "ToolTip": "C:\\Users\\KGA1\\Documents\\GitHub\\04-oop-console-project-wogns4168\\MoneyWeapon\\Scenes\\EndingScene.cs",
+              "RelativeToolTip": "Scenes\\EndingScene.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-09T03:51:16.185Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "GameObject.cs",
+              "DocumentMoniker": "C:\\Users\\KGA1\\Documents\\GitHub\\04-oop-console-project-wogns4168\\MoneyWeapon\\GameObjects\\GameObject.cs",
+              "RelativeDocumentMoniker": "GameObjects\\GameObject.cs",
+              "ToolTip": "C:\\Users\\KGA1\\Documents\\GitHub\\04-oop-console-project-wogns4168\\MoneyWeapon\\GameObjects\\GameObject.cs",
+              "RelativeToolTip": "GameObjects\\GameObject.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAswAwAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-09T03:43:25.373Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
               "Title": "TownPotal.cs",
               "DocumentMoniker": "C:\\Users\\KGA1\\Documents\\GitHub\\04-oop-console-project-wogns4168\\MoneyWeapon\\GameObjects\\TownPotal.cs",
               "RelativeDocumentMoniker": "GameObjects\\TownPotal.cs",
@@ -363,12 +380,11 @@
               "RelativeToolTip": "GameObjects\\TownPotal.cs",
               "ViewState": "AgIAAAcAAAAAAAAAAAAlwA0AAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-10T14:36:55.152Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-10T14:36:55.152Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 19,
               "Title": "Ractangle.cs",
               "DocumentMoniker": "C:\\Users\\KGA1\\Documents\\GitHub\\04-oop-console-project-wogns4168\\MoneyWeapon\\Utils\\Ractangle.cs",
               "RelativeDocumentMoniker": "Utils\\Ractangle.cs",
@@ -376,21 +392,7 @@
               "RelativeToolTip": "Utils\\Ractangle.cs",
               "ViewState": "AgIAADMAAAAAAAAAAAAAAEEAAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-09T14:17:40.084Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "DungeonScene.cs",
-              "DocumentMoniker": "C:\\Users\\KGA1\\Documents\\GitHub\\04-oop-console-project-wogns4168\\MoneyWeapon\\Scenes\\DungeonScene.cs",
-              "RelativeDocumentMoniker": "Scenes\\DungeonScene.cs",
-              "ToolTip": "C:\\Users\\KGA1\\Documents\\GitHub\\04-oop-console-project-wogns4168\\MoneyWeapon\\Scenes\\DungeonScene.cs",
-              "RelativeToolTip": "Scenes\\DungeonScene.cs",
-              "ViewState": "AgIAACYAAAAAAAAAAAAgwBQAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-10T08:51:33.893Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-09T14:17:40.084Z"
             },
             {
               "$type": "Document",
@@ -406,7 +408,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 20,
               "Title": "MineScene.cs",
               "DocumentMoniker": "C:\\Users\\KGA1\\Documents\\GitHub\\04-oop-console-project-wogns4168\\MoneyWeapon\\Scenes\\MineScene.cs",
               "RelativeDocumentMoniker": "Scenes\\MineScene.cs",
@@ -427,18 +429,6 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-01-09T23:49:30.454Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "DungeonPotal.cs",
-              "DocumentMoniker": "C:\\Users\\KGA1\\Documents\\GitHub\\04-oop-console-project-wogns4168\\MoneyWeapon\\GameObjects\\DungeonPotal.cs",
-              "RelativeDocumentMoniker": "GameObjects\\DungeonPotal.cs",
-              "ToolTip": "C:\\Users\\KGA1\\Documents\\GitHub\\04-oop-console-project-wogns4168\\MoneyWeapon\\GameObjects\\DungeonPotal.cs",
-              "RelativeToolTip": "GameObjects\\DungeonPotal.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-10T07:19:55.733Z"
             },
             {
               "$type": "Document",
@@ -467,18 +457,6 @@
             {
               "$type": "Document",
               "DocumentIndex": 25,
-              "Title": "Tutorial.cs",
-              "DocumentMoniker": "C:\\Users\\KGA1\\Documents\\GitHub\\04-oop-console-project-wogns4168\\MoneyWeapon\\Utils\\Tutorial.cs",
-              "RelativeDocumentMoniker": "Utils\\Tutorial.cs",
-              "ToolTip": "C:\\Users\\KGA1\\Documents\\GitHub\\04-oop-console-project-wogns4168\\MoneyWeapon\\Utils\\Tutorial.cs",
-              "RelativeToolTip": "Utils\\Tutorial.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAtAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-09T03:54:28.547Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 26,
               "Title": "TextExtensions.cs",
               "DocumentMoniker": "C:\\Users\\KGA1\\Documents\\GitHub\\04-oop-console-project-wogns4168\\MoneyWeapon\\Utils\\TextExtensions.cs",
               "RelativeDocumentMoniker": "Utils\\TextExtensions.cs",
@@ -490,7 +468,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 27,
               "Title": "CreditScene.cs",
               "DocumentMoniker": "C:\\Users\\KGA1\\Documents\\GitHub\\04-oop-console-project-wogns4168\\MoneyWeapon\\Scenes\\CreditScene.cs",
               "RelativeDocumentMoniker": "Scenes\\CreditScene.cs",
@@ -502,7 +480,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 28,
               "Title": "InputManager.cs",
               "DocumentMoniker": "C:\\Users\\KGA1\\Documents\\GitHub\\04-oop-console-project-wogns4168\\MoneyWeapon\\Managers\\InputManager.cs",
               "RelativeDocumentMoniker": "Managers\\InputManager.cs",
