@@ -31,7 +31,7 @@ namespace MoneyWeapon.Utils
             InventorySlot slot = null;
             for (int i = 0; i < InventoryList.Count; i++)
             {
-                if (slot == InventoryList[i])
+                if (stock == InventoryList[i].stock)
                 {
                     slot = InventoryList[i];
                     break;
@@ -53,7 +53,7 @@ namespace MoneyWeapon.Utils
             InventorySlot slot = null;
             for (int i = 0; i < InventoryList.Count; i++)
             {
-                if (slot == InventoryList[i])
+                if (stock == InventoryList[i].stock)
                 {
                     slot = InventoryList[i];
                     break;
@@ -174,6 +174,18 @@ namespace MoneyWeapon.Utils
         public static void Select()
         {
             Onselect?.Invoke(CurrentIndex);
+        }
+
+        public static int GetQuantity(Stock stock)
+        {
+            for (int i = 0; i < InventoryList.Count; i++)
+            {
+                if(stock == InventoryList[i].stock)
+                {
+                    return InventoryList[i].Quantity;
+                }
+            }
+            return 0;
         }
     }
 }

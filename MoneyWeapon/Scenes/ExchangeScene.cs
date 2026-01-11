@@ -3,6 +3,7 @@ using MoneyWeapon.Managers;
 using MoneyWeapon.Utils;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -30,7 +31,6 @@ namespace MoneyWeapon.Scenes
         {
             exchangeIsActive = true;
             Inventory.IsActive = true;
-            Inventory.Onselect += SellItem;
         }
 
         public override void Exit()
@@ -105,14 +105,23 @@ namespace MoneyWeapon.Scenes
             }
         }
 
-        public void SellItem(int index)
+        public static void Sell(Stock stock, int number)
         {
+            if (Inventory.GetQuantity(stock) < number) return;
 
+            Player.Money += stock.Price * number;
+            Inventory.Remove(stock, number);
         }
 
-        public void BuyItem(int index)
+        public static void Buy(Stock stock, int number)
         {
+            int price = stock.Price * number;
 
+            if (Player.Money < price) return;
+            if (stock.MaxQuantity < Inventory.GetQuantity(stock) + number) return;
+
+                Player.Money -= price;
+                Inventory.Add(stock, number);
         }
     }
 }
