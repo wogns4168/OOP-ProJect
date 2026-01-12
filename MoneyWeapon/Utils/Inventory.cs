@@ -180,9 +180,12 @@ namespace MoneyWeapon.Utils
                     SelectDown();
                 }
 
-                if (InputManager.GetKey(ConsoleKey.Enter))
+                if (InventoryList.Count > 0)
                 {
-                    ExchangeScene.Sell(InventoryList[CurrentIndex].stock, 1);
+                    if (InputManager.GetKey(ConsoleKey.Enter))
+                    {
+                        ExchangeScene.Sell(InventoryList[CurrentIndex].stock, 1);
+                    }
                 }
             }
 
