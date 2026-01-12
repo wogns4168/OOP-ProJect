@@ -89,21 +89,23 @@ namespace MoneyWeapon.Utils
 
             _outline.X = x + 20;
             _outline.Y = y;
-            _outline.Width = 40;
+            _outline.Width = 50;
             _outline.Height = 4 + InventoryList.Count - start;
             _outline.Draw();
 
             Console.SetCursorPosition(x + 21, y + 1);
             "[인벤토리]".Print(ConsoleColor.Red);
-            Console.SetCursorPosition(x + 35, y + 1);
+            Console.SetCursorPosition(x + 45, y + 1);
             $"총 금액 : {AllPrice()}".Print(ConsoleColor.Green);
             Console.SetCursorPosition(x + 23, y + 2);
             "[이름]".Print(ConsoleColor.Yellow);
-            Console.SetCursorPosition(x + 34, y + 2);
+            Console.SetCursorPosition(x + 35, y + 2);
             "[보유]".Print(ConsoleColor.Yellow);
-            Console.SetCursorPosition(x + 44, y + 2);
+            Console.SetCursorPosition(x + 47, y + 2);
             "[가격]".Print(ConsoleColor.Yellow);
-            
+            Console.SetCursorPosition(x + 59, y + 2);
+            "[평단가]".Print(ConsoleColor.Yellow);
+
 
 
 

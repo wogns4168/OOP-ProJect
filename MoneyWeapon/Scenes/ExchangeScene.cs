@@ -52,20 +52,22 @@ namespace MoneyWeapon.Scenes
             int contentHeight = MaxHeight - 3;
             int start = Math.Max(0, exchangeStockList.Count - contentHeight);
 
-            _outline.X = x + 10;
+            _outline.X = x + 5;
             _outline.Y = y;
-            _outline.Width = 40;
+            _outline.Width = 50;
             _outline.Height = 4 + exchangeStockList.Count - start;
             _outline.Draw();
 
-            Console.SetCursorPosition(x + 11, y + 1);
+            Console.SetCursorPosition(x + 6, y + 1);
             "[거래소]".Print(ConsoleColor.Red);
-            Console.SetCursorPosition(x + 25, y + 1);
+            Console.SetCursorPosition(x + 30, y + 1);
             $"보유 금액 : {Player.Money}".Print(ConsoleColor.Green);
-            Console.SetCursorPosition(x + 13, y + 2);
+            Console.SetCursorPosition(x + 8, y + 2);
             "[이름]".Print(ConsoleColor.Yellow);
-            Console.SetCursorPosition(x + 34, y + 2);
+            Console.SetCursorPosition(x + 25, y + 2);
             "[가격]".Print(ConsoleColor.Yellow);
+            Console.SetCursorPosition(x + 40, y + 2);
+            "[등락률]".Print(ConsoleColor.Yellow);
 
 
 
@@ -82,7 +84,7 @@ namespace MoneyWeapon.Scenes
                 {
                     "->".Print(ConsoleColor.Green);
                     item.Name.Print(ConsoleColor.Green);
-                    Console.SetCursorPosition(X + 23, Y);
+                    Console.SetCursorPosition(X + 18, Y);
                     Console.WriteLine(item.Price);
                     continue;
                 }
@@ -90,7 +92,7 @@ namespace MoneyWeapon.Scenes
                 {
                     Console.Write("  ");
                     item.Name.Print();
-                    Console.SetCursorPosition(X + 23, Y);
+                    Console.SetCursorPosition(X + 18, Y);
                     Console.WriteLine(item.Price);
                 }
             }
