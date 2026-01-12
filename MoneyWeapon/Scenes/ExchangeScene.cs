@@ -32,15 +32,15 @@ namespace MoneyWeapon.Scenes
 
         public void Init()
         {
-            exchangeStockList.Add(new Stock("주식 1", 10000, 1000, 100000, 100));
-            exchangeStockList.Add(new Stock("주식 2", 10000, 1000, 100000, 100));
-            exchangeStockList.Add(new Stock("주식 3", 10000, 1000, 100000, 100));
-            exchangeStockList.Add(new Stock("주식 4", 10000, 1000, 100000, 100));
-            exchangeStockList.Add(new Stock("주식 5", 10000, 1000, 100000, 100));
-            exchangeStockList.Add(new Stock("주식 6", 10000, 1000, 100000, 100));
-            exchangeStockList.Add(new Stock("주식 7", 10000, 1000, 100000, 100));
-            exchangeStockList.Add(new Stock("주식 8", 10000, 1000, 100000, 100));
-            exchangeStockList.Add(new Stock("주식 9", 10000, 1000, 100000, 100));
+            exchangeStockList.Add(new Stock("경일", 1000000));
+            exchangeStockList.Add(new Stock("카카오게임즈", 500000));
+            exchangeStockList.Add(new Stock("컴투스", 300000));
+            exchangeStockList.Add(new Stock("넥슨", 100000));
+            exchangeStockList.Add(new Stock("NC", 50000));
+            exchangeStockList.Add(new Stock("넷마블", 30000));
+            exchangeStockList.Add(new Stock("크래프톤", 10000));
+            exchangeStockList.Add(new Stock("스마일게이트", 5000));
+            exchangeStockList.Add(new Stock("펄어비스", 1000));
         }
 
         public override void Enter()

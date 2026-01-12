@@ -23,13 +23,19 @@ namespace MoneyWeapon.GameObjects
 
         private static Random rand = new Random();
 
-        public Stock(string name, int price, int minPrice, int maxPrice, int maxQuantity)
+        public Stock(string name, int price)
         {
             Name = name;
             Price = price;
-            MinPrice = minPrice;
-            MaxPrice = maxPrice;
-            MaxQuantity = maxQuantity;
+            MinPrice = price / 10;
+            MaxPrice = price * 10;
+            MaxQuantity = 200;
+
+            if(name == "폐지" || name == "노다지")
+            {
+                MinPrice = price;
+                MaxPrice = price;
+            }
         }
 
         public void RandomPrice()
