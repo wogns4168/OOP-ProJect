@@ -11,7 +11,7 @@ namespace MoneyWeapon.Scenes
 {
     internal class MineScene : Scene
     {
-        private Tile[,] _mineField = new Tile[20, 40];
+        private Tile[,] _mineField = new Tile[10, 30];
         private Player _player = new Player();
         private TownPotal _townPotal = new TownPotal();
         public List<Paper> _papers = new List<Paper>();
@@ -62,8 +62,8 @@ namespace MoneyWeapon.Scenes
 
         public override void Enter()
         {
-            _player.Position = new Vector(20, 2);
-            _townPotal.Position = new Vector(20, 1);
+            _player.Position = new Vector(15, 2);
+            _townPotal.Position = new Vector(15, 1);
             ObjectPosition(_player);
             ObjectPosition(_townPotal);
             SpawnPapers();

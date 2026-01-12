@@ -80,7 +80,7 @@ namespace MoneyWeapon.Scenes
             _outline.Draw();
 
             Console.SetCursorPosition(x + 6, y - 2);
-            $"폐지 판매 횟수 : [{CurRandomPlus}] 회 / 목표 횟수 : [{CurRandomMax}] 회".Print(ConsoleColor.Green);
+            $"폐지 판매 횟수 : [{CurRandomPlus}] 회 / 랜덤 횟수 증가 : [{CurRandomMax}] 회".Print(ConsoleColor.Green);
             Console.SetCursorPosition(x + 6, y - 1);
             $"현재 랜덤 횟수 : [{CurRandom}] 회 / 최대 랜덤 횟수 : [{MaxRandom}] 회".Print(ConsoleColor.Green);
             Console.SetCursorPosition(x + 6, y + 1);
@@ -160,7 +160,7 @@ namespace MoneyWeapon.Scenes
         {
             if (Inventory.GetQuantity(stock) < number) return;
             if (stock == MineScene.paper) CurRandomPlus++;
-            if (stock == MineScene.richPaper) CurRandom--;
+            if (stock == MineScene.richPaper) MaxRandom++;
 
             Player.Money += stock.Price * number;
             Inventory.Remove(stock, number);
@@ -246,10 +246,9 @@ namespace MoneyWeapon.Scenes
 
         private static void RandomPlus()
         {
-            if (CurRandom == 0) return;
             if (CurRandomPlus == CurRandomMax)
             {
-                CurRandom--;
+                MaxRandom++;
                 CurRandomPlus = 0;
             }
         }
