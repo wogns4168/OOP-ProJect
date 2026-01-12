@@ -165,6 +165,7 @@ namespace MoneyWeapon.Scenes
             if (stock == MineScene.paper) CurRandomPlus++;
             if (stock == MineScene.richPaper) MaxRandom++;
 
+
             Player.Money += stock.Price * number;
             Inventory.Remove(stock, number);
             RandomPlus();

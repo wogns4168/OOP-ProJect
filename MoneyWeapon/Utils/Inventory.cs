@@ -81,6 +81,12 @@ namespace MoneyWeapon.Utils
             {
                 slot.Quantity -= number;
             }
+
+            if (CurrentIndex >= InventoryList.Count)
+                CurrentIndex = InventoryList.Count - 1;
+
+            if (CurrentIndex < 0 && InventoryList.Count > 0)
+                CurrentIndex = 0;
         }
 
         public static int AllPrice()
