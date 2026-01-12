@@ -38,7 +38,7 @@ namespace MoneyWeapon.Scenes
                 }
             }
 
-            if (DungeonScene._currentMonster == null || DungeonScene._currentMonster.Hp <= 0)
+            if (DungeonScene._currentMonster == null || DungeonScene._currentMonster.Hp <= 0 || InputManager.GetKey(ConsoleKey.Escape))
             {
                 SceneManager.ChangePrevScene();
             }

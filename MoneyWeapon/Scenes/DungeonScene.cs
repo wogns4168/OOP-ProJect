@@ -17,10 +17,10 @@ namespace MoneyWeapon.Scenes
         private Player _prevPlayer = new Player();
         private TownPotal _townPotal = new TownPotal();
         public static Monster _currentMonster;
-        private DungeonPotal _dungeonPotal = new DungeonPotal();
         public static int _curFloor = 1;
-        private int _maxFloor = 10;
+        private int _endingFloor = 10;
         private bool _dungeonClear;
+        private bool _resultPickUp;
         private Result result;
 
         public DungeonScene() => Init();
@@ -74,8 +74,10 @@ namespace MoneyWeapon.Scenes
             {
                 _player.Position = _prevPlayer.Position;
             }
+            if (result == null) _dungeonClear = false;
 
             _townPotal.Position = new Vector(1, 2);
+
             if (_currentMonster == null)
             {
                 if (!_dungeonClear)
@@ -83,7 +85,7 @@ namespace MoneyWeapon.Scenes
             }
             else
             {
-                if (_currentMonster.Hp <= 0)
+                if (_currentMonster.Hp <= 0 && result != null)
                 {
                     dungeonField[_currentMonster.Position.Y, _currentMonster.Position.X].OnTileObject = null;
                     _currentMonster = null;
@@ -101,7 +103,7 @@ namespace MoneyWeapon.Scenes
         public override void Exit()
         {
             _prevPlayer.Position = _player.Position;
-            if (_dungeonClear == true)
+            if (_dungeonClear == true && result == null)
             {
                 _curFloor++;
                 _prevPlayer.Position = Vector.None;
@@ -116,13 +118,9 @@ namespace MoneyWeapon.Scenes
 
         public override void Update()
         {
-            _player.Update();
             Clear();
-
-            if (_dungeonClear == true && result == null)
-            {
-                SpawnResult();
-            }
+            if (_currentMonster == null && !_resultPickUp) SpawnResult();
+            _player.Update();
 
             if (_currentMonster != null)
             {
@@ -139,7 +137,7 @@ namespace MoneyWeapon.Scenes
             {
                 if (Vector.Near(_player.Position, _townPotal.Position))
                 {
-                    SceneManager.ChangePrevScene();
+                    SceneManager.Change("Town");
                 }
 
                 if (result != null)
@@ -148,16 +146,17 @@ namespace MoneyWeapon.Scenes
                     {
                         Inventory.Add(MineScene.richPaper, result.DropNum);
                         dungeonField[result.Position.Y, result.Position.X].OnTileObject = null;
+                        _resultPickUp = true;
+                        result = null;
                     }
                 }
+
+                if (_curFloor == _endingFloor + 1)
+                {
+                    if(_dungeonClear)
+                    SceneManager.Change("Ending");
+                }
             }
-
-            if (PickResult())
-            {
-                SpawnPotal();
-            }
-
-
 
         }
 
@@ -173,8 +172,9 @@ namespace MoneyWeapon.Scenes
         {
             if (_currentMonster != null && _currentMonster.Hp <= 0)
             {
-                _dungeonClear = true;
                 dungeonField[_currentMonster.Position.Y, _currentMonster.Position.X].OnTileObject = null;
+                _currentMonster = null;
+                _dungeonClear = true;
             }
         }
 
@@ -185,22 +185,5 @@ namespace MoneyWeapon.Scenes
             ObjectPosition(result);
         }
 
-        private void SpawnPotal()
-        {
-            _dungeonPotal.Position = new Vector(18, 2);
-            ObjectPosition(_dungeonPotal);
-        }
-
-        private bool PickResult()
-        {
-            if (result == null) return false;
-
-            if (dungeonField[result.Position.Y, result.Position.X].OnTileObject == null &&
-                (_currentMonster == null || dungeonField[_currentMonster.Position.Y, _currentMonster.Position.X].OnTileObject == null))
-                return true;
-
-            return false;
-
-        }
     }
 }
