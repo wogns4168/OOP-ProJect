@@ -15,6 +15,8 @@ namespace MoneyWeapon.GameObjects
         public int MaxPrice { get; }
         public int MaxQuantity { get; }
 
+        public int AvgPrice { get; set; }
+
 
         public Stock(string name, int price, int minPrice, int maxPrice, int maxQuantity)
         {

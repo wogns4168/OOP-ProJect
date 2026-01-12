@@ -40,10 +40,12 @@ namespace MoneyWeapon.Utils
             if(slot == null)
             {
                 InventoryList.Add(new InventorySlot(stock, number));
+                stock.AvgPrice += stock.Price * number;
             }
             else
             {
                 slot.Quantity += number;
+                stock.AvgPrice += stock.Price * number;
             }
         }
 
@@ -64,8 +66,16 @@ namespace MoneyWeapon.Utils
             else
             {
                 if (slot.Quantity < number) return;
-                else if (slot.Quantity == number) InventoryList.Remove(slot);
-                else slot.Quantity -= number;
+                else if (slot.Quantity == number)
+                {
+                    InventoryList.Remove(slot);
+                    stock.AvgPrice -= stock.Price * number;
+                }
+                else
+                {
+                    slot.Quantity -= number;
+                    stock.AvgPrice -= stock.Price * number;
+                }
             }
         }
 
@@ -127,6 +137,8 @@ namespace MoneyWeapon.Utils
                     Console.WriteLine($"{item.Quantity} 주");
                     Console.SetCursorPosition(X + 22, Y);
                     Console.WriteLine($"{item.stock.Price * item.Quantity} 원");
+                    Console.SetCursorPosition(X + 36, Y);
+                    Console.WriteLine($"{item.stock.AvgPrice / item.Quantity} 원");
                     continue;
                 }
                 else
@@ -137,6 +149,8 @@ namespace MoneyWeapon.Utils
                     Console.WriteLine($"{item.Quantity} 주");
                     Console.SetCursorPosition(X + 22, Y);
                     Console.WriteLine($"{item.stock.Price * item.Quantity} 원");
+                    Console.SetCursorPosition(X + 36, Y);
+                    Console.WriteLine($"{item.stock.AvgPrice / item.Quantity} 원");
                 }
             }
 
