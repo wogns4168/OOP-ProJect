@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MoneyWeapon.Utils;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -17,6 +18,10 @@ namespace MoneyWeapon.GameObjects
 
         public int AvgPrice { get; set; }
 
+        public int PrevPrice { get; private set; }
+        public float ChangeRate { get; private set; }
+
+        private static Random rand = new Random();
 
         public Stock(string name, int price, int minPrice, int maxPrice, int maxQuantity)
         {
@@ -25,6 +30,22 @@ namespace MoneyWeapon.GameObjects
             MinPrice = minPrice;
             MaxPrice = maxPrice;
             MaxQuantity = maxQuantity;
+        }
+
+        public void RandomPrice()
+        {
+            PrevPrice = Price;
+            Log.NomalLog("랜덤 실행");
+
+            float rate = rand.Next(-30, 31) / 100f;
+
+            int newPrice = (int)(Price * (1 + rate));
+
+            if (newPrice < MinPrice) newPrice = MinPrice;
+            if (newPrice > MaxPrice) newPrice = MaxPrice;
+            Price = newPrice;
+
+            ChangeRate = ((float)(Price - PrevPrice) / PrevPrice) * 100f;
         }
     }
 }

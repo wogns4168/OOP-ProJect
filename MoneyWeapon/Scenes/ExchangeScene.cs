@@ -18,6 +18,9 @@ namespace MoneyWeapon.Scenes
         const int MaxHeight = 15;
         public static bool IsInventoryUse;
         private static bool IsExchangeUse;
+        public static int MaxRandom = 10;
+        public static int CurRandom = 0;
+        
 
         private static int CurrentIndex { get; set; }
 
@@ -84,6 +87,8 @@ namespace MoneyWeapon.Scenes
             _outline.Height = 4 + exchangeStockList.Count - start;
             _outline.Draw();
 
+            Console.SetCursorPosition(x + 6, y - 1);
+            $"현재 랜덤 횟수 : [{CurRandom}] 회 / 최대 랜덤 횟수 : [{MaxRandom}] 회".Print(ConsoleColor.Green);
             Console.SetCursorPosition(x + 6, y + 1);
             "[거래소]".Print(ConsoleColor.Red);
             Console.SetCursorPosition(x + 9, y + 2);
@@ -110,6 +115,8 @@ namespace MoneyWeapon.Scenes
                     item.Name.Print(ConsoleColor.Green);
                     Console.SetCursorPosition(X + 15, Y);
                     Console.WriteLine($"{item.Price} 원");
+                    Console.SetCursorPosition(X + 33, Y);
+                    RatePersent(item);
                     continue;
                 }
                 else
@@ -118,6 +125,8 @@ namespace MoneyWeapon.Scenes
                     item.Name.Print();
                     Console.SetCursorPosition(X + 15, Y);
                     Console.WriteLine($"{item.Price} 원");
+                    Console.SetCursorPosition(X + 33, Y);
+                    RatePersent(item);
                 }
             }
 
@@ -128,6 +137,12 @@ namespace MoneyWeapon.Scenes
             if (InputManager.GetKey(ConsoleKey.Escape))
             {
                 SceneManager.ChangePrevScene();
+            }
+
+            if (InputManager.GetKey(ConsoleKey.R))
+            {
+                if(CurRandom < MaxRandom)
+                RandomStock();
             }
 
             UIUpdate();
@@ -212,6 +227,29 @@ namespace MoneyWeapon.Scenes
         public static void Select()
         {
 
+        }
+
+        public static void RandomStock()
+        {
+            foreach(var item in exchangeStockList)
+            {
+                item.RandomPrice();
+            }
+            CurRandom++;
+        }
+
+        private static void RatePersent(Stock stock)
+        {
+            string rateText = stock.ChangeRate.ToString("+0.0;-0.0;0.0");
+
+            if (stock.ChangeRate < 0)
+            {
+                $"{rateText} %".Print(ConsoleColor.Red);
+            }
+            else
+            {
+                $"{rateText} %".Print(ConsoleColor.Green);
+            }
         }
     }
 }
