@@ -16,9 +16,9 @@ namespace MoneyWeapon.Scenes
         private Player _player = new Player();
         private Player _prevPlayer = new Player();
         private TownPotal _townPotal = new TownPotal();
-        private List<Monster> _monsters = new List<Monster>();
+        public static Monster _currentMonster;
         private DungeonPotal _dungeonPotal = new DungeonPotal();
-        private int _curFloor = 1;
+        public static int _curFloor = 1;
         private int _maxFloor = 10;
         private bool _dungeonClear;
         private Result result;
@@ -74,13 +74,27 @@ namespace MoneyWeapon.Scenes
             {
                 _player.Position = _prevPlayer.Position;
             }
-            _dungeonClear = false;
+
             _townPotal.Position = new Vector(1, 2);
-            SpawnMonster();
-            _monsters[_curFloor - 1].Position = new Vector(10, 2);
+            if (_currentMonster == null)
+            {
+                if (!_dungeonClear)
+                    SpawnMonster();
+            }
+            else
+            {
+                if (_currentMonster.Hp <= 0)
+                {
+                    dungeonField[_currentMonster.Position.Y, _currentMonster.Position.X].OnTileObject = null;
+                    _currentMonster = null;
+                }
+                else
+                {
+                    ObjectPosition(_currentMonster);
+                }
+            }
             ObjectPosition(_player);
             ObjectPosition(_townPotal);
-            ObjectPosition(_monsters[_curFloor - 1]);
             Log.NomalLog("던전씬 진입");
         }
 
@@ -90,6 +104,7 @@ namespace MoneyWeapon.Scenes
             if (_dungeonClear == true)
             {
                 _curFloor++;
+                _prevPlayer.Position = Vector.None;
             }
         }
 
@@ -109,11 +124,14 @@ namespace MoneyWeapon.Scenes
                 SpawnResult();
             }
 
-            if (InputManager.GetKey(ConsoleKey.Spacebar))
+            if (_currentMonster != null)
             {
-                if (Vector.Near(_player.Position, _monsters[_curFloor - 1].Position))
+                if (InputManager.GetKey(ConsoleKey.Spacebar))
                 {
-                    SceneManager.Change("Battle");
+                    if (Vector.Near(_player.Position, _currentMonster.Position))
+                    {
+                        SceneManager.Change("Battle");
+                    }
                 }
             }
 
@@ -134,37 +152,30 @@ namespace MoneyWeapon.Scenes
                 }
             }
 
-            if(PickResult())
+            if (PickResult())
             {
                 SpawnPotal();
             }
 
-            
+
 
         }
 
         private void SpawnMonster()
         {
             int hp = _curFloor * 3 * 1000000;
-
-            for (int i = 0; i < _maxFloor; i++)
-            {
-                _monsters.Add(new Monster($"{_curFloor}층 몬스터", hp));
-            }
+            _currentMonster = new Monster($"{_curFloor}층 몬스터", hp);
+            _currentMonster.Position = new Vector(10, 2);
+            ObjectPosition(_currentMonster);
         }
 
         private void Clear()
         {
-            for (int y = 0; y < dungeonField.GetLength(0); y++)
+            if (_currentMonster != null && _currentMonster.Hp <= 0)
             {
-                for (int x = 0; x < dungeonField.GetLength(1); x++)
-                {
-                    if (dungeonField[y, x].OnTileObject == _monsters[_curFloor - 1]) return;
-                }
+                _dungeonClear = true;
+                dungeonField[_currentMonster.Position.Y, _currentMonster.Position.X].OnTileObject = null;
             }
-
-            _dungeonClear = true;
-            dungeonField[_monsters[_curFloor - 1].Position.Y, _monsters[_curFloor - 1].Position.X].OnTileObject = null;
         }
 
         private void SpawnResult()
@@ -184,10 +195,12 @@ namespace MoneyWeapon.Scenes
         {
             if (result == null) return false;
 
-            if (dungeonField[result.Position.Y, result.Position.X].OnTileObject == null && dungeonField[_monsters[_curFloor - 1].Position.Y, _monsters[_curFloor - 1].Position.X].OnTileObject == null) return true;
+            if (dungeonField[result.Position.Y, result.Position.X].OnTileObject == null &&
+                (_currentMonster == null || dungeonField[_currentMonster.Position.Y, _currentMonster.Position.X].OnTileObject == null))
+                return true;
 
             return false;
-            
+
         }
     }
 }
