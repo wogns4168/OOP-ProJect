@@ -17,8 +17,8 @@ namespace MoneyWeapon.Scenes
         public List<Paper> _papers = new List<Paper>();
         public List<RichPaper> _richPapers = new List<RichPaper>();
         private Random _random = new Random();
-        private Stock paper = new Stock("폐지", 5000, 5000, 5000, 100);
-        public Stock richPaper = new Stock("노다지", 50000, 50000, 50000, 100);
+        public static Stock paper = new Stock("폐지", 5000, 5000, 5000, 100);
+        public static Stock richPaper = new Stock("노다지", 50000, 50000, 50000, 100);
 
         public MineScene() => Init();
 

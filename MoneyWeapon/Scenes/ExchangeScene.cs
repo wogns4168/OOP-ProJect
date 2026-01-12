@@ -20,6 +20,8 @@ namespace MoneyWeapon.Scenes
         private static bool IsExchangeUse;
         public static int MaxRandom = 10;
         public static int CurRandom = 0;
+        public static int CurRandomPlus = 0;
+        public static int CurRandomMax = 3;
         
 
         private static int CurrentIndex { get; set; }
@@ -77,6 +79,8 @@ namespace MoneyWeapon.Scenes
             _outline.Height = 4 + exchangeStockList.Count - start;
             _outline.Draw();
 
+            Console.SetCursorPosition(x + 6, y - 2);
+            $"폐지 판매 횟수 : [{CurRandomPlus}] 회 / 목표 횟수 : [{CurRandomMax}] 회".Print(ConsoleColor.Green);
             Console.SetCursorPosition(x + 6, y - 1);
             $"현재 랜덤 횟수 : [{CurRandom}] 회 / 최대 랜덤 횟수 : [{MaxRandom}] 회".Print(ConsoleColor.Green);
             Console.SetCursorPosition(x + 6, y + 1);
@@ -155,9 +159,12 @@ namespace MoneyWeapon.Scenes
         public static void Sell(Stock stock, int number)
         {
             if (Inventory.GetQuantity(stock) < number) return;
+            if (stock == MineScene.paper) CurRandomPlus++;
+            if (stock == MineScene.richPaper) CurRandom--;
 
             Player.Money += stock.Price * number;
             Inventory.Remove(stock, number);
+            RandomPlus();
         }
 
         public static void Buy(Stock stock, int number)
@@ -234,6 +241,16 @@ namespace MoneyWeapon.Scenes
             else
             {
                 $"{rateText} %".Print(ConsoleColor.Green);
+            }
+        }
+
+        private static void RandomPlus()
+        {
+            if (CurRandom == 0) return;
+            if (CurRandomPlus == CurRandomMax)
+            {
+                CurRandom--;
+                CurRandomPlus = 0;
             }
         }
     }
