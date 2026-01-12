@@ -47,6 +47,7 @@
     <Compile Include="GameObjects\GameObject.cs" />
     <Compile Include="GameObjects\Item.cs" />
     <Compile Include="GameObjects\MinePotal.cs" />
+    <Compile Include="GameObjects\Paper.cs" />
     <Compile Include="GameObjects\Player.cs" />
     <Compile Include="GameObjects\ExchangePotal.cs" />
     <Compile Include="GameObjects\IPotal.cs" />

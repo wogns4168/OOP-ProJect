@@ -14,6 +14,8 @@ namespace MoneyWeapon.Scenes
         private Tile[,] _mineField = new Tile[20, 40];
         private Player _player = new Player();
         private TownPotal _townPotal = new TownPotal();
+        private List<Paper> _papers = new List<Paper>();
+        private Random _random = new Random();
 
         public MineScene() => Init();
 
@@ -61,12 +63,17 @@ namespace MoneyWeapon.Scenes
             _townPotal.Position = new Vector(20, 1);
             ObjectPosition(_player);
             ObjectPosition(_townPotal);
+            SpawnPapers();
             Log.NomalLog("광산씬 진입");
         }
 
         public override void Exit()
         {
             _mineField[_player.Position.Y, _player.Position.X].OnTileObject = null;
+            for (int i = 0; i < _papers.Count; i++)
+            {
+                _mineField[_papers[i].Position.Y, _papers[i].Position.X].OnTileObject = null;
+            }
         }
 
         public override void Render()
@@ -85,6 +92,39 @@ namespace MoneyWeapon.Scenes
                 {
                     SceneManager.ChangePrevScene();
                 }
+            }
+        }
+
+        private void SpawnPapers()
+        {
+            List<Vector> emptyTiles = new List<Vector>();
+
+            for (int y = 1; y < _mineField.GetLength(0) - 1; y++)
+            {
+                for (int x = 1; x < _mineField.GetLength(1) - 1; x++)
+                {
+                    if (_mineField[y, x].OnTileObject == null)
+                    {
+                        emptyTiles.Add(new Vector(x, y));
+                    }
+                }
+            }
+
+            if (emptyTiles.Count == 0) return;
+
+            int spawnCount = _random.Next(3, 8);
+
+            for (int i = 0; i < spawnCount; i++)
+            {
+                int index = _random.Next(emptyTiles.Count);
+                Vector pos = emptyTiles[index];
+                emptyTiles.RemoveAt(index);
+
+                Paper paper = new Paper();
+                paper.Position = pos;
+
+                _papers.Add(paper);
+                ObjectPosition(paper);
             }
         }
 
