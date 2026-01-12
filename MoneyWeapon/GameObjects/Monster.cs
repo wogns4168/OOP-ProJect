@@ -11,19 +11,29 @@ namespace MoneyWeapon.GameObjects
         string Name { get; }
         public int Hp { get; set; }
 
+        public int nextHp { get; set; }
+
         public Monster(string name, int hp)
         {
             Name = name;
             Hp = hp;
+            nextHp = hp;
             Symbol = 'M';
         }
 
         public void GetAttack(int num)
         {
-            int nextHP = Hp -= num;
+            nextHp -= num;
 
-            if (nextHP < 0) Hp = 0;
-            else Hp = nextHP;
+            if (nextHp < 0) Hp = 0;
+        }
+
+        public void HpReset()
+        {
+            if(nextHp > 0)
+            {
+                nextHp = Hp;
+            }
         }
     }
 }

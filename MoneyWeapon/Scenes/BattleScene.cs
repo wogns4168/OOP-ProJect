@@ -25,6 +25,7 @@ namespace MoneyWeapon.Scenes
         {
             _battleTime = 0;
             _attackTime = 0;
+            DungeonScene._currentMonster.HpReset();
         }
 
         public override void Render()
@@ -38,6 +39,8 @@ namespace MoneyWeapon.Scenes
             Console.WriteLine($"현재 쿨타임 : {attackTime} 초 / 공격 쿨타임 : {attackCoolTime} 초");
             Console.SetCursorPosition(0, 20);
             Console.WriteLine($"배틀 경과 시간 : {timeText} 초 / 최대 배틀 시간 : 60 초");
+            Console.SetCursorPosition(0, 18);
+            Console.WriteLine($"플레이어 현재 공격력 : {_player.Attack()} / 몬스터 남은 체력 : {DungeonScene._currentMonster.nextHp}");
         }
 
         public override void Update()
