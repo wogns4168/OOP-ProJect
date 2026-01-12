@@ -9,21 +9,10 @@ namespace MoneyWeapon.GameObjects
 {
     internal class ExchangePotal : GameObject, IPotal
     {
-        public string Name { get; } = "주식 거래소";
-
-        public Tile[,] Field { get; set; }
-
-        public ExchangePotal() => Init();
+        public string Name { get; } = "거래소";
 
 
-        public void Init()
-        {
-            Symbol = '@';
-        }
+        public ExchangePotal() => Symbol = '$';
 
-        public void Render(Vector position)
-        {
-            
-        }
     }
 }

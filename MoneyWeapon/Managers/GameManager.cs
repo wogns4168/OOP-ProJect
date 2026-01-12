@@ -17,8 +17,10 @@ namespace MoneyWeapon.Managers
 
         private Player _player;
         private MinePotal _minePotal;
-        private DengeonPotal _dengeonPotal;
+        private DungeonPotal _dungeonPotal;
         private ExchangePotal _exchangePotal;
+        private TownPotal _townPotal;
+        private Player _prevPlayer;
 
         public void Run()
         {
@@ -29,12 +31,29 @@ namespace MoneyWeapon.Managers
                 Console.Clear();
                 SceneManager.Render();
                 Log.Render(40, 10);
+                Inventory.Render(40, 10);
 
                 InputManager.GetUserInput();
 
-                if (InputManager.GetKey(ConsoleKey.L))
+                if (ExchangeScene.exchangeIsActive == false)
                 {
-                    Log.HandleControl();
+                    if (InputManager.GetKey(ConsoleKey.L))
+                    {
+                        Log.HandleControl();
+                    }
+
+                    if (!(SceneManager.curScene() is TitleScene) && Log.IsActive == false )
+                    {
+                        if (InputManager.GetKey(ConsoleKey.I))
+                        {
+                            Inventory.HandleControl();
+                        }
+                    }
+                }
+
+                if (Inventory.IsActive)
+                {
+                    Inventory.Update();
                 }
 
                 SceneManager.Update();
@@ -46,13 +65,15 @@ namespace MoneyWeapon.Managers
         {
             IsGameOver = false;
             _player = new Player();
-            _dengeonPotal = new DengeonPotal();
+            _dungeonPotal = new DungeonPotal();
             _exchangePotal = new ExchangePotal();
             _minePotal = new MinePotal();
+            _townPotal = new TownPotal();
+            _prevPlayer = new Player();
 
             SceneManager.AddScene("Title", new TitleScene());
             SceneManager.AddScene("Credit", new CreditScene());
-            SceneManager.AddScene("Town", new TownScene(_player, _minePotal, _dengeonPotal, _exchangePotal));
+            SceneManager.AddScene("Town", new TownScene());
             SceneManager.AddScene("Exchange", new ExchangeScene());
             SceneManager.AddScene("Mine", new MineScene());
             SceneManager.AddScene("Dungeon", new DungeonScene());

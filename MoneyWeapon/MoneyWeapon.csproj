@@ -43,12 +43,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="GameObjects\DengeonPotal.cs" />
+    <Compile Include="GameObjects\DungeonPotal.cs" />
     <Compile Include="GameObjects\GameObject.cs" />
+    <Compile Include="GameObjects\Item.cs" />
     <Compile Include="GameObjects\MinePotal.cs" />
     <Compile Include="GameObjects\Player.cs" />
     <Compile Include="GameObjects\ExchangePotal.cs" />
     <Compile Include="GameObjects\IPotal.cs" />
+    <Compile Include="GameObjects\Stock.cs" />
+    <Compile Include="GameObjects\TownPotal.cs" />
     <Compile Include="GameObjects\Wall.cs" />
     <Compile Include="Managers\GameManager.cs" />
     <Compile Include="Managers\InputManager.cs" />
@@ -63,6 +66,8 @@
     <Compile Include="Scenes\Scene.cs" />
     <Compile Include="Scenes\TitleScene.cs" />
     <Compile Include="Scenes\TownScene.cs" />
+    <Compile Include="Utils\Inventory.cs" />
+    <Compile Include="Utils\InventorySlot.cs" />
     <Compile Include="Utils\Log.cs" />
     <Compile Include="Utils\GameName.cs" />
     <Compile Include="Utils\MenuList.cs" />

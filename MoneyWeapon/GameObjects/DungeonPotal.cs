@@ -5,11 +5,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-
 namespace MoneyWeapon.GameObjects
 {
-    internal interface IPotal
+    internal class DungeonPotal : GameObject, IPotal
     {
-        string Name { get; }
+        public string Name { get; } = "던전 입구";
+
+        public DungeonPotal() => Symbol = '@';
+
     }
 }

@@ -10,7 +10,6 @@ namespace MoneyWeapon.Managers
 {
     internal static class SceneManager
     {
-        public static Action OnChangeScene;
 
         public static Scene Current {  get; private set; }
         private static Scene _prev;
@@ -47,7 +46,11 @@ namespace MoneyWeapon.Managers
             Current = next;
             Current.Enter();
 
-            OnChangeScene?.Invoke();
+        }
+
+        public static Scene curScene()
+        {
+            return Current;
         }
 
         public static void Update()

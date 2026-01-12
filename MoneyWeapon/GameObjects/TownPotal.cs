@@ -5,11 +5,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-
 namespace MoneyWeapon.GameObjects
 {
-    internal interface IPotal
+    internal class TownPotal : GameObject, IPotal
     {
-        string Name { get; }
+        public string Name { get; } = "마을 입구";
+
+        public TownPotal() => Symbol = '@';
+
     }
 }

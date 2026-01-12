@@ -12,19 +12,16 @@ namespace MoneyWeapon.Scenes
     internal class TownScene : Scene
     {
         private Tile[,] _townField = new Tile[10, 50];
-        private Player _player;
-        private MinePotal _minePotal;
-        private DengeonPotal _dengeonPotal;
-        private ExchangePotal _exchangePotal;
+        private Player _player = new Player();
+        private Player _prevPlayer = new Player();
+        private MinePotal _minePotal = new MinePotal();
+        private DungeonPotal _dungeonPotal = new DungeonPotal();
+        private ExchangePotal _exchangePotal = new ExchangePotal();
 
-        public TownScene(Player player, MinePotal minePotal, DengeonPotal dengeonPotal, ExchangePotal exchangePotal) => Init(player, minePotal, dengeonPotal, exchangePotal);
+        public TownScene() => Init();
 
-        public void Init(Player player, MinePotal minePotal, DengeonPotal dengeonPotal, ExchangePotal exchangePotal)
+        public void Init()
         {
-            _player = player;
-            _minePotal = minePotal;
-            _dengeonPotal = dengeonPotal;
-            _exchangePotal = exchangePotal;
 
             for (int y = 0; y < _townField.GetLength(0); y++)
             {
@@ -43,30 +40,36 @@ namespace MoneyWeapon.Scenes
 
         public override void Enter()
         {
-            _player.Field = _townField;
-            _exchangePotal.Field = _townField;
-            _dengeonPotal.Field = _townField;
-            _minePotal.Field = _townField;
-            _player.Position = new Vector(1, 4);
+            if (_prevPlayer.Position.X == Vector.None.X && _prevPlayer.Position.Y == Vector.None.Y)
+            {
+                _player.Position = new Vector(1, 4); 
+            }
+            else
+            {
+                _player.Position = _prevPlayer.Position;
+            }
+            _prevPlayer.Position = Vector.None;
             _exchangePotal.Position = new Vector(25, 1);
-            _dengeonPotal.Position = new Vector(_townField.GetLength(1) - 2, 4);
+            _dungeonPotal.Position = new Vector(_townField.GetLength(1) - 2, 4);
             _minePotal.Position = new Vector(25, _townField.GetLength(0) - 2);
             ObjectPosition(_player);
             ObjectPosition(_exchangePotal);
-            ObjectPosition(_dengeonPotal);
+            ObjectPosition(_dungeonPotal);
             ObjectPosition(_minePotal);
+            Player.IsActive = true;
+            Inventory.IsActive = false;
             Log.NomalLog("마을씬 진입");
         }
 
         public void ObjectPosition(GameObject obj)
         {
+            obj.Field = _townField;
             _townField[obj.Position.Y, obj.Position.X].OnTileObject = obj;
         }
 
         public override void Exit()
         {
-            _townField[_player.Position.Y, _player.Position.X].OnTileObject = null;
-            _player.Field = null;
+            _prevPlayer.Position = _player.Position;
         }
 
         public override void Render()
@@ -79,21 +82,19 @@ namespace MoneyWeapon.Scenes
         {
             _player.Update();
 
-            Vector p = _player.Position;
-
             if (InputManager.GetKey(ConsoleKey.Enter))
             {
-                if (Vector.Near(p, _exchangePotal.Position))
+                if (Vector.Near(_player.Position, _exchangePotal.Position))
                 {
                     SceneManager.Change("Exchange");
                 }
 
-                if (Vector.Near(p, _dengeonPotal.Position))
+                if (Vector.Near(_player.Position, _dungeonPotal.Position))
                 {
-                    SceneManager.Change("Dengeon");
+                    SceneManager.Change("Dungeon");
                 }
 
-                if (Vector.Near(p, _minePotal.Position))
+                if (Vector.Near(_player.Position, _minePotal.Position))
                 {
                     SceneManager.Change("Mine");
                 }
