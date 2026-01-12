@@ -73,6 +73,7 @@ namespace MoneyWeapon.Utils
             {
                 InventoryList.Remove(slot);
                 stock.AllBuyPrice = 0;
+                CurrentIndex--;
             }
             else
             {

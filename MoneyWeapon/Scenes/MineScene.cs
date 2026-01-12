@@ -15,8 +15,10 @@ namespace MoneyWeapon.Scenes
         private Player _player = new Player();
         private TownPotal _townPotal = new TownPotal();
         public List<Paper> _papers = new List<Paper>();
+        public List<RichPaper> _richPapers = new List<RichPaper>();
         private Random _random = new Random();
         private Stock paper = new Stock("폐지", 5000, 5000, 5000, 100);
+        public Stock richPaper = new Stock("노다지", 50000, 50000, 50000, 100);
 
         public MineScene() => Init();
 
@@ -65,6 +67,7 @@ namespace MoneyWeapon.Scenes
             ObjectPosition(_player);
             ObjectPosition(_townPotal);
             SpawnPapers();
+            SpawnRichPapers();
             Log.NomalLog("광산씬 진입");
         }
 
@@ -74,6 +77,11 @@ namespace MoneyWeapon.Scenes
             for (int i = 0; i < _papers.Count; i++)
             {
                 _mineField[_papers[i].Position.Y, _papers[i].Position.X].OnTileObject = null;
+            }
+
+            for (int i = 0; i < _richPapers.Count; i++)
+            {
+                _mineField[_richPapers[i].Position.Y, _richPapers[i].Position.X].OnTileObject = null;
             }
         }
 
@@ -102,7 +110,19 @@ namespace MoneyWeapon.Scenes
                         _mineField[_papers[i].Position.Y, _papers[i].Position.X].OnTileObject = null;
                         _papers.RemoveAt(i);
                     }
+
                 }
+
+                for (int i = 0; i < _richPapers.Count; i++)
+                {
+                    if (Vector.Near(_player.Position, _richPapers[i].Position))
+                    {
+                        Inventory.Add(richPaper, 1);
+                        _mineField[_richPapers[i].Position.Y, _richPapers[i].Position.X].OnTileObject = null;
+                        _richPapers.RemoveAt(i);
+                    }
+                }
+
             }
         }
 
@@ -136,6 +156,41 @@ namespace MoneyWeapon.Scenes
 
                 _papers.Add(paper);
                 ObjectPosition(paper);
+            }
+        }
+
+            private void SpawnRichPapers()
+        {
+            List<Vector> emptyTiles = new List<Vector>();
+
+            for (int y = 1; y < _mineField.GetLength(0) - 1; y++)
+            {
+                for (int x = 1; x < _mineField.GetLength(1) - 1; x++)
+                {
+                    if (_mineField[y, x].OnTileObject == null)
+                    {
+                        emptyTiles.Add(new Vector(x, y));
+                    }
+                }
+            }
+
+            if (emptyTiles.Count == 0) return;
+
+            int spawnCount = _random.Next(-10, 3);
+
+            if (spawnCount < 0) return;
+
+            for (int i = 0; i < spawnCount; i++)
+            {
+                int index = _random.Next(emptyTiles.Count);
+                Vector pos = emptyTiles[index];
+                emptyTiles.RemoveAt(index);
+
+                RichPaper richPaper = new RichPaper();
+                richPaper.Position = pos;
+
+                _richPapers.Add(richPaper);
+                ObjectPosition(richPaper);
             }
         }
 
