@@ -78,6 +78,7 @@ namespace MoneyWeapon.Managers
             SceneManager.AddScene("Mine", new MineScene());
             SceneManager.AddScene("Dungeon", new DungeonScene());
             SceneManager.AddScene("Ending", new EndingScene());
+            SceneManager.AddScene("Battle", new BattleScene());
 
             SceneManager.Change("Title");
         }

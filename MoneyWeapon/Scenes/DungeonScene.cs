@@ -93,12 +93,20 @@ namespace MoneyWeapon.Scenes
 
         public override void Update()
         {
-            Clear();
             _player.Update();
+            Clear();
 
             if (_dungeonClear == true && result == null)
             {
                 SpawnResult();
+            }
+
+            if (InputManager.GetKey(ConsoleKey.Spacebar))
+            {
+                if (Vector.Near(_player.Position, _monsters[_curFloor - 1].Position))
+                {
+                    SceneManager.Change("Battle");
+                }
             }
 
             if (InputManager.GetKey(ConsoleKey.Enter))
@@ -108,10 +116,13 @@ namespace MoneyWeapon.Scenes
                     SceneManager.ChangePrevScene();
                 }
 
-                if (Vector.Near(_player.Position, result.Position))
+                if (result != null)
                 {
-                    Inventory.Add(MineScene.richPaper, result.DropNum);
-                    dungeonField[result.Position.Y, result.Position.X].OnTileObject = null;
+                    if (Vector.Near(_player.Position, result.Position))
+                    {
+                        Inventory.Add(MineScene.richPaper, result.DropNum);
+                        dungeonField[result.Position.Y, result.Position.X].OnTileObject = null;
+                    }
                 }
             }
 
@@ -163,6 +174,8 @@ namespace MoneyWeapon.Scenes
 
         private bool PickResult()
         {
+            if (result == null) return false;
+
             if (dungeonField[result.Position.Y, result.Position.X].OnTileObject == null && dungeonField[_monsters[_curFloor - 1].Position.Y, _monsters[_curFloor - 1].Position.X].OnTileObject == null) return true;
 
             return false;
