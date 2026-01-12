@@ -13,6 +13,7 @@ namespace MoneyWeapon.Scenes
     internal class BattleScene : Scene
     {
         private double _battleTime;
+        private int _fullTime = 30;
         private double _attackCoolTime = 1.5;
         private double _attackTime;
 
@@ -38,14 +39,14 @@ namespace MoneyWeapon.Scenes
             Console.SetCursorPosition(0, 19);
             Console.WriteLine($"현재 쿨타임 : {attackTime} 초 / 공격 쿨타임 : {attackCoolTime} 초");
             Console.SetCursorPosition(0, 20);
-            Console.WriteLine($"배틀 경과 시간 : {timeText} 초 / 최대 배틀 시간 : 60 초");
+            Console.WriteLine($"배틀 경과 시간 : {timeText} 초 / 최대 배틀 시간 : {_fullTime} 초");
             Console.SetCursorPosition(0, 18);
             Console.WriteLine($"플레이어 현재 공격력 : {_player.Attack()} / 몬스터 남은 체력 : {DungeonScene._currentMonster.nextHp}");
         }
 
         public override void Update()
         {
-            if (DungeonScene._currentMonster == null || DungeonScene._currentMonster.Hp <= 0 || InputManager.GetKey(ConsoleKey.Escape) || _battleTime >= 10)
+            if (DungeonScene._currentMonster == null || DungeonScene._currentMonster.Hp <= 0 || InputManager.GetKey(ConsoleKey.Escape) || _battleTime >= _fullTime)
             {
                 SceneManager.ChangePrevScene();
             }

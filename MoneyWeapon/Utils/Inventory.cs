@@ -47,6 +47,9 @@ namespace MoneyWeapon.Utils
                 slot.Quantity += number;
                 stock.AllBuyPrice += stock.Price * number;
             }
+
+            if (InventoryList.Count > 0 && CurrentIndex < 0)
+                CurrentIndex = 0;
         }
 
         public static void Remove(Stock stock, int number)
@@ -73,7 +76,6 @@ namespace MoneyWeapon.Utils
             {
                 InventoryList.Remove(slot);
                 stock.AllBuyPrice = 0;
-                CurrentIndex--;
             }
             else
             {
@@ -163,6 +165,8 @@ namespace MoneyWeapon.Utils
             Log.NomalLog("인벤토리 활성화 / 비 활성화");
             IsActive = !IsActive;
             Player.IsActive = !IsActive;
+            if (IsActive && InventoryList.Count > 0 && CurrentIndex < 0)
+                CurrentIndex = 0;
         }
 
         public static void Update()
@@ -180,7 +184,7 @@ namespace MoneyWeapon.Utils
                     SelectDown();
                 }
 
-                if (InventoryList.Count > 0)
+                if (InventoryList.Count > 0 && SceneManager.curScene() is ExchangeScene)
                 {
                     if (InputManager.GetKey(ConsoleKey.Enter))
                     {
@@ -195,7 +199,7 @@ namespace MoneyWeapon.Utils
         {
             CurrentIndex--;
 
-            if (CurrentIndex < 0)
+            if (CurrentIndex <= 0)
                 CurrentIndex = 0;
         }
 
