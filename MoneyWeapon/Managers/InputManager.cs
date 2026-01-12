@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MoneyWeapon.Scenes;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -31,6 +32,10 @@ namespace MoneyWeapon.Managers
 
         public static void GetUserInput()
         {
+            if (SceneManager.curScene() is BattleScene)
+            {
+                if (!Console.KeyAvailable) return;
+            }
             ConsoleKey input = Console.ReadKey(true).Key;
             ResetKey();
 

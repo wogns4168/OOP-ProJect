@@ -79,6 +79,7 @@
     <Compile Include="Utils\Ractangle.cs" />
     <Compile Include="Utils\TextExtensions.cs" />
     <Compile Include="Utils\Tile.cs" />
+    <Compile Include="Utils\Time.cs" />
     <Compile Include="Utils\Tutorial.cs" />
     <Compile Include="Utils\Vector.cs" />
   </ItemGroup>

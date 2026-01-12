@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace MoneyWeapon.Managers
@@ -14,6 +15,7 @@ namespace MoneyWeapon.Managers
     {
         public const string SubGameTitle = "마왕 잡기 전에 손절부터...";
         public static bool IsGameOver {  get; set; }
+        private Time _time;
 
         private Player _player;
         private MinePotal _minePotal;
@@ -28,6 +30,7 @@ namespace MoneyWeapon.Managers
 
             while(!IsGameOver)
             {
+                _time.Tick();
                 Console.Clear();
                 SceneManager.Render();
                 Log.Render(40, 10);
@@ -63,6 +66,7 @@ namespace MoneyWeapon.Managers
 
         public void Init()
         {
+            _time = new Time();
             IsGameOver = false;
             _player = new Player();
             _dungeonPotal = new DungeonPotal();
