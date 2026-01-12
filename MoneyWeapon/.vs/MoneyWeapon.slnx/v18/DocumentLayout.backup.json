@@ -3,16 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\wogns\\Documents\\GitHub\\04-oop-console-project-wogns4168\\MoneyWeapon\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{C221BE72-7895-4E15-A9D3-19A6564773CB}|MoneyWeapon.csproj|C:\\Users\\wogns\\Documents\\GitHub\\04-oop-console-project-wogns4168\\MoneyWeapon\\scenes\\dungeonscene.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C221BE72-7895-4E15-A9D3-19A6564773CB}|MoneyWeapon.csproj|solutionrelative:scenes\\dungeonscene.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{C221BE72-7895-4E15-A9D3-19A6564773CB}|MoneyWeapon.csproj|C:\\Users\\wogns\\Documents\\GitHub\\04-oop-console-project-wogns4168\\MoneyWeapon\\gameobjects\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C221BE72-7895-4E15-A9D3-19A6564773CB}|MoneyWeapon.csproj|solutionrelative:gameobjects\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C221BE72-7895-4E15-A9D3-19A6564773CB}|MoneyWeapon.csproj|c:\\users\\wogns\\documents\\github\\04-oop-console-project-wogns4168\\moneyweapon\\gameobjects\\paper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C221BE72-7895-4E15-A9D3-19A6564773CB}|MoneyWeapon.csproj|solutionrelative:gameobjects\\paper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C221BE72-7895-4E15-A9D3-19A6564773CB}|MoneyWeapon.csproj|C:\\Users\\wogns\\Documents\\GitHub\\04-oop-console-project-wogns4168\\MoneyWeapon\\scenes\\dungeonscene.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C221BE72-7895-4E15-A9D3-19A6564773CB}|MoneyWeapon.csproj|solutionrelative:scenes\\dungeonscene.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C221BE72-7895-4E15-A9D3-19A6564773CB}|MoneyWeapon.csproj|C:\\Users\\wogns\\Documents\\GitHub\\04-oop-console-project-wogns4168\\MoneyWeapon\\gameobjects\\gameobject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -162,7 +162,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 21,
+          "SelectedChildIndex": 12,
           "Children": [
             {
               "$type": "Document",
@@ -244,7 +244,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Paper.cs",
               "DocumentMoniker": "C:\\Users\\wogns\\Documents\\GitHub\\04-oop-console-project-wogns4168\\MoneyWeapon\\GameObjects\\Paper.cs",
               "RelativeDocumentMoniker": "GameObjects\\Paper.cs",
@@ -322,13 +322,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "DungeonScene.cs",
               "DocumentMoniker": "C:\\Users\\wogns\\Documents\\GitHub\\04-oop-console-project-wogns4168\\MoneyWeapon\\Scenes\\DungeonScene.cs",
               "RelativeDocumentMoniker": "Scenes\\DungeonScene.cs",
               "ToolTip": "C:\\Users\\wogns\\Documents\\GitHub\\04-oop-console-project-wogns4168\\MoneyWeapon\\Scenes\\DungeonScene.cs",
               "RelativeToolTip": "Scenes\\DungeonScene.cs",
-              "ViewState": "AgIAAJYAAAAAAAAAAAAuwJwAAAAlAAAAAAAAAA==",
+              "ViewState": "AgIAAA4AAAAAAAAAAADwvxcAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-01-10T08:51:33.893Z",
               "EditorCaption": ""
@@ -435,13 +435,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Player.cs",
               "DocumentMoniker": "C:\\Users\\wogns\\Documents\\GitHub\\04-oop-console-project-wogns4168\\MoneyWeapon\\GameObjects\\Player.cs",
               "RelativeDocumentMoniker": "GameObjects\\Player.cs",
               "ToolTip": "C:\\Users\\wogns\\Documents\\GitHub\\04-oop-console-project-wogns4168\\MoneyWeapon\\GameObjects\\Player.cs*",
               "RelativeToolTip": "GameObjects\\Player.cs*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAnAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAA4AAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-01-09T07:57:19.552Z",
               "EditorCaption": ""

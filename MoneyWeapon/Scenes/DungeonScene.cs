@@ -107,6 +107,7 @@ namespace MoneyWeapon.Scenes
             {
                 _curFloor++;
                 _prevPlayer.Position = Vector.None;
+                _resultPickUp = false;
             }
         }
 
