@@ -18,6 +18,7 @@ namespace MoneyWeapon.Scenes
         private int _curFloor = 1;
         private int _maxFloor = 10;
         private bool _dungeonClear;
+        private Result result;
 
         public DungeonScene() => Init();
 
@@ -75,8 +76,7 @@ namespace MoneyWeapon.Scenes
 
         public override void Exit()
         {
-            dungeonField[_player.Position.Y, _player.Position.X].OnTileObject = null;
-            dungeonField[_monsters[_curFloor - 1].Position.Y, _monsters[_curFloor - 1].Position.X].OnTileObject = null;
+            dungeonField[_player.Position.Y, _player.Position.X].OnTileObject = null; 
         }
 
         public override void Render()
@@ -87,7 +87,13 @@ namespace MoneyWeapon.Scenes
 
         public override void Update()
         {
+            Clear();
             _player.Update();
+
+            if (_dungeonClear == true && result == null)
+            {
+                SpawnResult();
+            }
 
             if (InputManager.GetKey(ConsoleKey.Enter))
             {
@@ -95,12 +101,18 @@ namespace MoneyWeapon.Scenes
                 {
                     SceneManager.ChangePrevScene();
                 }
+
+                if (Vector.Near(_player.Position, result.Position))
+                {
+                    Inventory.Add(MineScene.richPaper, result.DropNum);
+                }
             }
+
         }
 
         private void SpawnMonster()
         {
-            int hp = _curFloor * 1000000;
+            int hp = _curFloor * 3 * 1000000;
 
             for (int i = 0; i < _maxFloor; i++)
             {
@@ -110,12 +122,23 @@ namespace MoneyWeapon.Scenes
 
         private void Clear()
         {
+            for (int y = 0; y < dungeonField.GetLength(0); y++)
+            {
+                for (int x = 0; x < dungeonField.GetLength(1); x++)
+                {
+                    if (dungeonField[y, x].OnTileObject == _monsters[_curFloor - 1]) return;
+                }
+            }
 
+            _dungeonClear = true;
+            dungeonField[_monsters[_curFloor - 1].Position.Y, _monsters[_curFloor - 1].Position.X].OnTileObject = null;
         }
 
         private void SpawnResult()
         {
-
+            result = new Result(_curFloor);
+            result.Position = new Vector(13, 2);
+            ObjectPosition(result);
         }
 
         private void SpawnPotal()
