@@ -82,5 +82,10 @@ namespace MoneyWeapon.GameObjects
         {
 
         }
+
+        public int Attack()
+        {
+            return Money;
+        }
     }
 }

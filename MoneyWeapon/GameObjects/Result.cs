@@ -8,7 +8,7 @@ namespace MoneyWeapon.GameObjects
 {
     internal class Result : GameObject
     {
-        public static int DropNum { get; set; }
+        public int DropNum { get; set; }
 
         public Result(int num)
         {
