@@ -7,8 +7,28 @@
       "RelativeMoniker": "D:0:0:{C221BE72-7895-4E15-A9D3-19A6564773CB}|MoneyWeapon.csproj|solutionrelative:scenes\\minescene.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{C221BE72-7895-4E15-A9D3-19A6564773CB}|MoneyWeapon.csproj|c:\\users\\wogns\\documents\\github\\04-oop-console-project-wogns4168\\moneyweapon\\scenes\\townscene.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C221BE72-7895-4E15-A9D3-19A6564773CB}|MoneyWeapon.csproj|solutionrelative:scenes\\townscene.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{C221BE72-7895-4E15-A9D3-19A6564773CB}|MoneyWeapon.csproj|C:\\Users\\wogns\\Documents\\GitHub\\04-oop-console-project-wogns4168\\MoneyWeapon\\scenes\\exchangescene.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C221BE72-7895-4E15-A9D3-19A6564773CB}|MoneyWeapon.csproj|solutionrelative:scenes\\exchangescene.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C221BE72-7895-4E15-A9D3-19A6564773CB}|MoneyWeapon.csproj|C:\\Users\\wogns\\Documents\\GitHub\\04-oop-console-project-wogns4168\\MoneyWeapon\\scenes\\titlescene.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C221BE72-7895-4E15-A9D3-19A6564773CB}|MoneyWeapon.csproj|solutionrelative:scenes\\titlescene.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C221BE72-7895-4E15-A9D3-19A6564773CB}|MoneyWeapon.csproj|C:\\Users\\wogns\\Documents\\GitHub\\04-oop-console-project-wogns4168\\MoneyWeapon\\scenes\\endingscene.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C221BE72-7895-4E15-A9D3-19A6564773CB}|MoneyWeapon.csproj|solutionrelative:scenes\\endingscene.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C221BE72-7895-4E15-A9D3-19A6564773CB}|MoneyWeapon.csproj|C:\\Users\\wogns\\Documents\\GitHub\\04-oop-console-project-wogns4168\\MoneyWeapon\\scenes\\scene.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C221BE72-7895-4E15-A9D3-19A6564773CB}|MoneyWeapon.csproj|solutionrelative:scenes\\scene.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C221BE72-7895-4E15-A9D3-19A6564773CB}|MoneyWeapon.csproj|C:\\Users\\wogns\\Documents\\GitHub\\04-oop-console-project-wogns4168\\MoneyWeapon\\managers\\scenemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C221BE72-7895-4E15-A9D3-19A6564773CB}|MoneyWeapon.csproj|solutionrelative:managers\\scenemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C221BE72-7895-4E15-A9D3-19A6564773CB}|MoneyWeapon.csproj|c:\\users\\wogns\\documents\\github\\04-oop-console-project-wogns4168\\moneyweapon\\utils\\inventory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -35,10 +55,6 @@
       "RelativeMoniker": "D:0:0:{C221BE72-7895-4E15-A9D3-19A6564773CB}|MoneyWeapon.csproj|solutionrelative:gameobjects\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C221BE72-7895-4E15-A9D3-19A6564773CB}|MoneyWeapon.csproj|c:\\users\\wogns\\documents\\github\\04-oop-console-project-wogns4168\\moneyweapon\\scenes\\townscene.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C221BE72-7895-4E15-A9D3-19A6564773CB}|MoneyWeapon.csproj|solutionrelative:scenes\\townscene.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{C221BE72-7895-4E15-A9D3-19A6564773CB}|MoneyWeapon.csproj|C:\\Users\\wogns\\Documents\\GitHub\\04-oop-console-project-wogns4168\\MoneyWeapon\\gameobjects\\gameobject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C221BE72-7895-4E15-A9D3-19A6564773CB}|MoneyWeapon.csproj|solutionrelative:gameobjects\\gameobject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -59,10 +75,6 @@
       "RelativeMoniker": "D:0:0:{C221BE72-7895-4E15-A9D3-19A6564773CB}|MoneyWeapon.csproj|solutionrelative:utils\\inventoryslot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C221BE72-7895-4E15-A9D3-19A6564773CB}|MoneyWeapon.csproj|C:\\Users\\wogns\\Documents\\GitHub\\04-oop-console-project-wogns4168\\MoneyWeapon\\scenes\\titlescene.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C221BE72-7895-4E15-A9D3-19A6564773CB}|MoneyWeapon.csproj|solutionrelative:scenes\\titlescene.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{C221BE72-7895-4E15-A9D3-19A6564773CB}|MoneyWeapon.csproj|C:\\Users\\wogns\\Documents\\GitHub\\04-oop-console-project-wogns4168\\MoneyWeapon\\utils\\log.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C221BE72-7895-4E15-A9D3-19A6564773CB}|MoneyWeapon.csproj|solutionrelative:utils\\log.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -75,24 +87,12 @@
       "RelativeMoniker": "D:0:0:{C221BE72-7895-4E15-A9D3-19A6564773CB}|MoneyWeapon.csproj|solutionrelative:managers\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C221BE72-7895-4E15-A9D3-19A6564773CB}|MoneyWeapon.csproj|C:\\Users\\wogns\\Documents\\GitHub\\04-oop-console-project-wogns4168\\MoneyWeapon\\managers\\scenemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C221BE72-7895-4E15-A9D3-19A6564773CB}|MoneyWeapon.csproj|solutionrelative:managers\\scenemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{C221BE72-7895-4E15-A9D3-19A6564773CB}|MoneyWeapon.csproj|C:\\Users\\wogns\\Documents\\GitHub\\04-oop-console-project-wogns4168\\MoneyWeapon\\scenes\\dungeonscene.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C221BE72-7895-4E15-A9D3-19A6564773CB}|MoneyWeapon.csproj|solutionrelative:scenes\\dungeonscene.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C221BE72-7895-4E15-A9D3-19A6564773CB}|MoneyWeapon.csproj|C:\\Users\\wogns\\Documents\\GitHub\\04-oop-console-project-wogns4168\\MoneyWeapon\\scenes\\endingscene.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C221BE72-7895-4E15-A9D3-19A6564773CB}|MoneyWeapon.csproj|solutionrelative:scenes\\endingscene.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{C221BE72-7895-4E15-A9D3-19A6564773CB}|MoneyWeapon.csproj|C:\\Users\\wogns\\Documents\\GitHub\\04-oop-console-project-wogns4168\\MoneyWeapon\\utils\\menulist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C221BE72-7895-4E15-A9D3-19A6564773CB}|MoneyWeapon.csproj|solutionrelative:utils\\menulist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C221BE72-7895-4E15-A9D3-19A6564773CB}|MoneyWeapon.csproj|C:\\Users\\wogns\\Documents\\GitHub\\04-oop-console-project-wogns4168\\MoneyWeapon\\scenes\\scene.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C221BE72-7895-4E15-A9D3-19A6564773CB}|MoneyWeapon.csproj|solutionrelative:scenes\\scene.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C221BE72-7895-4E15-A9D3-19A6564773CB}|MoneyWeapon.csproj|C:\\Users\\wogns\\Documents\\GitHub\\04-oop-console-project-wogns4168\\MoneyWeapon\\gameobjects\\ipotal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -163,7 +163,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 8,
               "Title": "RichPaper.cs",
               "DocumentMoniker": "C:\\Users\\wogns\\Documents\\GitHub\\04-oop-console-project-wogns4168\\MoneyWeapon\\GameObjects\\RichPaper.cs",
               "RelativeDocumentMoniker": "GameObjects\\RichPaper.cs",
@@ -176,7 +176,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 10,
               "Title": "Paper.cs",
               "DocumentMoniker": "C:\\Users\\wogns\\Documents\\GitHub\\04-oop-console-project-wogns4168\\MoneyWeapon\\GameObjects\\Paper.cs",
               "RelativeDocumentMoniker": "GameObjects\\Paper.cs",
@@ -189,7 +189,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 15,
               "Title": "TownPotal.cs",
               "DocumentMoniker": "C:\\Users\\wogns\\Documents\\GitHub\\04-oop-console-project-wogns4168\\MoneyWeapon\\GameObjects\\TownPotal.cs",
               "RelativeDocumentMoniker": "GameObjects\\TownPotal.cs",
@@ -202,7 +202,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 16,
               "Title": "Item.cs",
               "DocumentMoniker": "C:\\Users\\wogns\\Documents\\GitHub\\04-oop-console-project-wogns4168\\MoneyWeapon\\GameObjects\\Item.cs",
               "RelativeDocumentMoniker": "GameObjects\\Item.cs",
@@ -215,7 +215,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 7,
               "Title": "Inventory.cs",
               "DocumentMoniker": "C:\\Users\\wogns\\Documents\\GitHub\\04-oop-console-project-wogns4168\\MoneyWeapon\\Utils\\Inventory.cs",
               "RelativeDocumentMoniker": "Utils\\Inventory.cs",
@@ -228,7 +228,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 17,
               "Title": "InventorySlot.cs",
               "DocumentMoniker": "C:\\Users\\wogns\\Documents\\GitHub\\04-oop-console-project-wogns4168\\MoneyWeapon\\Utils\\InventorySlot.cs",
               "RelativeDocumentMoniker": "Utils\\InventorySlot.cs",
@@ -241,7 +241,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 11,
               "Title": "Stock.cs",
               "DocumentMoniker": "C:\\Users\\wogns\\Documents\\GitHub\\04-oop-console-project-wogns4168\\MoneyWeapon\\GameObjects\\Stock.cs",
               "RelativeDocumentMoniker": "GameObjects\\Stock.cs",
@@ -254,7 +254,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 21,
               "Title": "DungeonScene.cs",
               "DocumentMoniker": "C:\\Users\\wogns\\Documents\\GitHub\\04-oop-console-project-wogns4168\\MoneyWeapon\\Scenes\\DungeonScene.cs",
               "RelativeDocumentMoniker": "Scenes\\DungeonScene.cs",
@@ -266,7 +266,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 9,
               "Title": "MinePotal.cs",
               "DocumentMoniker": "C:\\Users\\wogns\\Documents\\GitHub\\04-oop-console-project-wogns4168\\MoneyWeapon\\GameObjects\\MinePotal.cs",
               "RelativeDocumentMoniker": "GameObjects\\MinePotal.cs",
@@ -315,26 +315,26 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 1,
               "Title": "TownScene.cs",
               "DocumentMoniker": "C:\\Users\\wogns\\Documents\\GitHub\\04-oop-console-project-wogns4168\\MoneyWeapon\\Scenes\\TownScene.cs",
               "RelativeDocumentMoniker": "Scenes\\TownScene.cs",
               "ToolTip": "C:\\Users\\wogns\\Documents\\GitHub\\04-oop-console-project-wogns4168\\MoneyWeapon\\Scenes\\TownScene.cs",
               "RelativeToolTip": "Scenes\\TownScene.cs",
-              "ViewState": "AgIAAEsAAAAAAAAAAAAYwFUAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAFsAAAAAAAAAAAAgwG8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-01-09T03:39:16.132Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 6,
               "Title": "SceneManager.cs",
               "DocumentMoniker": "C:\\Users\\wogns\\Documents\\GitHub\\04-oop-console-project-wogns4168\\MoneyWeapon\\Managers\\SceneManager.cs",
               "RelativeDocumentMoniker": "Managers\\SceneManager.cs",
               "ToolTip": "C:\\Users\\wogns\\Documents\\GitHub\\04-oop-console-project-wogns4168\\MoneyWeapon\\Managers\\SceneManager.cs",
               "RelativeToolTip": "Managers\\SceneManager.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAB0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-01-08T08:26:39.203Z",
               "EditorCaption": ""
@@ -353,7 +353,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 4,
               "Title": "EndingScene.cs",
               "DocumentMoniker": "C:\\Users\\wogns\\Documents\\GitHub\\04-oop-console-project-wogns4168\\MoneyWeapon\\Scenes\\EndingScene.cs",
               "RelativeDocumentMoniker": "Scenes\\EndingScene.cs",
@@ -361,11 +361,12 @@
               "RelativeToolTip": "Scenes\\EndingScene.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-09T03:51:16.185Z"
+              "WhenOpened": "2026-01-09T03:51:16.185Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 12,
               "Title": "Player.cs",
               "DocumentMoniker": "C:\\Users\\wogns\\Documents\\GitHub\\04-oop-console-project-wogns4168\\MoneyWeapon\\GameObjects\\Player.cs",
               "RelativeDocumentMoniker": "GameObjects\\Player.cs",
@@ -378,7 +379,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 13,
               "Title": "GameObject.cs",
               "DocumentMoniker": "C:\\Users\\wogns\\Documents\\GitHub\\04-oop-console-project-wogns4168\\MoneyWeapon\\GameObjects\\GameObject.cs",
               "RelativeDocumentMoniker": "GameObjects\\GameObject.cs",
@@ -403,7 +404,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 3,
               "Title": "TitleScene.cs",
               "DocumentMoniker": "C:\\Users\\wogns\\Documents\\GitHub\\04-oop-console-project-wogns4168\\MoneyWeapon\\Scenes\\TitleScene.cs",
               "RelativeDocumentMoniker": "Scenes\\TitleScene.cs",
@@ -416,7 +417,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 18,
               "Title": "Log.cs",
               "DocumentMoniker": "C:\\Users\\wogns\\Documents\\GitHub\\04-oop-console-project-wogns4168\\MoneyWeapon\\Utils\\Log.cs",
               "RelativeDocumentMoniker": "Utils\\Log.cs",
@@ -429,7 +430,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 20,
               "Title": "GameManager.cs",
               "DocumentMoniker": "C:\\Users\\wogns\\Documents\\GitHub\\04-oop-console-project-wogns4168\\MoneyWeapon\\Managers\\GameManager.cs",
               "RelativeDocumentMoniker": "Managers\\GameManager.cs",
@@ -442,20 +443,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "ExchangeScene.cs",
               "DocumentMoniker": "C:\\Users\\wogns\\Documents\\GitHub\\04-oop-console-project-wogns4168\\MoneyWeapon\\Scenes\\ExchangeScene.cs",
               "RelativeDocumentMoniker": "Scenes\\ExchangeScene.cs",
               "ToolTip": "C:\\Users\\wogns\\Documents\\GitHub\\04-oop-console-project-wogns4168\\MoneyWeapon\\Scenes\\ExchangeScene.cs",
               "RelativeToolTip": "Scenes\\ExchangeScene.cs",
-              "ViewState": "AgIAAOoAAAAAAAAAAADwv/wAAAANAAAAAAAAAA==",
+              "ViewState": "AgIAAD8AAAAAAAAAAAAcwFAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-01-09T03:42:25.212Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 19,
               "Title": "InputManager.cs",
               "DocumentMoniker": "C:\\Users\\wogns\\Documents\\GitHub\\04-oop-console-project-wogns4168\\MoneyWeapon\\Managers\\InputManager.cs",
               "RelativeDocumentMoniker": "Managers\\InputManager.cs",
@@ -468,7 +469,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 5,
               "Title": "Scene.cs",
               "DocumentMoniker": "C:\\Users\\wogns\\Documents\\GitHub\\04-oop-console-project-wogns4168\\MoneyWeapon\\Scenes\\Scene.cs",
               "RelativeDocumentMoniker": "Scenes\\Scene.cs",
@@ -476,7 +477,8 @@
               "RelativeToolTip": "Scenes\\Scene.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-08T08:30:10.114Z"
+              "WhenOpened": "2026-01-08T08:30:10.114Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -492,7 +494,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 14,
               "Title": "Vector.cs",
               "DocumentMoniker": "C:\\Users\\wogns\\Documents\\GitHub\\04-oop-console-project-wogns4168\\MoneyWeapon\\Utils\\Vector.cs",
               "RelativeDocumentMoniker": "Utils\\Vector.cs",
@@ -529,7 +531,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 22,
               "Title": "MenuList.cs",
               "DocumentMoniker": "C:\\Users\\wogns\\Documents\\GitHub\\04-oop-console-project-wogns4168\\MoneyWeapon\\Utils\\MenuList.cs",
               "RelativeDocumentMoniker": "Utils\\MenuList.cs",
@@ -547,7 +549,7 @@
               "RelativeDocumentMoniker": "Scenes\\MineScene.cs",
               "ToolTip": "C:\\Users\\wogns\\Documents\\GitHub\\04-oop-console-project-wogns4168\\MoneyWeapon\\Scenes\\MineScene.cs*",
               "RelativeToolTip": "Scenes\\MineScene.cs*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAvAAAAAAAAAA==",
+              "ViewState": "AgIAACEAAAAAAAAAAAAIwDUAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-01-09T03:40:33.75Z",
               "EditorCaption": ""

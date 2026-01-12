@@ -45,6 +45,8 @@ namespace MoneyWeapon.Scenes
         {
             Console.SetCursorPosition(5, 1);
             Tutorial.Render(5, 1);
+            Console.SetCursorPosition(5, 9);
+            "[던전]".Print(ConsoleColor.Red);
             for (int y = 0; y < dungeonField.GetLength(0); y++)
             {
                 for (int x = 0; x < dungeonField.GetLength(1); x++)

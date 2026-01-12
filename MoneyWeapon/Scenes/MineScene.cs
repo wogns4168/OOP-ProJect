@@ -50,6 +50,8 @@ namespace MoneyWeapon.Scenes
         {
             Console.SetCursorPosition(5, 1);
             Tutorial.Render(5, 1);
+            Console.SetCursorPosition(5, 9);
+            "[광산]".Print(ConsoleColor.Red);
             for (int y = 0; y < _mineField.GetLength(0); y++)
             {
                 for (int x = 0; x < _mineField.GetLength(1); x++)
