@@ -39,17 +39,6 @@ namespace MoneyWeapon.Scenes
             exchangeStockList.Add(new Stock("주식 7", 10000, 1000, 100000, 100));
             exchangeStockList.Add(new Stock("주식 8", 10000, 1000, 100000, 100));
             exchangeStockList.Add(new Stock("주식 9", 10000, 1000, 100000, 100));
-
-            Inventory.Add(new Stock("주식 1", 10000, 1000, 100000, 100), 80);
-            Inventory.Add(new Stock("주식 2", 10000, 1000, 100000, 100), 3);
-            Inventory.Add(new Stock("주식 3", 10000, 1000, 100000, 100), 5);
-            Inventory.Add(new Stock("주식 4", 10000, 1000, 100000, 100), 5);
-            Inventory.Add(new Stock("주식 5", 10000, 1000, 100000, 100), 5);
-            Inventory.Add(new Stock("주식 6", 10000, 1000, 100000, 100), 5);
-            Inventory.Add(new Stock("주식 7", 10000, 1000, 100000, 100), 5);
-            Inventory.Add(new Stock("주식 8", 10000, 1000, 100000, 100), 5);
-            Inventory.Add(new Stock("주식 9", 10000, 1000, 100000, 100), 5);
-            Inventory.Add(new Stock("주식 10", 10000, 1000, 100000, 100), 5);
         }
 
         public override void Enter()
@@ -58,6 +47,7 @@ namespace MoneyWeapon.Scenes
             Inventory.IsActive = true;
             IsExchangeUse = true;
             IsInventoryUse = false;
+            Log.IsActive = false;
         }
 
         public override void Exit()
@@ -109,7 +99,7 @@ namespace MoneyWeapon.Scenes
 
                 Console.SetCursorPosition(X, Y);
 
-                if (i == CurrentIndex)
+                if (i == CurrentIndex && IsExchangeUse == true)
                 {
                     "->".Print(ConsoleColor.Green);
                     item.Name.Print(ConsoleColor.Green);
@@ -203,7 +193,7 @@ namespace MoneyWeapon.Scenes
 
                 if (InputManager.GetKey(ConsoleKey.Enter))
                 {
-                    Select();
+                    Buy(exchangeStockList[CurrentIndex], 1);
                 }
             }
         }
@@ -222,11 +212,6 @@ namespace MoneyWeapon.Scenes
 
             if (CurrentIndex >= exchangeStockList.Count)
                 CurrentIndex = exchangeStockList.Count - 1;
-        }
-
-        public static void Select()
-        {
-
         }
 
         public static void RandomStock()

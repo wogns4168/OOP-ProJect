@@ -37,15 +37,15 @@ namespace MoneyWeapon.Utils
                 }
             }
 
-            if(slot == null)
+            if (slot == null)
             {
                 InventoryList.Add(new InventorySlot(stock, number));
-                stock.AvgPrice += stock.Price * number;
+                stock.AllBuyPrice += stock.Price * number;
             }
             else
             {
                 slot.Quantity += number;
-                stock.AvgPrice += stock.Price * number;
+                stock.AllBuyPrice += stock.Price * number;
             }
         }
 
@@ -63,19 +63,20 @@ namespace MoneyWeapon.Utils
 
             if (slot == null) return;
 
+            if (slot.Quantity < number) return;
+
+            int avgPrice = stock.AllBuyPrice / slot.Quantity;
+
+            stock.AllBuyPrice -= avgPrice * number;
+
+            if (slot.Quantity == number)
+            {
+                InventoryList.Remove(slot);
+                stock.AllBuyPrice = 0;
+            }
             else
             {
-                if (slot.Quantity < number) return;
-                else if (slot.Quantity == number)
-                {
-                    InventoryList.Remove(slot);
-                    stock.AvgPrice -= stock.Price * number;
-                }
-                else
-                {
-                    slot.Quantity -= number;
-                    stock.AvgPrice -= stock.Price * number;
-                }
+                slot.Quantity -= number;
             }
         }
 
@@ -129,7 +130,7 @@ namespace MoneyWeapon.Utils
 
                 Console.SetCursorPosition(X, Y);
 
-                if (i == CurrentIndex)
+                if (i == CurrentIndex && ExchangeScene.IsInventoryUse == true)
                 {
                     "->".Print(ConsoleColor.Green);
                     item.stock.Name.Print(ConsoleColor.Green);
@@ -138,7 +139,7 @@ namespace MoneyWeapon.Utils
                     Console.SetCursorPosition(X + 22, Y);
                     Console.WriteLine($"{item.stock.Price * item.Quantity} 원");
                     Console.SetCursorPosition(X + 36, Y);
-                    Console.WriteLine($"{item.stock.AvgPrice / item.Quantity} 원");
+                    Console.WriteLine($"{item.stock.AllBuyPrice / item.Quantity} 원");
                     continue;
                 }
                 else
@@ -150,7 +151,7 @@ namespace MoneyWeapon.Utils
                     Console.SetCursorPosition(X + 22, Y);
                     Console.WriteLine($"{item.stock.Price * item.Quantity} 원");
                     Console.SetCursorPosition(X + 36, Y);
-                    Console.WriteLine($"{item.stock.AvgPrice / item.Quantity} 원");
+                    Console.WriteLine($"{item.stock.AllBuyPrice / item.Quantity} 원");
                 }
             }
 
@@ -177,8 +178,13 @@ namespace MoneyWeapon.Utils
                 {
                     SelectDown();
                 }
+
+                if (InputManager.GetKey(ConsoleKey.Enter))
+                {
+                    ExchangeScene.Sell(InventoryList[CurrentIndex].stock, 1);
+                }
             }
-            
+
         }
 
         public static void SelectUp()
@@ -197,15 +203,11 @@ namespace MoneyWeapon.Utils
                 CurrentIndex = InventoryList.Count - 1;
         }
 
-        public static void Select()
-        {
-        }
-
         public static int GetQuantity(Stock stock)
         {
             for (int i = 0; i < InventoryList.Count; i++)
             {
-                if(stock == InventoryList[i].stock)
+                if (stock == InventoryList[i].stock)
                 {
                     return InventoryList[i].Quantity;
                 }

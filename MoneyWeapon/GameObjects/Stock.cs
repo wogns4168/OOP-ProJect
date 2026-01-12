@@ -16,7 +16,7 @@ namespace MoneyWeapon.GameObjects
         public int MaxPrice { get; }
         public int MaxQuantity { get; }
 
-        public int AvgPrice { get; set; }
+        public int AllBuyPrice { get; set; }
 
         public int PrevPrice { get; private set; }
         public float ChangeRate { get; private set; }
@@ -47,5 +47,6 @@ namespace MoneyWeapon.GameObjects
 
             ChangeRate = ((float)(Price - PrevPrice) / PrevPrice) * 100f;
         }
+
     }
 }
