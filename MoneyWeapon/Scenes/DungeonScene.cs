@@ -66,6 +66,7 @@ namespace MoneyWeapon.Scenes
 
         public override void Enter()
         {
+
             if (_prevPlayer.Position.X == Vector.None.X && _prevPlayer.Position.Y == Vector.None.Y)
             {
                 _player.Position = new Vector(2, 2);
@@ -74,30 +75,22 @@ namespace MoneyWeapon.Scenes
             {
                 _player.Position = _prevPlayer.Position;
             }
-            if (result == null) _dungeonClear = false;
 
             _townPotal.Position = new Vector(1, 2);
 
-            if (_currentMonster == null)
-            {
-                if (!_dungeonClear)
-                    SpawnMonster();
-            }
-            else
-            {
-                if (_currentMonster.Hp <= 0 && result != null)
-                {
-                    dungeonField[_currentMonster.Position.Y, _currentMonster.Position.X].OnTileObject = null;
-                    _currentMonster = null;
-                }
-                else
-                {
-                    ObjectPosition(_currentMonster);
-                }
-            }
+            if (_currentMonster == null && !_dungeonClear)
+                SpawnMonster();
+
+            if (_currentMonster != null && _currentMonster.Hp > 0)
+                ObjectPosition(_currentMonster);
+
+            if (result != null)
+                ObjectPosition(result);
+
             ObjectPosition(_player);
             ObjectPosition(_townPotal);
-            Log.NomalLog("던전씬 진입");
+
+            Clear();
         }
 
         public override void Exit()
@@ -107,7 +100,10 @@ namespace MoneyWeapon.Scenes
             {
                 _curFloor++;
                 _prevPlayer.Position = Vector.None;
+                _dungeonClear = false;
                 _resultPickUp = false;
+                _currentMonster = null;
+                result = null;
             }
         }
 
@@ -120,7 +116,6 @@ namespace MoneyWeapon.Scenes
         public override void Update()
         {
             Clear();
-            if (_currentMonster == null && !_resultPickUp) SpawnResult();
             _player.Update();
 
             if (_currentMonster != null)
@@ -163,7 +158,7 @@ namespace MoneyWeapon.Scenes
 
         private void SpawnMonster()
         {
-            int hp = _curFloor * 3 * 1000000;
+            int hp = _curFloor * 10 * 1000000;
             _currentMonster = new Monster($"{_curFloor}층 몬스터", hp);
             _currentMonster.Position = new Vector(10, 2);
             ObjectPosition(_currentMonster);
@@ -176,6 +171,11 @@ namespace MoneyWeapon.Scenes
                 dungeonField[_currentMonster.Position.Y, _currentMonster.Position.X].OnTileObject = null;
                 _currentMonster = null;
                 _dungeonClear = true;
+            }
+
+            if (_dungeonClear && result == null && !_resultPickUp)
+            {
+                SpawnResult();
             }
         }
 

@@ -32,14 +32,17 @@ namespace MoneyWeapon.Scenes
 
         public void Init()
         {
-            exchangeStockList.Add(new Stock("경일", 1000000));
-            exchangeStockList.Add(new Stock("카카오게임즈", 500000));
+            exchangeStockList.Add(new Stock("경일", 10000000));
+            exchangeStockList.Add(new Stock("라이엇", 5000000));
+            exchangeStockList.Add(new Stock("스팀", 1000000));
+            exchangeStockList.Add(new Stock("네오플", 700000));
+            exchangeStockList.Add(new Stock("카카오", 500000));
             exchangeStockList.Add(new Stock("컴투스", 300000));
             exchangeStockList.Add(new Stock("넥슨", 100000));
             exchangeStockList.Add(new Stock("NC", 50000));
             exchangeStockList.Add(new Stock("넷마블", 30000));
             exchangeStockList.Add(new Stock("크래프톤", 10000));
-            exchangeStockList.Add(new Stock("스마일게이트", 5000));
+            exchangeStockList.Add(new Stock("스마일", 5000));
             exchangeStockList.Add(new Stock("펄어비스", 1000));
         }
 

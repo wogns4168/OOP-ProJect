@@ -10,6 +10,7 @@ namespace MoneyWeapon.Managers
     internal static class InputManager
     {
         private static ConsoleKey _current;
+        private static ConsoleKey _previous;
 
         private static readonly ConsoleKey[] _keys =
         {
@@ -32,6 +33,7 @@ namespace MoneyWeapon.Managers
 
         public static void GetUserInput()
         {
+            _previous = _current;
             if (SceneManager.curScene() is BattleScene)
             {
                 if (!Console.KeyAvailable) return;
