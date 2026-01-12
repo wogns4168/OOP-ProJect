@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
+using System.Net.NetworkInformation;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -15,6 +16,8 @@ namespace MoneyWeapon.Scenes
         public static bool exchangeIsActive { get; set; }
         private static Ractangle _outline;
         const int MaxHeight = 15;
+        public static bool IsInventoryUse;
+        private static bool IsExchangeUse;
 
         private static int CurrentIndex { get; set; }
 
@@ -25,18 +28,28 @@ namespace MoneyWeapon.Scenes
         public void Init()
         {
             exchangeStockList.Add(new Stock("주식 1", 10000, 1000, 100000, 100));
+            exchangeStockList.Add(new Stock("주식 2", 10000, 1000, 100000, 100));
+            exchangeStockList.Add(new Stock("주식 3", 10000, 1000, 100000, 100));
+
+            Inventory.Add(new Stock("주식 1", 10000, 1000, 100000, 100), 5);
+            Inventory.Add(new Stock("주식 2", 10000, 1000, 100000, 100), 3);
+            Inventory.Add(new Stock("주식 3", 10000, 1000, 100000, 100), 5);
         }
 
         public override void Enter()
         {
             exchangeIsActive = true;
             Inventory.IsActive = true;
+            IsExchangeUse = true;
+            IsInventoryUse = false;
         }
 
         public override void Exit()
         {
             exchangeIsActive = false;
             Inventory.IsActive = false;
+            IsInventoryUse = true;
+            IsExchangeUse = false;
         }
 
         public override void Render()
@@ -101,9 +114,25 @@ namespace MoneyWeapon.Scenes
 
         public override void Update()
         {
-            if(InputManager.GetKey(ConsoleKey.Escape))
+            if (InputManager.GetKey(ConsoleKey.Escape))
             {
                 SceneManager.ChangePrevScene();
+            }
+
+            UIUpdate();
+            if (IsExchangeUse == true)
+            {
+                if (InputManager.GetKey(ConsoleKey.RightArrow))
+                {
+                    PocusUI();
+                }
+            }
+            else
+            {
+                if (InputManager.GetKey(ConsoleKey.LeftArrow))
+                {
+                    PocusUI();
+                }
             }
         }
 
@@ -122,8 +151,56 @@ namespace MoneyWeapon.Scenes
             if (Player.Money < price) return;
             if (stock.MaxQuantity < Inventory.GetQuantity(stock) + number) return;
 
-                Player.Money -= price;
-                Inventory.Add(stock, number);
+            Player.Money -= price;
+            Inventory.Add(stock, number);
+        }
+
+        public static void PocusUI()
+        {
+            IsExchangeUse = !IsExchangeUse;
+            IsInventoryUse = !IsExchangeUse;
+        }
+
+        public static void UIUpdate()
+        {
+            if (IsExchangeUse == true)
+            {
+                if (InputManager.GetKey(ConsoleKey.UpArrow))
+                {
+                    SelectUp();
+                }
+
+                if (InputManager.GetKey(ConsoleKey.DownArrow))
+                {
+                    SelectDown();
+                }
+
+                if (InputManager.GetKey(ConsoleKey.Enter))
+                {
+                    Select();
+                }
+            }
+        }
+
+        public static void SelectUp()
+        {
+            CurrentIndex--;
+
+            if (CurrentIndex < 0)
+                CurrentIndex = 0;
+        }
+
+        public static void SelectDown()
+        {
+            CurrentIndex++;
+
+            if (CurrentIndex >= exchangeStockList.Count)
+                CurrentIndex = exchangeStockList.Count - 1;
+        }
+
+        public static void Select()
+        {
+
         }
     }
 }

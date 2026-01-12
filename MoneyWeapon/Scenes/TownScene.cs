@@ -58,6 +58,7 @@ namespace MoneyWeapon.Scenes
             ObjectPosition(_minePotal);
             Player.IsActive = true;
             Inventory.IsActive = false;
+            ExchangeScene.IsInventoryUse = true;
             Log.NomalLog("마을씬 진입");
         }
 

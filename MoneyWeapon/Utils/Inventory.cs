@@ -146,15 +146,20 @@ namespace MoneyWeapon.Utils
 
         public static void Update()
         {
-            if (InputManager.GetKey(ConsoleKey.UpArrow))
-            {
-                SelectUp();
-            }
 
-            if (InputManager.GetKey(ConsoleKey.DownArrow))
+            if (ExchangeScene.IsInventoryUse == true)
             {
-                SelectDown();
+                if (InputManager.GetKey(ConsoleKey.UpArrow))
+                {
+                    SelectUp();
+                }
+
+                if (InputManager.GetKey(ConsoleKey.DownArrow))
+                {
+                    SelectDown();
+                }
             }
+            
         }
 
         public static void SelectUp()
