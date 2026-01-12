@@ -14,6 +14,10 @@ namespace MoneyWeapon.Scenes
         private Tile[,] dungeonField = new Tile[5, 20];
         private Player _player = new Player();
         private TownPotal _townPotal = new TownPotal();
+        private List<Monster> _monsters = new List<Monster>();
+        private int _curFloor = 1;
+        private int _maxFloor = 10;
+        private bool _dungeonClear;
 
         public DungeonScene() => Init();
 
@@ -33,7 +37,6 @@ namespace MoneyWeapon.Scenes
                     }
                 }
             }
-
         }
         public void ObjectPosition(GameObject obj)
         {
@@ -46,7 +49,7 @@ namespace MoneyWeapon.Scenes
             Console.SetCursorPosition(5, 1);
             Tutorial.Render(5, 1);
             Console.SetCursorPosition(5, 9);
-            "[던전]".Print(ConsoleColor.Red);
+            $"[{_curFloor}층 던전]".Print(ConsoleColor.Red);
             for (int y = 0; y < dungeonField.GetLength(0); y++)
             {
                 for (int x = 0; x < dungeonField.GetLength(1); x++)
@@ -59,16 +62,21 @@ namespace MoneyWeapon.Scenes
 
         public override void Enter()
         {
+            _dungeonClear = false;
             _player.Position = new Vector(2, 2);
             _townPotal.Position = new Vector(1, 2);
+            SpawnMonster();
+            _monsters[_curFloor - 1].Position = new Vector(10, 2);
             ObjectPosition(_player);
             ObjectPosition(_townPotal);
+            ObjectPosition(_monsters[_curFloor - 1]);
             Log.NomalLog("던전씬 진입");
         }
 
         public override void Exit()
         {
             dungeonField[_player.Position.Y, _player.Position.X].OnTileObject = null;
+            dungeonField[_monsters[_curFloor - 1].Position.Y, _monsters[_curFloor - 1].Position.X].OnTileObject = null;
         }
 
         public override void Render()
@@ -88,6 +96,31 @@ namespace MoneyWeapon.Scenes
                     SceneManager.ChangePrevScene();
                 }
             }
+        }
+
+        private void SpawnMonster()
+        {
+            int hp = _curFloor * 1000000;
+
+            for (int i = 0; i < _maxFloor; i++)
+            {
+                _monsters.Add(new Monster($"{_curFloor}층 몬스터", hp));
+            }
+        }
+
+        private void Clear()
+        {
+
+        }
+
+        private void SpawnResult()
+        {
+
+        }
+
+        private void SpawnPotal()
+        {
+
         }
 
     }
