@@ -14,8 +14,9 @@ namespace MoneyWeapon.Scenes
         private Tile[,] _mineField = new Tile[20, 40];
         private Player _player = new Player();
         private TownPotal _townPotal = new TownPotal();
-        private List<Paper> _papers = new List<Paper>();
+        public List<Paper> _papers = new List<Paper>();
         private Random _random = new Random();
+        private Stock paper = new Stock("폐지", 5000, 5000, 5000, 100);
 
         public MineScene() => Init();
 
@@ -91,6 +92,16 @@ namespace MoneyWeapon.Scenes
                 if (Vector.Near(_player.Position, _townPotal.Position))
                 {
                     SceneManager.ChangePrevScene();
+                }
+
+                for(int i = 0; i < _papers.Count; i++)
+                {
+                    if(Vector.Near(_player.Position, _papers[i].Position))
+                    {
+                        Inventory.Add(paper, 1);
+                        _mineField[_papers[i].Position.Y, _papers[i].Position.X].OnTileObject = null;
+                        _papers.RemoveAt(i);
+                    }
                 }
             }
         }

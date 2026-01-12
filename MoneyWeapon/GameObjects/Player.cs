@@ -1,4 +1,5 @@
 ﻿using MoneyWeapon.Managers;
+using MoneyWeapon.Scenes;
 using MoneyWeapon.Utils;
 using System;
 using System.Collections.Generic;
@@ -46,6 +47,7 @@ namespace MoneyWeapon.GameObjects
                 {
                     return Move(Vector.Right);
                 }
+
             }
 
             return Position;
