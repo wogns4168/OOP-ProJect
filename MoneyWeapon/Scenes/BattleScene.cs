@@ -1,4 +1,6 @@
-﻿using System;
+﻿using MoneyWeapon.GameObjects;
+using MoneyWeapon.Managers;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,22 +12,22 @@ namespace MoneyWeapon.Scenes
     {
         public override void Enter()
         {
-            throw new NotImplementedException();
         }
 
         public override void Exit()
         {
-            throw new NotImplementedException();
+            if (InputManager.GetKey(ConsoleKey.Escape))
+            {
+                SceneManager.ChangePrevScene();
+            }
         }
 
         public override void Render()
         {
-            throw new NotImplementedException();
         }
 
         public override void Update()
         {
-            throw new NotImplementedException();
         }
     }
 }

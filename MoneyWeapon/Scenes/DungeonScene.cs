@@ -14,6 +14,7 @@ namespace MoneyWeapon.Scenes
     {
         private Tile[,] dungeonField = new Tile[5, 20];
         private Player _player = new Player();
+        private Player _prevPlayer = new Player();
         private TownPotal _townPotal = new TownPotal();
         private List<Monster> _monsters = new List<Monster>();
         private DungeonPotal _dungeonPotal = new DungeonPotal();
@@ -65,8 +66,15 @@ namespace MoneyWeapon.Scenes
 
         public override void Enter()
         {
+            if (_prevPlayer.Position.X == Vector.None.X && _prevPlayer.Position.Y == Vector.None.Y)
+            {
+                _player.Position = new Vector(2, 2);
+            }
+            else
+            {
+                _player.Position = _prevPlayer.Position;
+            }
             _dungeonClear = false;
-            _player.Position = new Vector(2, 2);
             _townPotal.Position = new Vector(1, 2);
             SpawnMonster();
             _monsters[_curFloor - 1].Position = new Vector(10, 2);
@@ -78,8 +86,8 @@ namespace MoneyWeapon.Scenes
 
         public override void Exit()
         {
-            dungeonField[_player.Position.Y, _player.Position.X].OnTileObject = null;
-            if(_dungeonClear == true)
+            _prevPlayer.Position = _player.Position;
+            if (_dungeonClear == true)
             {
                 _curFloor++;
             }
