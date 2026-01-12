@@ -11,13 +11,10 @@ namespace MoneyWeapon.GameObjects
         string Name { get; }
         int Hp {  get; }
 
-        int dropNum { get; }
-
-        public Monster(string name, int hp, int num)
+        public Monster(string name, int hp)
         {
             Name = name;
             Hp = hp;
-            dropNum = num;
             Symbol = 'M';
         }
     }

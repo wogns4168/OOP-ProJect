@@ -4,6 +4,7 @@ using MoneyWeapon.Utils;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -15,6 +16,7 @@ namespace MoneyWeapon.Scenes
         private Player _player = new Player();
         private TownPotal _townPotal = new TownPotal();
         private List<Monster> _monsters = new List<Monster>();
+        private DungeonPotal _dungeonPotal = new DungeonPotal();
         private int _curFloor = 1;
         private int _maxFloor = 10;
         private bool _dungeonClear;
@@ -76,7 +78,11 @@ namespace MoneyWeapon.Scenes
 
         public override void Exit()
         {
-            dungeonField[_player.Position.Y, _player.Position.X].OnTileObject = null; 
+            dungeonField[_player.Position.Y, _player.Position.X].OnTileObject = null;
+            if(_dungeonClear == true)
+            {
+                _curFloor++;
+            }
         }
 
         public override void Render()
@@ -105,8 +111,16 @@ namespace MoneyWeapon.Scenes
                 if (Vector.Near(_player.Position, result.Position))
                 {
                     Inventory.Add(MineScene.richPaper, result.DropNum);
+                    dungeonField[result.Position.Y, result.Position.X].OnTileObject = null;
                 }
             }
+
+            if(PickResult())
+            {
+                SpawnPotal();
+            }
+
+            
 
         }
 
@@ -143,8 +157,16 @@ namespace MoneyWeapon.Scenes
 
         private void SpawnPotal()
         {
-
+            _dungeonPotal.Position = new Vector(18, 2);
+            ObjectPosition(_dungeonPotal);
         }
 
+        private bool PickResult()
+        {
+            if (dungeonField[result.Position.Y, result.Position.X].OnTileObject == null && dungeonField[_monsters[_curFloor - 1].Position.Y, _monsters[_curFloor - 1].Position.X].OnTileObject == null) return true;
+
+            return false;
+            
+        }
     }
 }
