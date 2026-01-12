@@ -30,10 +30,23 @@ namespace MoneyWeapon.Scenes
             exchangeStockList.Add(new Stock("주식 1", 10000, 1000, 100000, 100));
             exchangeStockList.Add(new Stock("주식 2", 10000, 1000, 100000, 100));
             exchangeStockList.Add(new Stock("주식 3", 10000, 1000, 100000, 100));
+            exchangeStockList.Add(new Stock("주식 4", 10000, 1000, 100000, 100));
+            exchangeStockList.Add(new Stock("주식 5", 10000, 1000, 100000, 100));
+            exchangeStockList.Add(new Stock("주식 6", 10000, 1000, 100000, 100));
+            exchangeStockList.Add(new Stock("주식 7", 10000, 1000, 100000, 100));
+            exchangeStockList.Add(new Stock("주식 8", 10000, 1000, 100000, 100));
+            exchangeStockList.Add(new Stock("주식 9", 10000, 1000, 100000, 100));
 
-            Inventory.Add(new Stock("주식 1", 10000, 1000, 100000, 100), 5);
+            Inventory.Add(new Stock("주식 1", 10000, 1000, 100000, 100), 80);
             Inventory.Add(new Stock("주식 2", 10000, 1000, 100000, 100), 3);
             Inventory.Add(new Stock("주식 3", 10000, 1000, 100000, 100), 5);
+            Inventory.Add(new Stock("주식 4", 10000, 1000, 100000, 100), 5);
+            Inventory.Add(new Stock("주식 5", 10000, 1000, 100000, 100), 5);
+            Inventory.Add(new Stock("주식 6", 10000, 1000, 100000, 100), 5);
+            Inventory.Add(new Stock("주식 7", 10000, 1000, 100000, 100), 5);
+            Inventory.Add(new Stock("주식 8", 10000, 1000, 100000, 100), 5);
+            Inventory.Add(new Stock("주식 9", 10000, 1000, 100000, 100), 5);
+            Inventory.Add(new Stock("주식 10", 10000, 1000, 100000, 100), 5);
         }
 
         public override void Enter()
@@ -73,11 +86,9 @@ namespace MoneyWeapon.Scenes
 
             Console.SetCursorPosition(x + 6, y + 1);
             "[거래소]".Print(ConsoleColor.Red);
-            Console.SetCursorPosition(x + 30, y + 1);
-            $"보유 금액 : {Player.Money}".Print(ConsoleColor.Green);
-            Console.SetCursorPosition(x + 8, y + 2);
+            Console.SetCursorPosition(x + 9, y + 2);
             "[이름]".Print(ConsoleColor.Yellow);
-            Console.SetCursorPosition(x + 25, y + 2);
+            Console.SetCursorPosition(x + 22, y + 2);
             "[가격]".Print(ConsoleColor.Yellow);
             Console.SetCursorPosition(x + 40, y + 2);
             "[등락률]".Print(ConsoleColor.Yellow);
@@ -97,16 +108,16 @@ namespace MoneyWeapon.Scenes
                 {
                     "->".Print(ConsoleColor.Green);
                     item.Name.Print(ConsoleColor.Green);
-                    Console.SetCursorPosition(X + 18, Y);
-                    Console.WriteLine(item.Price);
+                    Console.SetCursorPosition(X + 15, Y);
+                    Console.WriteLine($"{item.Price} 원");
                     continue;
                 }
                 else
                 {
                     Console.Write("  ");
                     item.Name.Print();
-                    Console.SetCursorPosition(X + 18, Y);
-                    Console.WriteLine(item.Price);
+                    Console.SetCursorPosition(X + 15, Y);
+                    Console.WriteLine($"{item.Price} 원");
                 }
             }
 

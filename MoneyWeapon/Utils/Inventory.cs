@@ -20,7 +20,6 @@ namespace MoneyWeapon.Utils
         public static bool IsActive { get; set; }
         private static Ractangle _outline;
         const int MaxHeight = 15;
-        public static event Action<int> Onselect;
 
         private static int CurrentIndex { get; set; }
 
@@ -95,15 +94,17 @@ namespace MoneyWeapon.Utils
 
             Console.SetCursorPosition(x + 21, y + 1);
             "[인벤토리]".Print(ConsoleColor.Red);
-            Console.SetCursorPosition(x + 45, y + 1);
-            $"총 금액 : {AllPrice()}".Print(ConsoleColor.Green);
-            Console.SetCursorPosition(x + 23, y + 2);
+            Console.SetCursorPosition(x + 21, y - 1);
+            $"[보유 금액] : {Player.Money}".Print(ConsoleColor.Green);
+            Console.SetCursorPosition(x + 45, y - 1);
+            $"[주식 금액] : {AllPrice()}".Print(ConsoleColor.Green);
+            Console.SetCursorPosition(x + 24, y + 2);
             "[이름]".Print(ConsoleColor.Yellow);
             Console.SetCursorPosition(x + 35, y + 2);
             "[보유]".Print(ConsoleColor.Yellow);
-            Console.SetCursorPosition(x + 47, y + 2);
-            "[가격]".Print(ConsoleColor.Yellow);
-            Console.SetCursorPosition(x + 59, y + 2);
+            Console.SetCursorPosition(x + 44, y + 2);
+            "[총 가격]".Print(ConsoleColor.Yellow);
+            Console.SetCursorPosition(x + 58, y + 2);
             "[평단가]".Print(ConsoleColor.Yellow);
 
 
@@ -122,16 +123,20 @@ namespace MoneyWeapon.Utils
                 {
                     "->".Print(ConsoleColor.Green);
                     item.stock.Name.Print(ConsoleColor.Green);
-                    Console.SetCursorPosition(X + 23, Y);
-                    Console.WriteLine(item.stock.Price);
+                    Console.SetCursorPosition(X + 13, Y);
+                    Console.WriteLine($"{item.Quantity} 주");
+                    Console.SetCursorPosition(X + 22, Y);
+                    Console.WriteLine($"{item.stock.Price * item.Quantity} 원");
                     continue;
                 }
                 else
                 {
                     Console.Write("  ");
                     item.stock.Name.Print();
-                    Console.SetCursorPosition(X + 23, Y);
-                    Console.WriteLine(item.stock.Price);
+                    Console.SetCursorPosition(X + 13, Y);
+                    Console.WriteLine($"{item.Quantity} 주");
+                    Console.SetCursorPosition(X + 22, Y);
+                    Console.WriteLine($"{item.stock.Price * item.Quantity} 원");
                 }
             }
 
@@ -180,7 +185,6 @@ namespace MoneyWeapon.Utils
 
         public static void Select()
         {
-            Onselect?.Invoke(CurrentIndex);
         }
 
         public static int GetQuantity(Stock stock)
