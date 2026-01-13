@@ -1,0 +1,10 @@
+레포지토리 URL : https://github.com/Kyungil-smart/04-oop-console-project-wogns4168.git
+
+상 : UpArrow 
+하 : DownArrowt 
+좌 : LeftArrow
+우 : RightArrowt
+인벤토리 : I
+상호작용 : Enter
+공격 : Space
+로그 : L
