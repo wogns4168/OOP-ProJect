@@ -150,7 +150,7 @@ namespace MoneyWeapon.Scenes
                 if (_curFloor == _endingFloor + 1)
                 {
                     if(_dungeonClear)
-                    SceneManager.Change("Ending");
+                    SceneManager.Change("Credit");
                 }
             }
 

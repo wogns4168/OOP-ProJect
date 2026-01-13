@@ -65,7 +65,6 @@
     <Compile Include="Scenes\BattleScene.cs" />
     <Compile Include="Scenes\CreditScene.cs" />
     <Compile Include="Scenes\DungeonScene.cs" />
-    <Compile Include="Scenes\EndingScene.cs" />
     <Compile Include="Scenes\ExchangeScene.cs" />
     <Compile Include="Scenes\MineScene.cs" />
     <Compile Include="Scenes\Scene.cs" />

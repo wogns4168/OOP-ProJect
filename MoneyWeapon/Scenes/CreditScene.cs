@@ -32,7 +32,7 @@ namespace MoneyWeapon.Scenes
         {
             if(InputManager.GetKey(ConsoleKey.Escape))
             {
-                SceneManager.Change("Title");
+                SceneManager.ChangePrevScene();
             }
         }
     }
