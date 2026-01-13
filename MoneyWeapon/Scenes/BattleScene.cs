@@ -43,9 +43,11 @@ namespace MoneyWeapon.Scenes
             Console.WriteLine($"현재 쿨타임 : {attackTime} 초 / 공격 쿨타임 : {attackCoolTime} 초");
             Console.SetCursorPosition(2, 21);
             Console.WriteLine($"배틀 경과 시간 : {timeText} 초 / 최대 배틀 시간 : {_fullTime} 초");
-            Console.SetCursorPosition(2, 19);
-            Console.WriteLine($"플레이어 현재 공격력 : {_player.Attack()} / 몬스터 남은 체력 : {DungeonScene._currentMonster.Hp}");
-            Console.SetCursorPosition(77, 2);
+            Console.SetCursorPosition(18, 7);
+            Console.WriteLine($"플레이어 현재 공격력 : {_player.Attack()}");
+            Console.SetCursorPosition(72, 2);
+            Console.WriteLine($"몬스터 남은 체력 : {DungeonScene._currentMonster.Hp}");
+            Console.SetCursorPosition(77, 3);
             HpBar();
             for (int i = 0; i < MonsterImage.boss.Length; i++)
             {
@@ -55,7 +57,7 @@ namespace MoneyWeapon.Scenes
 
             for (int i = 0; i < PlayerImage.playerMoneyAttack.Length; i++)
             {
-                Console.SetCursorPosition(20, 12 + i);
+                Console.SetCursorPosition(20, 9 + i);
                 Console.WriteLine(PlayerImage.playerMoneyAttack[i]);
             }
 
