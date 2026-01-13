@@ -14,7 +14,7 @@ namespace MoneyWeapon.Scenes
     internal class BattleScene : Scene
     {
         private double _battleTime;
-        private int _fullTime = 20;
+        private int _fullTime = 30;
         private double _attackCoolTime = 1.5;
         private double _attackTime;
 

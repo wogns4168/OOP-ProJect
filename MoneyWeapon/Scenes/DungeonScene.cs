@@ -147,7 +147,7 @@ namespace MoneyWeapon.Scenes
                     }
                 }
 
-                if (_curFloor == _endingFloor + 1)
+                if (_curFloor == _endingFloor)
                 {
                     if(_dungeonClear)
                     SceneManager.Change("Credit");
