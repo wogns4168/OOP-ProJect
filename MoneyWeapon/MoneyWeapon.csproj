@@ -78,6 +78,7 @@
     <Compile Include="Utils\GameName.cs" />
     <Compile Include="Utils\MenuList.cs" />
     <Compile Include="Utils\MonsterImage.cs" />
+    <Compile Include="Utils\PlayerImage.cs" />
     <Compile Include="Utils\Ractangle.cs" />
     <Compile Include="Utils\TextExtensions.cs" />
     <Compile Include="Utils\Tile.cs" />

@@ -53,6 +53,12 @@ namespace MoneyWeapon.Scenes
                 Console.WriteLine(MonsterImage.boss[i]);
             }
 
+            for (int i = 0; i < PlayerImage.playerMoneyAttack.Length; i++)
+            {
+                Console.SetCursorPosition(20, 12 + i);
+                Console.WriteLine(PlayerImage.playerMoneyAttack[i]);
+            }
+
         }
 
         public override void Update()
