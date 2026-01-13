@@ -22,7 +22,7 @@ namespace MoneyWeapon.Scenes
         public override void Render()
         {
             Console.SetCursorPosition(2, 1);
-            "[크레딧]".Print(ConsoleColor.DarkBlue);
+            "[크레딧]".Print();
 
             Console.SetCursorPosition(95, 1);
             "뒤로가기 버튼 : ESC".Print();
@@ -36,8 +36,14 @@ namespace MoneyWeapon.Scenes
             "[진유록] 매니저님!".Print();
             Console.SetCursorPosition(45, 13);
             "[경일] 수강생 분들 모두!".Print();
-            Console.SetCursorPosition(45, 20);
-            $"{CreditImage.creditMent}".Print(ConsoleColor.Red);
+            int startX = 27;
+            int startY = 17;
+
+            for (int i = 0; i < CreditImage.creditMentLines.Length; i++)
+            {
+                Console.SetCursorPosition(startX, startY + i);
+                $"{CreditImage.creditMentLines[i]}".Print(ConsoleColor.Red);
+            }
         }
 
         public override void Update()
