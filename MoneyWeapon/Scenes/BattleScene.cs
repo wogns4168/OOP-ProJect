@@ -4,6 +4,7 @@ using MoneyWeapon.Utils;
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -44,6 +45,8 @@ namespace MoneyWeapon.Scenes
             Console.WriteLine($"배틀 경과 시간 : {timeText} 초 / 최대 배틀 시간 : {_fullTime} 초");
             Console.SetCursorPosition(2, 19);
             Console.WriteLine($"플레이어 현재 공격력 : {_player.Attack()} / 몬스터 남은 체력 : {DungeonScene._currentMonster.Hp}");
+            Console.SetCursorPosition(70, 19);
+            HpBar();
         }
 
         public override void Update()
@@ -62,6 +65,46 @@ namespace MoneyWeapon.Scenes
                 DungeonScene._currentMonster.GetAttack(_player.Attack());
                 _attackTime = 0.0;
                 InputManager.ResetKey();
+            }
+
+        }
+
+        public void HpBar()
+        {
+            int division = 100000 * 5 * DungeonScene._curFloor;
+            int HpBar = DungeonScene._currentMonster.Hp / division;
+            switch (HpBar)
+            {
+                case 10 :
+                    "[■■■■■■■■■■]".Print(ConsoleColor.Red);
+                    break;
+                case 9:
+                    "[■■■■■■■■■□]".Print(ConsoleColor.Red);
+                    break;
+                case 8:
+                    "[■■■■■■■■□□]".Print(ConsoleColor.Red);
+                    break;
+                case 7:
+                    "[■■■■■■■□□□]".Print(ConsoleColor.Red);
+                    break;
+                case 6:
+                    "[■■■■■■□□□□]".Print(ConsoleColor.Red);
+                    break;
+                case 5:
+                    "[■■■■■□□□□□]".Print(ConsoleColor.Red);
+                    break;
+                case 4:
+                    "[■■■■□□□□□□]".Print(ConsoleColor.Red);
+                    break;
+                case 3:
+                    "[■■■□□□□□□]".Print(ConsoleColor.Red);
+                    break;
+                case 2:
+                    "[■■□□□□□□□□]".Print(ConsoleColor.Red);
+                    break;
+                case 1:
+                    "[■□□□□□□□□□]".Print(ConsoleColor.Red);
+                    break;
             }
 
         }
