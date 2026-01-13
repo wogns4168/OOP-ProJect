@@ -53,6 +53,11 @@ namespace MoneyWeapon.Managers
             return Current;
         }
 
+        public static Scene prevScene()
+        {
+            return _prev;
+        }
+
         public static void Update()
         {
             Current?.Update();

@@ -13,14 +13,13 @@ namespace MoneyWeapon.Scenes
     internal class BattleScene : Scene
     {
         private double _battleTime;
-        private int _fullTime = 10;
+        private int _fullTime = 20;
         private double _attackCoolTime = 1.5;
         private double _attackTime;
 
         private Player _player = new Player();
         public override void Enter()
         {
-            _attackTime = _attackCoolTime;
             InputManager.ResetKey();
         }
 

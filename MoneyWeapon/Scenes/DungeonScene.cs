@@ -158,7 +158,7 @@ namespace MoneyWeapon.Scenes
 
         private void SpawnMonster()
         {
-            int hp = _curFloor * 10 * 1000000;
+            int hp = _curFloor * 5 * 1000000;
             _currentMonster = new Monster($"{_curFloor}층 몬스터", hp);
             _currentMonster.Position = new Vector(10, 2);
             ObjectPosition(_currentMonster);

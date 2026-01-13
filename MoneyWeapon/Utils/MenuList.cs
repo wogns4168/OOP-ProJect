@@ -50,7 +50,7 @@ namespace MoneyWeapon.Utils
 
             _menus[CurrentIndex].action?.Invoke();
 
-            if(_menus.Count == 0) CurrentIndex = 0;
+            if (_menus.Count == 0) CurrentIndex = 0;
             else if (CurrentIndex >= _menus.Count) CurrentIndex = _menus.Count - 1;
         }
 
@@ -110,6 +110,28 @@ namespace MoneyWeapon.Utils
                     Console.Write("  ");
                     _menus[i].text.Print();
                 }
+            }
+        }
+
+        public void GuideRender(int x, int y)
+        {
+            _outline.X = x;
+            _outline.Y = y;
+            _outline.Width = _maxLength + 6;
+            _outline.Height = _menus.Count + 2;
+            _outline.Draw();
+
+            for (int i = 0; i < _menus.Count; i++)
+            {
+                y++;
+                Console.SetCursorPosition(x + 1, y);
+                if (i == 0) _menus[i].text.Print(ConsoleColor.Red);
+                else
+                {
+                    Console.Write("  ");
+                    _menus[i].text.Print();
+                }
+
             }
         }
 

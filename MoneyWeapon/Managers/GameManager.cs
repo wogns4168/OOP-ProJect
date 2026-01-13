@@ -23,6 +23,7 @@ namespace MoneyWeapon.Managers
         private ExchangePotal _exchangePotal;
         private TownPotal _townPotal;
         private Player _prevPlayer;
+        private Guide _gudie;
 
         public void Run()
         {
@@ -33,6 +34,7 @@ namespace MoneyWeapon.Managers
                 _time.Tick();
                 Console.Clear();
                 SceneManager.Render();
+                _gudie.Render();
                 Log.Render(40, 10);
                 Inventory.Render(40, 10);
 
@@ -74,6 +76,7 @@ namespace MoneyWeapon.Managers
             _minePotal = new MinePotal();
             _townPotal = new TownPotal();
             _prevPlayer = new Player();
+            _gudie = new Guide();
 
             SceneManager.AddScene("Title", new TitleScene());
             SceneManager.AddScene("Credit", new CreditScene());

@@ -1,4 +1,5 @@
-﻿using MoneyWeapon.Utils;
+﻿using MoneyWeapon.Scenes;
+using MoneyWeapon.Utils;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -26,7 +27,7 @@ namespace MoneyWeapon.GameObjects
         public Stock(string name, int price)
         {
             Name = name;
-            Price = price;
+            Price = price * DungeonScene._curFloor;
             MinPrice = price / 10;
             MaxPrice = price * 10;
             MaxQuantity = 200;
