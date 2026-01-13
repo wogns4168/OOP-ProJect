@@ -37,11 +37,11 @@ namespace MoneyWeapon.Scenes
             string timeText = _battleTime.ToString("0.0");
             string attackCoolTime = _attackCoolTime.ToString("0.0");
             string attackTime = _attackTime.ToString("0.0");
-            Console.SetCursorPosition(0, 19);
+            Console.SetCursorPosition(2, 20);
             Console.WriteLine($"현재 쿨타임 : {attackTime} 초 / 공격 쿨타임 : {attackCoolTime} 초");
-            Console.SetCursorPosition(0, 20);
+            Console.SetCursorPosition(2, 21);
             Console.WriteLine($"배틀 경과 시간 : {timeText} 초 / 최대 배틀 시간 : {_fullTime} 초");
-            Console.SetCursorPosition(0, 18);
+            Console.SetCursorPosition(2, 19);
             Console.WriteLine($"플레이어 현재 공격력 : {_player.Attack()} / 몬스터 남은 체력 : {DungeonScene._currentMonster.Hp}");
         }
 
