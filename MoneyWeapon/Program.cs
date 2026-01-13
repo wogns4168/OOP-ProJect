@@ -11,6 +11,9 @@ namespace MoneyWeapon
     {
         static void Main(string[] args)
         {
+            Console.InputEncoding = Encoding.UTF8;
+            Console.OutputEncoding = Encoding.UTF8;
+            Console.CursorVisible = false;
             GameManager gameManager = new GameManager();
             gameManager.Run();
         }

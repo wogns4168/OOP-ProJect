@@ -45,8 +45,14 @@ namespace MoneyWeapon.Scenes
             Console.WriteLine($"배틀 경과 시간 : {timeText} 초 / 최대 배틀 시간 : {_fullTime} 초");
             Console.SetCursorPosition(2, 19);
             Console.WriteLine($"플레이어 현재 공격력 : {_player.Attack()} / 몬스터 남은 체력 : {DungeonScene._currentMonster.Hp}");
-            Console.SetCursorPosition(70, 19);
+            Console.SetCursorPosition(77, 2);
             HpBar();
+            for (int i = 0; i < MonsterImage.boss.Length; i++)
+            {
+                Console.SetCursorPosition(70, 5 + i);
+                Console.WriteLine(MonsterImage.boss[i]);
+            }
+
         }
 
         public override void Update()

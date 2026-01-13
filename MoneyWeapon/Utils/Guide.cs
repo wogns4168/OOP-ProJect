@@ -58,7 +58,7 @@ namespace MoneyWeapon.Utils
 
             _dungeonGuide.Add("[던전 가이드]", Null);
             _dungeonGuide.Add("어서오시게 벌써 [던전]에 오다니 용기가 대단하구만.", Null);
-            _dungeonGuide.Add("던전 중간의 [M] : 몬스터 이고 근처에가서 [Enter] 키를 누르면 [전투]를 시작할 수 있네", Null);
+            _dungeonGuide.Add("던전 중간의 [M] : 몬스터 이고 근처에가서 [Space Bar] 키를 누르면 [전투]를 시작할 수 있네", Null);
             _dungeonGuide.Add("[몬스터]를 잡게되면 [보물상자]가 확정적으로 드랍된다네.", Null);
             _dungeonGuide.Add("[보물상자]는 몬스터 뒤에 드랍될거고 [R] 모양으로 생겼다네", Null);
             _dungeonGuide.Add("[몬스터]를 잡고 [보물상자]까지 먹었다면 [마을]로 돌아갔다 [던전]으로 들어와보게", Null);

@@ -31,7 +31,6 @@ namespace MoneyWeapon.Managers
 
             while(!IsGameOver)
             {
-                Console.CursorVisible = false;
                 _time.Tick();
                 if(!(SceneManager.curScene() is BattleScene)) Console.Clear();
                 SceneManager.Render();
