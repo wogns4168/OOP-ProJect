@@ -21,6 +21,7 @@ namespace MoneyWeapon.Scenes
         public override void Enter()
         {
             InputManager.ResetKey();
+            Console.Clear();
         }
 
         public override void Exit()
